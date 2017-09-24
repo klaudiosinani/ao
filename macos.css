@@ -1,0 +1,4 @@
+.sidebar-inner {
+  /* Make space for the traffic lights on macos */
+  padding-top: 29px !important;
+}
