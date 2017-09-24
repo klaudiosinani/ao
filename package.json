@@ -28,7 +28,7 @@
     "pack": "build --dir",
     "dist": "build",
     "pack-all": "npm run pack:macos && npm run pack:linux && npm run pack:windows",
-    "pack:macos": "electron-packager . --no-prune --overwrite --asar --out=dist --platform=darwin --arch=x64 --icon=static/Icon.icns && cd dist/Ao-darwin-x64 && zip -ryXq9 ../Tusk-macos-v${npm_package_version}.zip Ao.app && electron-installer-dmg ../Ao-darwin-x64/Ao.app Ao --icon=../../static/Icon.icns && cp Ao.dmg  ../../dist",
+    "pack:macos": "electron-packager . --no-prune --overwrite --asar --out=dist --platform=darwin --arch=x64 --icon=static/Icon.icns && cd dist/Ao-darwin-x64 && zip -ryXq9 ../Ao-macos-v${npm_package_version}.zip Ao.app && electron-installer-dmg ../Ao-darwin-x64/Ao.app Ao --icon=../../static/Icon.icns && cp Ao.dmg  ../../dist",
     "pack:linux": "electron-packager . --no-prune --overwrite --out=dist --platform=linux --arch=x64 && cd dist/Ao-linux-x64/ && zip -ryq9 ../Ao-linux-v${npm_package_version}.zip *",
     "pack:windows": "electron-packager . --no-prune --overwrite --asar --out=dist --platform=win32 --arch=ia32 --icon=static/Icon.ico --version-string.ProductName=$npm_package_productName && cd dist/Ao-win32-ia32 && zip -ryq9 ../Ao-windows-v${npm_package_version}.zip *"
   },
