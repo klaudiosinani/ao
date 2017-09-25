@@ -65,11 +65,17 @@ Description                | Keys
 -------------------------- | --------------------------
 Toggle Window Menu         | <kbd>Alt</kbd>
 Toggle Full Screen         | <kbd>F11</kbd>
+Return to Todos            | <kbd>Esc</kbd>
 New Todo                   | <kbd>Cmd/Ctrl</kbd> <kbd>N</kbd>
+Delete Todo                | <kbd>Cmd/Ctrl</kbd> <kbd>D</kbd>
+Rename Todo                | <kbd>Cmd/Ctrl</kbd> <kbd>T</kbd>
 Search Todos               | <kbd>Cmd/Ctrl</kbd> <kbd>F</kbd>
+Add Todo to My Day         | <kbd>Cmd/Ctrl</kbd> <kbd>K</kbd>
+New List                   | <kbd>Cmd/Ctrl</kbd> <kbd>L</kbd>
+Rename List                | <kbd>Cmd/Ctrl</kbd> <kbd>Y</kbd>
 Toggle My Day              | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
 Toggle Cortana             | <kbd>Cmd/Ctrl</kbd> <kbd>E</kbd>
-Toggle Dark Theme          | <kbd>Cmd/Ctrl</kbd> <kbd>D</kbd>
+Toggle Dark Theme          | <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 Toggle Sepia Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
 Toggle Settings            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
 Make Text Smaller          | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
@@ -77,10 +83,12 @@ Reset Zoom Level           | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
 Navigate to Next Note      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
 Navigate to List           | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
 Sign out                   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
-Add Due Date               | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>S</kbd>
+Delete List                | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>D</kbd>
+Add Due Date               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd>
 Reload Ao                  | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd>
 Set Reminder               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd>
 Complete Todo              | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd>
+Hide Completed Todos       | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>H</kbd>
 Toggle Dev Tools           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd>
 Make Text Larger           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
 
