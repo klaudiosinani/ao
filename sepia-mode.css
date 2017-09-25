@@ -91,3 +91,6 @@ html.sepia-mode .notificationToast {
 html.sepia-mode .settingsSection-header {
   background-color: var(--sepia) !important;
 }
+html.sepia-mode .callout {
+  background-color: var(--sepia) !important;
+}

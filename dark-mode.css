@@ -91,3 +91,6 @@ html.dark-mode .notificationToast {
 html.dark-mode .settingsSection-header {
   background-color: var(--dark-grey) !important;
 }
+html.dark-mode .callout {
+  background-color: var(--dark-mode) !important;
+}
