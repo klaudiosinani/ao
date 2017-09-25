@@ -23,6 +23,16 @@ exports.create = win => {
   const iconPath = path.join(__dirname, 'static/IconTray.png');
 
   const toggleWin = () => {
+    // Toggle/untoggle window
+    if (win.isVisible()) {
+      win.hide();
+    } else {
+      win.show();
+    }
+  };
+
+  const showWin = () => {
+    // Bring window on top if not visible
     if (!win.isVisible()) {
       win.show();
     }
@@ -38,13 +48,13 @@ exports.create = win => {
   }, {
     label: 'Search',
     click() {
-      toggleWin();
+      showWin();
       activate('search');
     }
   }, {
     label: 'New Todo',
     click() {
-      toggleWin();
+      showWin();
       activate('new-todo');
     }
   }, {
@@ -52,13 +62,13 @@ exports.create = win => {
   }, {
     label: 'Toggle Sepia Mode',
     click() {
-      toggleWin();
+      showWin();
       activate('toggle-sepia-mode');
     }
   }, {
     label: 'Toggle Dark Mode',
     click() {
-      toggleWin();
+      showWin();
       activate('toggle-dark-mode');
     }
   }, {
@@ -66,7 +76,7 @@ exports.create = win => {
   }, {
     label: `Settings`,
     click() {
-      toggleWin();
+      showWin();
       activate('settings');
     }
   }, {
