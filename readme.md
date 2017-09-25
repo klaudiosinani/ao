@@ -1,6 +1,6 @@
 > ✔️ Charming MS To-Do desktop app
 
-[![Build Status](https://travis-ci.com/klauscfhq/ao.svg?branch=master)](https://travis-ci.com/klauscfhq/ao) [![Build status](https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true)](https://ci.appveyor.com/project/klauscfhq/ao) [![Dependency Status](https://dependencyci.com/github/klauscfhq/ao/badge)](https://dependencyci.com/github/klauscfhq/ao) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/klauscfhq/ao) [![Latest version](https://badge.fury.io/gh/klauscfhq%2Fao.svg)](https://github.com/klauscfhq/ao/releases) [![DLs](https://img.shields.io/github/downloads/klauscfhq/ao/total.svg)](https://github.com/klauscfhq/ao/releases)
+[![Build Status](https://travis-ci.org/klauscfhq/ao.svg?branch=master)](https://travis-ci.org/klauscfhq/ao) [![Build status](https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true)](https://ci.appveyor.com/project/klauscfhq/ao) [![Dependency Status](https://dependencyci.com/github/klauscfhq/ao/badge)](https://dependencyci.com/github/klauscfhq/ao) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/klauscfhq/ao) [![Latest version](https://badge.fury.io/gh/klauscfhq%2Fao.svg)](https://github.com/klauscfhq/ao/releases) [![DLs](https://img.shields.io/github/downloads/klauscfhq/ao/total.svg)](https://github.com/klauscfhq/ao/releases)
 
 ## Description
 
@@ -63,6 +63,26 @@ Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd>
 
 Description                | Keys
 -------------------------- | --------------------------
+Toggle Window Menu         | <kbd>Alt</kbd>
+Toggle Full Screen         | <kbd>F11</kbd>
+New Todo                   | <kbd>Cmd/Ctrl</kbd> <kbd>N</kbd>
+Search Todos               | <kbd>Cmd/Ctrl</kbd> <kbd>F</kbd>
+Toggle My Day              | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
+Toggle Cortana             | <kbd>Cmd/Ctrl</kbd> <kbd>E</kbd>
+Toggle Dark Theme          | <kbd>Cmd/Ctrl</kbd> <kbd>D</kbd>
+Toggle Sepia Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
+Toggle Settings            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
+Make Text Smaller          | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
+Reset Zoom Level           | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
+Navigate to Next Note      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
+Navigate to List           | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
+Sign out                   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
+Add Due Date               | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>S</kbd>
+Reload Ao                  | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd>
+Set Reminder               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd>
+Complete Todo              | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd>
+Toggle Dev Tools           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd>
+Make Text Larger           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
 
 ## Related
 
