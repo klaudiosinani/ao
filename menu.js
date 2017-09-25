@@ -66,28 +66,6 @@ const darwinTpl = [{
   }, {
     type: 'separator'
   }, {
-    label: 'Navigate to Next List',
-    accelerator: 'CmdorCtrl+Tab',
-    click() {
-      activate('next-list');
-    }
-  }, {
-    label: 'Navigate to Previous List',
-    accelerator: 'CmdorCtrl+Shift+Tab',
-    click() {
-      activate('previous-list');
-    }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Sign out',
-    accelerator: 'CmdorCtrl+Alt+Q',
-    click() {
-      activate('sign-out');
-    }
-  }, {
-    type: 'separator'
-  }, {
     role: 'services',
     submenu: []
   }, {
@@ -114,38 +92,72 @@ const darwinTpl = [{
   }, {
     type: 'separator'
   }, {
-    label: 'New Todo',
-    accelerator: 'CmdorCtrl+N',
-    click() {
-      activate('new-todo');
-    }
+    label: 'List',
+    submenu: [{
+      label: 'New List',
+      accelerator: 'CmdorCtrl+L',
+      click() {
+        activate('new-list');
+      }
+    }, {
+      label: 'Delete List',
+      accelerator: 'CmdorCtrl+Shift+D',
+      click() {
+        activate('delete-list');
+      }
+    }, {
+      label: 'Rename List',
+      accelerator: 'CmdorCtrl+Y',
+      click() {
+        activate('rename-list');
+      }
+    }, {
+      label: 'Hide Completed Todos',
+      accelerator: 'CmdorCtrl+Shift+H',
+      click() {
+        activate('hide-todo');
+      }
+    }]
   }, {
-    label: 'Toggle My Day',
+    label: 'Todo',
+    submenu: [{
+      label: 'New Todo',
+      accelerator: 'CmdorCtrl+N',
+      click() {
+        activate('new-todo');
+      }
+    }, {
+      label: 'Delete Todo',
+      accelerator: 'CmdorCtrl+D',
+      click() {
+        activate('delete-todo');
+      }
+    }, {
+      label: 'Rename Todo',
+      accelerator: 'CmdorCtrl+T',
+      click() {
+        activate('rename-todo');
+      }
+    }, {
+      label: 'Add to My Day',
+      accelerator: 'CmdorCtrl+K',
+      click() {
+        activate('add-my-day');
+      }
+    }, {
+      label: 'Complete Todo',
+      accelerator: 'CmdorCtrl+Shift+N',
+      click() {
+        activate('complete-todo');
+      }
+    }]
+  }, {
+    type: 'separator'
+  }, {
+    label: 'My Day',
     accelerator: 'CmdorCtrl+M',
     click() {
       activate('my-day');
-    }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Toggle Cortana',
-    accelerator: 'CmdorCtrl+E',
-    click() {
-      activate('toggle-cortana');
-    }
-  }, {
-    label: 'Complete Todo',
-    accelerator: 'CmdorCtrl+Shift+N',
-    click() {
-      activate('complete-todo');
-    }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Add to My Day',
-    accelerator: 'CmdorCtrl+Shift+T',
-    click() {
-      activate('add-to-day');
     }
   }, {
     label: 'Set Reminder',
@@ -155,9 +167,35 @@ const darwinTpl = [{
     }
   }, {
     label: 'Add Due Date',
-    accelerator: 'CmdorCtrl+Alt+S',
+    accelerator: 'CmdorCtrl+Shift+T',
     click() {
       activate('add-due-date');
+    }
+  }, {
+    label: 'Toggle Cortana',
+    accelerator: 'CmdorCtrl+E',
+    click() {
+      activate('toggle-cortana');
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Settings',
+    accelerator: 'CmdorCtrl+,',
+    click() {
+      activate('settings');
+    }
+  }, {
+    label: 'Sign out',
+    accelerator: 'CmdorCtrl+Alt+Q',
+    click() {
+      activate('sign-out');
+    }
+  }, {
+    label: 'Return to Todos',
+    accelerator: 'Esc',
+    click() {
+      activate('return');
     }
   }]
 }, {
@@ -223,17 +261,23 @@ const darwinTpl = [{
     }
   }, {
     label: 'Toggle Dark Mode',
-    accelerator: 'CmdOrCtrl+D',
+    accelerator: 'CmdorCtrl+H',
     click() {
       activate('toggle-dark-mode');
     }
   }, {
     type: 'separator'
   }, {
-    label: 'Settings',
-    accelerator: 'CmdorCtrl+,',
+    label: 'Navigate to Next List',
+    accelerator: 'CmdorCtrl+Tab',
     click() {
-      activate('settings');
+      activate('next-list');
+    }
+  }, {
+    label: 'Navigate to Previous List',
+    accelerator: 'CmdorCtrl+Shift+Tab',
+    click() {
+      activate('previous-list');
     }
   }, {
     type: 'separator'
@@ -284,33 +328,73 @@ const otherTpl = [{
   }, {
     type: 'separator'
   }, {
-    label: 'New Todo',
-    accelerator: 'CmdorCtrl+N',
-    click() {
-      activate('new-todo');
-    }
+    label: 'List',
+    submenu: [{
+      label: 'New List',
+      accelerator: 'CmdorCtrl+L',
+      click() {
+        activate('new-list');
+      }
+    }, {
+      label: 'Delete List',
+      accelerator: 'CmdorCtrl+Shift+D',
+      click() {
+        activate('delete-list');
+      }
+    }, {
+      label: 'Rename List',
+      accelerator: 'CmdorCtrl+Y',
+      click() {
+        activate('rename-list');
+      }
+    }, {
+      label: 'Hide Completed Todos',
+      accelerator: 'CmdorCtrl+Shift+H',
+      click() {
+        activate('hide-todo');
+      }
+    }]
   }, {
-    label: 'Toggle My Day',
+    label: 'Todo',
+    submenu: [{
+      label: 'New Todo',
+      accelerator: 'CmdorCtrl+N',
+      click() {
+        activate('new-todo');
+      }
+    }, {
+      label: 'Delete Todo',
+      accelerator: 'CmdorCtrl+D',
+      click() {
+        activate('delete-todo');
+      }
+    }, {
+      label: 'Rename Todo',
+      accelerator: 'CmdorCtrl+T',
+      click() {
+        activate('rename-todo');
+      }
+    }, {
+      label: 'Add to My Day',
+      accelerator: 'CmdorCtrl+K',
+      click() {
+        activate('add-my-day');
+      }
+    }, {
+      label: 'Complete Todo',
+      accelerator: 'CmdorCtrl+Shift+N',
+      click() {
+        activate('complete-todo');
+      }
+    }]
+  }, {
+    type: 'separator'
+  }, {
+    label: 'My Day',
     accelerator: 'CmdorCtrl+M',
     click() {
       activate('my-day');
     }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Toggle Cortana',
-    accelerator: 'CmdorCtrl+E',
-    click() {
-      activate('toggle-cortana');
-    }
-  }, {
-    label: 'Complete Todo',
-    accelerator: 'CmdorCtrl+Shift+N',
-    click() {
-      activate('complete-todo');
-    }
-  }, {
-    type: 'separator'
   }, {
     label: 'Set Reminder',
     accelerator: 'CmdorCtrl+Shift+E',
@@ -319,31 +403,35 @@ const otherTpl = [{
     }
   }, {
     label: 'Add Due Date',
-    accelerator: 'CmdorCtrl+Alt+S',
+    accelerator: 'CmdorCtrl+Shift+T',
     click() {
       activate('add-due-date');
     }
   }, {
-    type: 'separator'
-  }, {
-    label: 'Navigate to Next List',
-    accelerator: 'CmdorCtrl+Tab',
+    label: 'Toggle Cortana',
+    accelerator: 'CmdorCtrl+E',
     click() {
-      activate('next-list');
-    }
-  }, {
-    label: 'Navigate to Previous List',
-    accelerator: 'CmdorCtrl+Shift+Tab',
-    click() {
-      activate('previous-list');
+      activate('toggle-cortana');
     }
   }, {
     type: 'separator'
+  }, {
+    label: 'Settings',
+    accelerator: 'CmdorCtrl+,',
+    click() {
+      activate('settings');
+    }
   }, {
     label: 'Sign out',
     accelerator: 'CmdorCtrl+Alt+Q',
     click() {
       activate('sign-out');
+    }
+  }, {
+    label: 'Return to Todos',
+    accelerator: 'Esc',
+    click() {
+      activate('return');
     }
   }, {
     type: 'separator'
@@ -413,15 +501,23 @@ const otherTpl = [{
     }
   }, {
     label: 'Toggle Dark Mode',
-    accelerator: 'CmdOrCtrl+D',
+    accelerator: 'CmdorCtrl+H',
     click() {
       activate('toggle-dark-mode');
     }
   }, {
-    label: 'Settings',
-    accelerator: 'CmdorCtrl+,',
+    type: 'separator'
+  }, {
+    label: 'Navigate to Next List',
+    accelerator: 'CmdorCtrl+Tab',
     click() {
-      activate('settings');
+      activate('next-list');
+    }
+  }, {
+    label: 'Navigate to Previous List',
+    accelerator: 'CmdorCtrl+Shift+Tab',
+    click() {
+      activate('previous-list');
     }
   }, {
     type: 'separator'

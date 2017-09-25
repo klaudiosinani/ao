@@ -5,14 +5,55 @@ const config = require('./config');
 const ipc = electron.ipcRenderer;
 const webFrame = electron.webFrame;
 
+ipc.on('search', () => {
+  // Search Todos
+  document.querySelector('.search').click();
+});
+
+ipc.on('new-list', () => {
+  // Create New List
+  document.querySelector('.addList').click();
+});
+
+ipc.on('delete-list', () => {
+  // Delete List
+  document.querySelector('.toolbarButton.more').click();
+  document.querySelector('.popoverMenuItem-destructive').click();
+});
+
+ipc.on('rename-list', () => {
+  // Rename List
+  document.querySelector('.listTitle').click();
+});
+
+ipc.on('hide-todo', () => {
+  // Hide Completed Todos
+  document.querySelector('.toolbarButton.more').click();
+  document.querySelector('.checkbox-completed-18').click();
+});
+
 ipc.on('new-todo', () => {
   // Create New Todo
   document.querySelector('.addTask-icon').click();
 });
 
-ipc.on('my-day', () => {
-  // Toggle My Day list
-  document.querySelector('.todayToolbar-item').click();
+ipc.on('rename-todo', () => {
+  // Rename Todo
+  doubleClick('.taskItem.selected.active');
+  document.querySelector('.editableContent-editButton').click();
+});
+
+ipc.on('delete-todo', () => {
+  // Delete Todo
+  doubleClick('.taskItem.selected.active');
+  document.querySelector('.detailFooter-trash').click();
+});
+
+ipc.on('add-my-day', () => {
+  // Add Todo to My Day list
+  doubleClick('.taskItem.selected.active');
+  document.querySelector('.detail-body').children[0].children[0].firstChild.click();
+  document.querySelector('.detailFooter-close').click();
 });
 
 ipc.on('complete-todo', () => {
@@ -20,15 +61,9 @@ ipc.on('complete-todo', () => {
   document.querySelector('.taskItem.selected.active .checkBox').click();
 });
 
-ipc.on('toggle-cortana', () => {
-  // Toggle Cortana
-  document.querySelector('.cortanaButton').click();
-});
-
-ipc.on('add-due-date', () => {
-  // Add Due Date
-  doubleClick('.taskItem.selected.active');
-  document.querySelector('.detail-body').children[1].children[1].firstChild.click();
+ipc.on('my-day', () => {
+  // Toggle My Day List
+  document.querySelector('.todayToolbar-item').click();
 });
 
 ipc.on('set-reminder', () => {
@@ -37,9 +72,32 @@ ipc.on('set-reminder', () => {
   document.querySelector('.detail-body').children[1].children[0].firstChild.click();
 });
 
-ipc.on('search', () => {
-  // Search Todos
-  document.querySelector('.search').click();
+ipc.on('add-due-date', () => {
+  // Add Due Date
+  doubleClick('.taskItem.selected.active');
+  document.querySelector('.detail-body').children[1].children[1].firstChild.click();
+});
+
+ipc.on('toggle-cortana', () => {
+  // Toggle Cortana
+  document.querySelector('.cortanaButton').click();
+});
+
+ipc.on('settings', () => {
+  // Toggle Settings
+  document.querySelector('.userToolbar-avatar').click();
+  document.querySelector('.popoverMenu').children[0].click();
+});
+
+ipc.on('sign-out', () => {
+  // Sign out
+  document.querySelector('.userToolbar-avatar').click();
+  document.querySelector('.popoverMenu').children[3].click();
+});
+
+ipc.on('return', () => {
+  // Return back to Todos
+  document.querySelector('.detailFooter-close').click();
 });
 
 function doubleClick(classSelector) {
@@ -194,18 +252,6 @@ ipc.on('zoom-reset', () => {
   // Reset zoom factor
   webFrame.setZoomFactor(1.0);
   config.set('zoomFactor', 1.0);
-});
-
-ipc.on('settings', () => {
-  // Toggle Settings
-  document.querySelector('.userToolbar-avatar').click();
-  document.querySelector('.popoverMenu').children[0].click();
-});
-
-ipc.on('sign-out', () => {
-  // Sign out
-  document.querySelector('.userToolbar-avatar').click();
-  document.querySelector('.popoverMenu').children[3].click();
 });
 
 document.addEventListener('keydown', event => {
