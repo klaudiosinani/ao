@@ -22,6 +22,7 @@ Ao is an unofficial, open source, third-party, community driven, free Microsoft 
   - Automagical Auto-updates 🐘
   - Desktop Notifications
   - Background Behavior
+- [Related](#related)
 - [Disclaimer](#disclaimer)
 - [Team](#team)
 - [License](#license)
@@ -62,6 +63,12 @@ Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd>
 
 Description                | Keys
 -------------------------- | --------------------------
+
+## Related
+
+More awesome desktop apps.
+
+- [Tusk](https://github.com/champloohq/tusk) - 🐘 Refined Evernote desktop app
 
 ## Disclaimer
 
