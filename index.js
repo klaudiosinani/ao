@@ -94,13 +94,13 @@ app.on('ready', () => {
   const windowContent = mainWindow.webContents;
 
   windowContent.on('dom-ready', () => {
-    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'browser.css'), 'utf8'));
+    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/browser.css'), 'utf8'));
     if (process.platform === 'darwin') {
       // Make room for the traffic-lights on macos
-      windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'macos.css'), 'utf8'));
+      windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/macos.css'), 'utf8'));
     }
-    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'dark-mode.css'), 'utf8'));
-    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'sepia-mode.css'), 'utf8'));
+    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/dark-mode.css'), 'utf8'));
+    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/sepia-mode.css'), 'utf8'));
     mainWindow.show();
   });
 
