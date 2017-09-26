@@ -19,7 +19,7 @@ Ao is an unofficial, open source, third-party, community driven, free Microsoft 
   - [Scalable Interface](#scalable-interface)
   - [Keyboard Shortcuts](#keyboard-shortcuts)
   - [Cross Platform](https://github.com/klauscfhq/ao/releases/latest)
-  - Automagical Auto-updates 🐘
+  - Automagical Auto-updates ✔️
   - Desktop Notifications
   - Background Behavior
 - [Related](#related)
@@ -27,17 +27,17 @@ Ao is an unofficial, open source, third-party, community driven, free Microsoft 
 - [Team](#team)
 - [License](#license)
 
-<sup>🐘 Windows only atm</sup>
+<sup>✔️ Windows only atm</sup>
 
 ## Install
 
-Head to the [releases](https://github.com/klau/tusk/releases/latest) page and download the appropriate installer for your system.
+Head to the [releases](https://github.com/klauscfhq/ao/releases/latest) page and download the appropriate installer for your system.
 
 ## Features
 
 ### Sepia Theme
 
-Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
+Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 
 ### Dark Theme
 
@@ -73,6 +73,7 @@ Search Todos               | <kbd>Cmd/Ctrl</kbd> <kbd>F</kbd>
 Add Todo to My Day         | <kbd>Cmd/Ctrl</kbd> <kbd>K</kbd>
 New List                   | <kbd>Cmd/Ctrl</kbd> <kbd>L</kbd>
 Rename List                | <kbd>Cmd/Ctrl</kbd> <kbd>Y</kbd>
+Toggle Sidebar             | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd>
 Toggle My Day              | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
 Toggle Cortana             | <kbd>Cmd/Ctrl</kbd> <kbd>E</kbd>
 Toggle Dark Theme          | <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
@@ -81,7 +82,7 @@ Toggle Settings            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
 Make Text Smaller          | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
 Reset Zoom Level           | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
 Navigate to Next Note      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
-Navigate to List           | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
+Jump to List               | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
 Sign out                   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
 Delete List                | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>D</kbd>
 Add Due Date               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd>
