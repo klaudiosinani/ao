@@ -1,21 +1,61 @@
 'use strict';
 const path = require('path');
 const electron = require('electron');
+const os = require('os');
+const fs = require('fs-extra');
 
+const join = path.join;
 const app = electron.app;
 const shell = electron.shell;
-const BrowserWindow = electron.BrowserWindow;
 const appName = app.getName();
+const BrowserWindow = electron.BrowserWindow;
+
+let configData;
+const oaJSON = '.ao.json'; // Config file name
+const homeDir = os.homedir();
+const homeConfig = join(homeDir, oaJSON); // Config file on home directory
+const defaultConfig = join(__dirname, '.', oaJSON); // Default config file directory
+
 const sourceURL = 'https://github.com/klauscfhq/ao';
 const homepageURL = 'https://github.com/klauscfhq/ao';
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 const releaseURL = 'https://github.com/klauscfhq/ao/releases/latest';
 
-function activate(command) {
+function getConfig() {
+  // Create a new default config file
+  // if it does not already exist
+  if (!fs.existsSync(homeConfig)) {
+    try {
+      fs.copySync(defaultConfig, homeConfig);
+      console.log('Ao config file was created successfully.');
+    } catch (err) {
+      console.error(err);
+    }
+  }
+  // Parse the content of the config file
+  try {
+    configData = JSON.parse(fs.readFileSync(homeConfig, 'utf8'));
+  } catch (err) {
+    console.log('Invalid JSON object');
+  }
+  return configData;
+}
+
+const aoConfig = getConfig();   // Get the user-defined settings
+
+function setAcc(custom, predifined) {
+  // Return the custom or predifined shortcut keys
+  if (Object.prototype.hasOwnProperty.call(aoConfig.shortcutKeys, custom)) {
+    return aoConfig.shortcutKeys[custom];
+  }
+  return predifined;
+}
+
+function activate(custom) {
   const appWindow = BrowserWindow.getAllWindows()[0];
   // Extra measure in order to be shown
   appWindow.show();
-  appWindow.webContents.send(command);
+  appWindow.webContents.send(custom);
 }
 
 const helpSubmenu = [{
@@ -95,25 +135,25 @@ const darwinTpl = [{
     label: 'List',
     submenu: [{
       label: 'New List',
-      accelerator: 'CmdorCtrl+L',
+      accelerator: setAcc('new-list', 'CmdorCtrl+L'),
       click() {
         activate('new-list');
       }
     }, {
       label: 'Delete List',
-      accelerator: 'CmdorCtrl+Shift+D',
+      accelerator: setAcc('delete-list', 'CmdorCtrl+Shift+D'),
       click() {
         activate('delete-list');
       }
     }, {
       label: 'Rename List',
-      accelerator: 'CmdorCtrl+Y',
+      accelerator: setAcc('rename-list', 'CmdorCtrl+Y'),
       click() {
         activate('rename-list');
       }
     }, {
       label: 'Hide Completed Todos',
-      accelerator: 'CmdorCtrl+Shift+H',
+      accelerator: setAcc('hide-todo', 'CmdorCtrl+Shift+H'),
       click() {
         activate('hide-todo');
       }
@@ -122,31 +162,31 @@ const darwinTpl = [{
     label: 'Todo',
     submenu: [{
       label: 'New Todo',
-      accelerator: 'CmdorCtrl+N',
+      accelerator: setAcc('new-todo', 'CmdorCtrl+N'),
       click() {
         activate('new-todo');
       }
     }, {
       label: 'Delete Todo',
-      accelerator: 'CmdorCtrl+D',
+      accelerator: setAcc('delete-todo', 'CmdorCtrl+D'),
       click() {
         activate('delete-todo');
       }
     }, {
       label: 'Rename Todo',
-      accelerator: 'CmdorCtrl+T',
+      accelerator: setAcc('rename-todo', 'CmdorCtrl+T'),
       click() {
         activate('rename-todo');
       }
     }, {
       label: 'Add to My Day',
-      accelerator: 'CmdorCtrl+K',
+      accelerator: setAcc('add-my-day', 'CmdorCtrl+K'),
       click() {
         activate('add-my-day');
       }
     }, {
       label: 'Complete Todo',
-      accelerator: 'CmdorCtrl+Shift+N',
+      accelerator: setAcc('complete-todo', 'CmdorCtrl+Shift+N'),
       click() {
         activate('complete-todo');
       }
@@ -155,25 +195,25 @@ const darwinTpl = [{
     type: 'separator'
   }, {
     label: 'My Day',
-    accelerator: 'CmdorCtrl+M',
+    accelerator: setAcc('my-day', 'CmdorCtrl+M'),
     click() {
       activate('my-day');
     }
   }, {
     label: 'Set Reminder',
-    accelerator: 'CmdorCtrl+Shift+E',
+    accelerator: setAcc('set-reminder', 'CmdorCtrl+Shift+E'),
     click() {
       activate('set-reminder');
     }
   }, {
     label: 'Add Due Date',
-    accelerator: 'CmdorCtrl+Shift+T',
+    accelerator: setAcc('add-due-date', 'CmdorCtrl+Shift+T'),
     click() {
       activate('add-due-date');
     }
   }, {
     label: 'Toggle Cortana',
-    accelerator: 'CmdorCtrl+E',
+    accelerator: setAcc('toggle-cortana', 'CmdorCtrl+E'),
     click() {
       activate('toggle-cortana');
     }
@@ -181,25 +221,25 @@ const darwinTpl = [{
     type: 'separator'
   }, {
     label: 'Settings',
-    accelerator: 'CmdorCtrl+,',
+    accelerator: setAcc('settings', 'CmdorCtrl+,'),
     click() {
       activate('settings');
     }
   }, {
     label: 'Sign out',
-    accelerator: 'CmdorCtrl+Alt+Q',
+    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
     click() {
       activate('sign-out');
     }
   }, {
     label: 'Toggle Sidebar',
-    accelerator: 'CmdorCtrl+O',
+    accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
     click() {
       activate('toggle-sidebar');
     }
   }, {
     label: 'Return to Todos',
-    accelerator: 'Esc',
+    accelerator: setAcc('return', 'Esc'),
     click() {
       activate('return');
     }
@@ -261,13 +301,13 @@ const darwinTpl = [{
     type: 'separator'
   }, {
     label: 'Toggle Sepia Mode',
-    accelerator: 'CmdOrCtrl+G',
+    accelerator: setAcc('toggle-sepia-mode', 'CmdOrCtrl+G'),
     click() {
       activate('toggle-sepia-mode');
     }
   }, {
     label: 'Toggle Dark Mode',
-    accelerator: 'CmdorCtrl+H',
+    accelerator: setAcc('toggle-dark-mode', 'CmdorCtrl+H'),
     click() {
       activate('toggle-dark-mode');
     }
@@ -337,25 +377,25 @@ const otherTpl = [{
     label: 'List',
     submenu: [{
       label: 'New List',
-      accelerator: 'CmdorCtrl+L',
+      accelerator: setAcc('new-list', 'CmdorCtrl+L'),
       click() {
         activate('new-list');
       }
     }, {
       label: 'Delete List',
-      accelerator: 'CmdorCtrl+Shift+D',
+      accelerator: setAcc('delete-list', 'CmdorCtrl+Shift+D'),
       click() {
         activate('delete-list');
       }
     }, {
       label: 'Rename List',
-      accelerator: 'CmdorCtrl+Y',
+      accelerator: setAcc('rename-list', 'CmdorCtrl+Y'),
       click() {
         activate('rename-list');
       }
     }, {
       label: 'Hide Completed Todos',
-      accelerator: 'CmdorCtrl+Shift+H',
+      accelerator: setAcc('hide-todo', 'CmdorCtrl+Shift+H'),
       click() {
         activate('hide-todo');
       }
@@ -364,31 +404,31 @@ const otherTpl = [{
     label: 'Todo',
     submenu: [{
       label: 'New Todo',
-      accelerator: 'CmdorCtrl+N',
+      accelerator: setAcc('new-todo', 'CmdorCtrl+N'),
       click() {
         activate('new-todo');
       }
     }, {
       label: 'Delete Todo',
-      accelerator: 'CmdorCtrl+D',
+      accelerator: setAcc('delete-todo', 'CmdorCtrl+D'),
       click() {
         activate('delete-todo');
       }
     }, {
       label: 'Rename Todo',
-      accelerator: 'CmdorCtrl+T',
+      accelerator: setAcc('rename-todo', 'CmdorCtrl+T'),
       click() {
         activate('rename-todo');
       }
     }, {
       label: 'Add to My Day',
-      accelerator: 'CmdorCtrl+K',
+      accelerator: setAcc('add-my-day', 'CmdorCtrl+K'),
       click() {
         activate('add-my-day');
       }
     }, {
       label: 'Complete Todo',
-      accelerator: 'CmdorCtrl+Shift+N',
+      accelerator: setAcc('complete-todo', 'CmdorCtrl+Shift+N'),
       click() {
         activate('complete-todo');
       }
@@ -397,25 +437,25 @@ const otherTpl = [{
     type: 'separator'
   }, {
     label: 'My Day',
-    accelerator: 'CmdorCtrl+M',
+    accelerator: setAcc('my-day', 'CmdorCtrl+M'),
     click() {
       activate('my-day');
     }
   }, {
     label: 'Set Reminder',
-    accelerator: 'CmdorCtrl+Shift+E',
+    accelerator: setAcc('set-reminder', 'CmdorCtrl+Shift+E'),
     click() {
       activate('set-reminder');
     }
   }, {
     label: 'Add Due Date',
-    accelerator: 'CmdorCtrl+Shift+T',
+    accelerator: setAcc('add-due-date', 'CmdorCtrl+Shift+T'),
     click() {
       activate('add-due-date');
     }
   }, {
     label: 'Toggle Cortana',
-    accelerator: 'CmdorCtrl+E',
+    accelerator: setAcc('toggle-cortana', 'CmdorCtrl+E'),
     click() {
       activate('toggle-cortana');
     }
@@ -423,25 +463,25 @@ const otherTpl = [{
     type: 'separator'
   }, {
     label: 'Settings',
-    accelerator: 'CmdorCtrl+,',
+    accelerator: setAcc('settings', 'CmdorCtrl+,'),
     click() {
       activate('settings');
     }
   }, {
     label: 'Sign out',
-    accelerator: 'CmdorCtrl+Alt+Q',
+    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
     click() {
       activate('sign-out');
     }
   }, {
     label: 'Toggle Sidebar',
-    accelerator: 'CmdorCtrl+O',
+    accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
     click() {
       activate('toggle-sidebar');
     }
   }, {
     label: 'Return to Todos',
-    accelerator: 'Esc',
+    accelerator: setAcc('return', 'Esc'),
     click() {
       activate('return');
     }
@@ -507,13 +547,13 @@ const otherTpl = [{
     type: 'separator'
   }, {
     label: 'Toggle Sepia Mode',
-    accelerator: 'CmdOrCtrl+G',
+    accelerator: setAcc('toggle-sepia-mode', 'CmdOrCtrl+G'),
     click() {
       activate('toggle-sepia-mode');
     }
   }, {
     label: 'Toggle Dark Mode',
-    accelerator: 'CmdorCtrl+H',
+    accelerator: setAcc('toggle-dark-mode', 'CmdorCtrl+H'),
     click() {
       activate('toggle-dark-mode');
     }
