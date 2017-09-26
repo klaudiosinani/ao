@@ -33,7 +33,8 @@
     "pack:windows": "electron-packager . --no-prune --overwrite --asar --out=dist --platform=win32 --arch=ia32 --icon=static/Icon.ico --version-string.ProductName=$npm_package_productName && cd dist/Ao-win32-ia32 && zip -ryq9 ../Ao-windows-v${npm_package_version}.zip *"
   },
   "dependencies": {
-    "ms": "0.7.2",
+    "ms": "^0.7.2",
+    "fs-extra": "^4.0.2",
     "simple-get": "^2.0.0",
     "electron-dl": "^1.9.0",
     "electron-is-dev": "^0.1.2",
@@ -45,8 +46,8 @@
     "xo": "^0.19.0",
     "electron": "^1.7.8",
     "electron-packager": "^8.7.2",
-    "electron-builder": "19.19.1",
-    "electron-builder-squirrel-windows": "19.19.1",
+    "electron-builder": "^19.19.1",
+    "electron-builder-squirrel-windows": "^19.19.1",
     "electron-installer-dmg": "^0.2.1"
   },
   "xo": {
