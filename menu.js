@@ -27,7 +27,7 @@ function getConfig() {
   if (!fs.existsSync(homeConfig)) {
     try {
       fs.copySync(defaultConfig, homeConfig);
-      console.log('Ao config file was created successfully.');
+      console.log('Ao config file was created successfully');
     } catch (err) {
       console.error(err);
     }
@@ -41,7 +41,8 @@ function getConfig() {
   return configData;
 }
 
-const aoConfig = getConfig();   // Get the user-defined settings
+// Get the user-defined settings
+const aoConfig = getConfig();
 
 function setAcc(custom, predifined) {
   // Return the custom or predifined shortcut keys
