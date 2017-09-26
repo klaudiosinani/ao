@@ -192,6 +192,12 @@ const darwinTpl = [{
       activate('sign-out');
     }
   }, {
+    label: 'Toggle Sidebar',
+    accelerator: 'CmdorCtrl+O',
+    click() {
+      activate('toggle-sidebar');
+    }
+  }, {
     label: 'Return to Todos',
     accelerator: 'Esc',
     click() {
@@ -426,6 +432,12 @@ const otherTpl = [{
     accelerator: 'CmdorCtrl+Alt+Q',
     click() {
       activate('sign-out');
+    }
+  }, {
+    label: 'Toggle Sidebar',
+    accelerator: 'CmdorCtrl+O',
+    click() {
+      activate('toggle-sidebar');
     }
   }, {
     label: 'Return to Todos',

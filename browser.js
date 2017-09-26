@@ -100,6 +100,17 @@ ipc.on('return', () => {
   document.querySelector('.detailFooter-close').click();
 });
 
+ipc.on('toggle-sidebar', () => {
+  // Toggle sidebar
+  const sidebar = document.querySelector('#sidebar');
+  const display = sidebar.style.display;
+  sidebar.style.display = display === '' ? 'none' : '';
+  // Adjust background theme
+  const themeBackground = document.querySelector('html[dir=ltr] .themeBackground');
+  const left = themeBackground.style.left;
+  themeBackground.style.left = left === '-280px' ? '280px' : '-280px';
+});
+
 function doubleClick(classSelector) {
   const doubleClicked = document.createEvent('MouseEvents');
   // Make it bubbly and cancelable
