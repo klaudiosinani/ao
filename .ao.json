@@ -19,6 +19,8 @@
     "toggle-sidebar": "CmdorCtrl+O",
     "return": "Esc",
     "toggle-sepia-mode": "CmdOrCtrl+G",
-    "toggle-dark-mode": "CmdorCtrl+H"
+    "toggle-dark-mode": "CmdorCtrl+H",
+    "toggle-vibrant-mode": "CmdOrCtrl+Alt+U",
+    "toggle-vibrant-dark-mode": "CmdOrCtrl+Alt+J"
   }
 }
