@@ -327,6 +327,18 @@ const darwinTpl = [{
       activate('toggle-dark-mode');
     }
   }, {
+    label: 'Toggle Vibrant Mode',
+    accelerator: setAcc('toggle-vibrant-mode', 'CmdOrCtrl+Alt+U'),
+    click() {
+      activate('toggle-vibrant-mode');
+    }
+  }, {
+    label: 'Toggle Vibrant Dark Mode',
+    accelerator: setAcc('toggle-vibrant-dark-mode', 'CmdOrCtrl+Alt+J'),
+    click() {
+      activate('toggle-vibrant-dark-mode');
+    }
+  }, {
     type: 'separator'
   }, {
     label: 'Navigate to Next List',

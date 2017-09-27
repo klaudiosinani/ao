@@ -11,6 +11,8 @@ module.exports = new Config({
     lastURL: 'https://todo.microsoft.com/?app',
     darkMode: false,
     sepiaMode: false,
+    vibrantMode: false,
+    vibrantDarkMode: false,
     alwaysOnTop: false
   }
 });

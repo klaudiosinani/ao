@@ -156,6 +156,8 @@ function untoggleDark() {
 
 ipc.on('toggle-dark-mode', () => {
   untoggleSepia();
+  untoggleVibrant();
+  untoggleDarkVibrant();
   // Toggle the dark theme
   config.set('darkMode', !config.get('darkMode'));
   darkMode();
@@ -172,9 +174,55 @@ function untoggleSepia() {
 
 ipc.on('toggle-sepia-mode', () => {
   untoggleDark();
+  untoggleVibrant();
+  untoggleDarkVibrant();
   // Toggle the sepia theme
   config.set('sepiaMode', !config.get('sepiaMode'));
   sepiaMode();
+});
+
+function vibrantMode() {
+  document.documentElement.classList.toggle('vibrant-mode', config.get('vibrantMode'));
+  // Activate vibrant mode on main window
+  ipc.send('activate-vibrant');
+  // Make app background transparent
+  document.documentElement.style.backgroundColor = 'transparent';
+}
+
+function untoggleVibrant() {
+  // Untoggle the vibrant theme
+  untoggleTheme('vibrantMode', vibrantMode);
+}
+
+ipc.on('toggle-vibrant-mode', () => {
+  untoggleDark();
+  untoggleSepia();
+  untoggleDarkVibrant();
+  // Toggle the vibrant theme
+  config.set('vibrantMode', !config.get('vibrantMode'));
+  vibrantMode();
+});
+
+function vibrantDarkMode() {
+  document.documentElement.classList.toggle('vibrant-dark-mode', config.get('vibrantDarkMode'));
+  // Activate dark vibrant mode on main window
+  ipc.send('activate-vibrant');
+  // Make app background transparent
+  document.documentElement.style.backgroundColor = 'transparent';
+}
+
+function untoggleDarkVibrant() {
+  // Untoggle the dark vibrant theme
+  untoggleTheme('vibrantDarkMode', vibrantDarkMode);
+}
+
+ipc.on('toggle-vibrant-dark-mode', () => {
+  untoggleDark();
+  untoggleSepia();
+  untoggleVibrant();
+  // Toggle the dark vibrant theme
+  config.set('vibrantDarkMode', !config.get('vibrantDarkMode'));
+  vibrantDarkMode();
 });
 
 function goToList(key) {
@@ -310,6 +358,12 @@ document.addEventListener('DOMContentLoaded', () => {
   sepiaMode();
   // Toggle dark mode
   darkMode();
+  // Toggle vibrant mode
+  vibrantMode();
+  // Toggle vibrant dark mode
+  vibrantDarkMode();
   // Prevent white flashing screen on startup
-  document.documentElement.style.backgroundColor = '#212121';
+  if (!config.get('vibrantMode') && !config.get('vibrantDarkMode')) {
+    document.documentElement.style.backgroundColor = '#212121';
+  }
 });

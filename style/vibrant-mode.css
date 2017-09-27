@@ -1,0 +1,99 @@
+html.vibrant-mode body {
+  background: transparent !important;
+}
+fhtml.vibrant-mode ::-webkit-scrollbar-track { /* Scrollbar track */
+  background: var(--transparent-white) !important;
+}
+html.vibrant-mode select {
+  background: var(--vibrant-grey);
+  border: 1px solid var(--vibrant-grey);
+}
+html.vibrant-mode #sidebar {
+  background: var(--transparent-white) !important;
+}
+html.vibrant-mode .todayToolbar-item.active, html.vibrant-mode .todayToolbar.active {
+  background: var(--vibrant-dark-grey) !important;
+}
+html.vibrant-mode .settingsSection-header, html.vibrant-mode button.notificationToast-cancelButton, html.vibrant-mode .notificationToast-text, html.vibrant-mode .modal .modal-content, html.vibrant-mode .editableContent-edit, html.vibrant-mode .datePicker-headerLabel, html.vibrant-mode .popover-title, html.vibrant-mode #detail .section-item:hover .section-description, html.vibrant-mode #detail .section-item:hover .section-title, html.vibrant-mode .editableContent.multiLine .editableContent-display, html.vibrant-mode .listItem .listItem-title, html.vibrant-mode .todayToolbar-title, html.vibrant-mode .userToolbar-name, html.vibrant-mode .taskItem-titleWrapper, html.vibrant-mode .taskCard-label, html.vibrant-mode .listItem.active .listItem-count, html.vibrant-mode .listItem:hover .listItem-count, html.vibrant-mode .addTask .addTask-input, html.vibrant-mode .popoverMenuItem .popoverMenuItem-label, html.vibrant-mode .searchToolbar input.searchToolbar-input[type=text], html.vibrant-mode .popover-header {
+  color: #767678 !important;
+}
+html.vibrant-mode #main .main-background {
+  background: var(--vibrant-grey) !important;
+}
+html.vibrant-mode #main .main-background {
+  border-left: 1px solid var(--vibrant-grey) !important;
+}
+html.vibrant-mode html[dir=ltr] #main .main-background {
+  background: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .taskItem {
+  background: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .taskItem.selected .taskItem-body {
+  background: var(--vibrant-dark-grey) !important;
+  box-shadow: inset 0 0 0 1px var(--vibrant-dark-grey) !important;
+}
+html.vibrant-mode .taskItem:hover .taskItem-body {
+  background-color: var(--vibrant-dark-grey) !important;
+  box-shadow: inset 0 0 0 1px var(--vibrant-dark-grey) !important;
+}
+html.vibrant-mode .active {
+  background-color: var(--vibrant-dark-grey) !important;
+}
+html.vibrant-mode .addTask {
+  background: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .listItem.active .emoji {
+  background-color: var(--trasparent-white) !important;
+}
+html.vibrant-mode div.backgroundLines, html.vibrant-mode #detail .detail-inner {
+  background: var(--trasparent-white) !important;
+}
+html.vibrant-mode .taskCard {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .detailFooter .detailFooter-trash:hover, html.vibrant-mode .detailFooter .detailFooter-close:hover, html.vibrant-mode .userToolbar:hover, html.vibrant-mode .listItem:hover, html.vibrant-mode .todayToolbar:hover, html.vibrant-mode .searchToolbar:hover, html.vibrant-mode .popoverMenuItem:hover, html.vibrant-mode .todayToolbar-item:hover, html.vibrant-mode #sidebar.search-is-open .searchToolbar-icon.stop:hover {
+    background-color: var(--vibrant-dark-grey) !important;
+}
+html.vibrant-mode .popover, html.vibrant-mode .popover-footer, html.vibrant-mode .popover-footerRight {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode #sidebar.search-is-open .sidebar-header .searchToolbar {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .avatar {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode #detail .section, html.vibrant-mode .detailHeader, html.vibrant-mode .detailFooter {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode #detail .detail-body {
+  background-color: var(--vibrant-dark-grey) !important;
+}
+html.vibrant-mode .editableContent-textarea {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .detailHeader .detailHeader-title:hover, html.vibrant-mode #detail .section-item:hover, html.vibrant-mode #detail .section-item.detailNote:hover {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode #detail .detail-inner {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .addList:active:hover, html.vibrant-mode .addList:hover, html.vibrant-mode .addList:hover:hover {
+  background-color: var(--vibrant-dark-grey) !important;
+}
+html.vibrant-mode .datePicker-gridCell.today.active {
+  border-radius: 50% !important;
+}
+html.vibrant-mode .modal {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .notificationToast {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .settingsSection-header {
+  background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .callout {
+  background-color: var(--vibrant-grey) !important;
+}

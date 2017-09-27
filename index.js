@@ -10,6 +10,7 @@ const config = require('./config');
 const update = require('./update');
 
 const app = electron.app;
+const ipcMain = electron.ipcMain;
 
 require('electron-debug')({enabled: true});
 require('electron-dl')();
@@ -101,6 +102,8 @@ app.on('ready', () => {
     }
     windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/dark-mode.css'), 'utf8'));
     windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/sepia-mode.css'), 'utf8'));
+    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/vibrant-mode.css'), 'utf8'));
+    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/vibrant-dark-mode.css'), 'utf8'));
     mainWindow.show();
   });
 
@@ -115,6 +118,20 @@ app.on('ready', () => {
     setTimeout(() => {
       update.checkUpdate();
     }, ms('2m'));
+  }
+});
+
+ipcMain.on('activate-vibrant', () => {
+  // Check if the vibrant theme was activated
+  if (config.get('vibrantMode')) {
+    // Set the app's background vibrant light
+    mainWindow.setVibrancy('light');
+  } else if (config.get('vibrantDarkMode')) {
+    // Set the app's background vibrant ultra dark
+    mainWindow.setVibrancy('ultra-dark');
+  } else {
+    // Remove background vibrancy
+    mainWindow.setVibrancy(null);
   }
 });
 
