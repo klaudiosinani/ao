@@ -52,6 +52,20 @@ exports.create = win => {
       activate('search');
     }
   }, {
+    type: 'separator'
+  }, {
+    label: 'My Day',
+    click() {
+      showWin();
+      activate('my-day');
+    }
+  }, {
+    label: 'New List',
+    click() {
+      showWin();
+      activate('new-list');
+    }
+  }, {
     label: 'New Todo',
     click() {
       showWin();
@@ -59,6 +73,12 @@ exports.create = win => {
     }
   }, {
     type: 'separator'
+  }, {
+    label: 'Toggle Sidebar',
+    click() {
+      showWin();
+      activate('toggle-sidebar');
+    }
   }, {
     label: 'Toggle Sepia Mode',
     click() {
