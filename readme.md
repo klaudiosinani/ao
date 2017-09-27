@@ -16,6 +16,7 @@ Ao is an unofficial, open source, third-party, community driven, free Microsoft 
   - [Focus Mode](#focus-mode)
   - [Compact Mode](#compact-mode)
   - [List Navigation](#note-navigation)
+  - [Custom Shortcut Keys](#custom-shortcut-keys)
   - [Scalable Interface](#scalable-interface)
   - [Keyboard Shortcuts](#keyboard-shortcuts)
   - [Cross Platform](https://github.com/klauscfhq/ao/releases/latest)
@@ -55,6 +56,10 @@ Get more for less. Simply downsize the window to enter the mode.
 
 Navigate seamlessly between your lists by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd> / <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd> or jump directly to a specific list by using <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
 
+### Custom Shortcut Keys
+
+Adjust Ao to your workflow. Navigate to `~/.ao.json` or press <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd> and modify any shortcut key to your own preference. To reset simply delete the ao config file from your home directory.
+
 ### Scalable Interface
 
 Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd> or <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
@@ -80,6 +85,7 @@ Toggle Dark Theme          | <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 Toggle Sepia Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
 Toggle Settings            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
 Make Text Smaller          | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
+Edit Shortcut Keys         | <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd>
 Reset Zoom Level           | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
 Navigate to Next Note      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
 Jump to List               | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
