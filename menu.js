@@ -153,6 +153,8 @@ const darwinTpl = [{
         activate('rename-list');
       }
     }, {
+      type: 'separator'
+    }, {
       label: 'Hide Completed Todos',
       accelerator: setAcc('hide-todo', 'CmdorCtrl+Shift+H'),
       click() {
@@ -179,6 +181,8 @@ const darwinTpl = [{
       click() {
         activate('rename-todo');
       }
+    }, {
+      type: 'separator'
     }, {
       label: 'Add to My Day',
       accelerator: setAcc('add-my-day', 'CmdorCtrl+K'),
@@ -233,6 +237,8 @@ const darwinTpl = [{
       activate('sign-out');
     }
   }, {
+    type: 'separator'
+  }, {
     label: 'Toggle Sidebar',
     accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
     click() {
@@ -243,6 +249,14 @@ const darwinTpl = [{
     accelerator: setAcc('return', 'Esc'),
     click() {
       activate('return');
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Edit Shortcut Keys',
+    accelerator: 'CmdorCtrl+.',
+    click() {
+      activate('edit-shortcuts');
     }
   }]
 }, {
@@ -395,6 +409,8 @@ const otherTpl = [{
         activate('rename-list');
       }
     }, {
+      type: 'separator'
+    }, {
       label: 'Hide Completed Todos',
       accelerator: setAcc('hide-todo', 'CmdorCtrl+Shift+H'),
       click() {
@@ -421,6 +437,8 @@ const otherTpl = [{
       click() {
         activate('rename-todo');
       }
+    }, {
+      type: 'separator'
     }, {
       label: 'Add to My Day',
       accelerator: setAcc('add-my-day', 'CmdorCtrl+K'),
@@ -475,6 +493,8 @@ const otherTpl = [{
       activate('sign-out');
     }
   }, {
+    type: 'separator'
+  }, {
     label: 'Toggle Sidebar',
     accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
     click() {
@@ -485,6 +505,14 @@ const otherTpl = [{
     accelerator: setAcc('return', 'Esc'),
     click() {
       activate('return');
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Edit Shortcut Keys',
+    accelerator: 'CmdorCtrl+.',
+    click() {
+      activate('edit-shortcuts');
     }
   }, {
     type: 'separator'

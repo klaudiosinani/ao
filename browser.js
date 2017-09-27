@@ -1,9 +1,17 @@
 'use strict';
+const path = require('path');
 const electron = require('electron');
+const os = require('os');
 const config = require('./config');
 
+const join = path.join;
+const shell = electron.shell;
 const ipc = electron.ipcRenderer;
 const webFrame = electron.webFrame;
+
+const oaJSON = '.ao.json'; // Config file name
+const homeDir = os.homedir();
+const homeConfig = join(homeDir, oaJSON); // Config file on home directory
 
 ipc.on('search', () => {
   // Search Todos
@@ -95,11 +103,6 @@ ipc.on('sign-out', () => {
   document.querySelector('.popoverMenu').children[3].click();
 });
 
-ipc.on('return', () => {
-  // Return back to Todos
-  document.querySelector('.detailFooter-close').click();
-});
-
 ipc.on('toggle-sidebar', () => {
   // Toggle sidebar
   const sidebar = document.querySelector('#sidebar');
@@ -109,6 +112,16 @@ ipc.on('toggle-sidebar', () => {
   const themeBackground = document.querySelector('html[dir=ltr] .themeBackground');
   const left = themeBackground.style.left;
   themeBackground.style.left = left === '-280px' ? '280px' : '-280px';
+});
+
+ipc.on('return', () => {
+  // Return back to Todos
+  document.querySelector('.detailFooter-close').click();
+});
+
+ipc.on('edit-shortcuts', () => {
+  // Toggle config file
+  shell.openExternal(homeConfig);
 });
 
 function doubleClick(classSelector) {
