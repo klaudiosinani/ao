@@ -11,9 +11,9 @@ Ao is an unofficial, open source, third-party, community driven, free Microsoft 
 - [Description](#description)
 - [Install](#install)
 - [Features](#features)
+  - [Vibrant Themes](#vibrant-themes) 🍎
   - [Sepia Theme](#sepia-theme)
   - [Dark Theme](#dark-theme)
-  - [Focus Mode](#focus-mode)
   - [Compact Mode](#compact-mode)
   - [List Navigation](#note-navigation)
   - [Custom Shortcut Keys](#custom-shortcut-keys)
@@ -28,6 +28,7 @@ Ao is an unofficial, open source, third-party, community driven, free Microsoft 
 - [Team](#team)
 - [License](#license)
 
+<sup>🍎 Macos only atm</sup><br/>
 <sup>✔️ Windows only atm</sup>
 
 ## Install
@@ -36,17 +37,17 @@ Head to the [releases](https://github.com/klauscfhq/ao/releases/latest) page and
 
 ## Features
 
+### Vibrant Themes
+
+Refreshing dark and light vibrant themes. Press <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> to activate them respectively.
+
 ### Sepia Theme
 
-Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
+Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
 
 ### Dark Theme
 
-Silky & relaxing. Make it yours by pressing <kbd>Cmd/Ctrl</kbd> <kbd>D</kbd>
-
-### Focus Mode
-
-Press <kbd>Cmd/Ctrl</kbd> <kbd>K</kbd> and immerse yourself in a distraction-free mode.
+Silky & relaxing. Make it yours by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 
 ### Compact Mode
 
@@ -65,6 +66,8 @@ Adjust Ao to your workflow. Navigate to `~/.ao.json` or press <kbd>Cmd/Ctrl</kbd
 Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd> or <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
 
 ### Keyboard shortcuts
+
+40+ keyboard shortcuts. Toggle anything in a flash.
 
 Description                | Keys
 -------------------------- | --------------------------
@@ -90,6 +93,8 @@ Reset Zoom Level           | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
 Navigate to Next Note      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
 Jump to List               | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
 Sign out                   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
+Toggle Vibrant Light Theme | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>U</kbd>
+Toggle Vibrant Dark Theme  | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>J</kbd>
 Delete List                | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>D</kbd>
 Add Due Date               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd>
 Reload Ao                  | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd>
