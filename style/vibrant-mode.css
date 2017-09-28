@@ -18,16 +18,16 @@ html.vibrant-mode .settingsSection-header, html.vibrant-mode button.notification
   color: #767678 !important;
 }
 html.vibrant-mode #main .main-background {
-  background: var(--vibrant-grey) !important;
+  background: var(--transparent-white) !important;
 }
 html.vibrant-mode #main .main-background {
-  border-left: 1px solid var(--vibrant-grey) !important;
+  border-left: 1px solid var(--transparent-white) !important;
 }
 html.vibrant-mode html[dir=ltr] #main .main-background {
   background: var(--vibrant-grey) !important;
 }
 html.vibrant-mode .taskItem {
-  background: var(--vibrant-grey) !important;
+  background: var(--transparent-white) !important;
 }
 html.vibrant-mode .taskItem.selected .taskItem-body {
   background: var(--vibrant-dark-grey) !important;
@@ -41,7 +41,7 @@ html.vibrant-mode .active {
   background-color: var(--vibrant-dark-grey) !important;
 }
 html.vibrant-mode .addTask {
-  background: var(--vibrant-grey) !important;
+  background: var(--transparenet-white) !important;
 }
 html.vibrant-mode .listItem.active .emoji {
   background-color: var(--trasparent-white) !important;
@@ -96,4 +96,7 @@ html.vibrant-mode .settingsSection-header {
 }
 html.vibrant-mode .callout {
   background-color: var(--vibrant-grey) !important;
+}
+html.vibrant-mode .themeComposition.big {
+  height: 150px !important;
 }

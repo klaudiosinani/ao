@@ -18,16 +18,16 @@ html.vibrant-dark-mode .settingsSection-header, html.vibrant-dark-mode button.no
   color: #767678 !important;
 }
 html.vibrant-dark-mode #main .main-background {
-  background: var(--dark-grey) !important;
+  background: var(--transparent-white) !important;
 }
 html.vibrant-dark-mode #main .main-background {
-  border-left: 1px solid var(--dark-grey) !important;
+  border-left: 1px solid var(--transparent-white) !important;
 }
 html.vibrant-dark-mode html[dir=ltr] #main .main-background {
   background: var(--dark-grey) !important;
 }
 html.vibrant-dark-mode .taskItem {
-  background: var(--dark-grey) !important;
+  background: var(--transparent-white) !important;
 }
 html.vibrant-dark-mode .taskItem.selected .taskItem-body {
   background: var(--grey) !important;
@@ -41,7 +41,7 @@ html.vibrant-dark-mode .active {
   background-color: var(--grey) !important;
 }
 html.vibrant-dark-mode .addTask {
-  background: var(--dark-grey) !important;
+  background: var(--transparenet-white) !important;
 }
 html.vibrant-dark-mode .listItem.active .emoji {
   background-color: var(--trasparent-white) !important;
@@ -96,4 +96,7 @@ html.vibrant-dark-mode .settingsSection-header {
 }
 html.vibrant-dark-mode .callout {
   background-color: var(--dark-grey) !important;
+}
+html.vibrant-dark-mode .themeComposition.big {
+  height: 150px !important;
 }
