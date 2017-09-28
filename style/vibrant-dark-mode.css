@@ -100,3 +100,6 @@ html.vibrant-dark-mode .callout {
 html.vibrant-dark-mode .themeComposition.big {
   height: 150px !important;
 }
+html.vibrant-dark-mode .todayToolbar-count {
+  color: #767678 !important;
+}

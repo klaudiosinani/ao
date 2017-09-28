@@ -94,3 +94,6 @@ html.dark-mode .settingsSection-header {
 html.dark-mode .callout {
   background-color: var(--dark-grey) !important;
 }
+html.dark-mode .todayToolbar-count {
+  color: #767678 !important;
+}
