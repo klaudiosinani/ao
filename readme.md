@@ -1,3 +1,9 @@
+<h1 align="center">
+      <a href="https://github.com/klauscfhq/ao">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/e64a6aae/media/list-navigation.gif" alt="Ao" width="100%">
+      </a>
+</h1>
+
 > ✔️ Charming MS To-Do desktop app
 
 [![Build Status](https://travis-ci.org/klauscfhq/ao.svg?branch=master)](https://travis-ci.org/klauscfhq/ao) [![Build status](https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true)](https://ci.appveyor.com/project/klauscfhq/ao) [![Dependency Status](https://dependencyci.com/github/klauscfhq/ao/badge)](https://dependencyci.com/github/klauscfhq/ao) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/klauscfhq/ao) [![Latest version](https://badge.fury.io/gh/klauscfhq%2Fao.svg)](https://github.com/klauscfhq/ao/releases) [![DLs](https://img.shields.io/github/downloads/klauscfhq/ao/total.svg)](https://github.com/klauscfhq/ao/releases)
