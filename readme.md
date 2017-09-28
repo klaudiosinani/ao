@@ -95,6 +95,12 @@ Adjust Ao to your workflow. Navigate to `~/.ao.json` or press <kbd>Cmd/Ctrl</kbd
 
 Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd> or <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
 
+<div align="center">
+      <a href="https://github.com/klauscfhq/ao">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/51d7d3d2/media/scalable-interface.gif" alt="Scalable Interface" width="100%">
+      </a>
+</div>
+
 ### Keyboard shortcuts
 
 40+ keyboard shortcuts. Toggle anything in a flash.
