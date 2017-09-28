@@ -85,6 +85,12 @@ Navigate seamlessly between your lists by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Tab<
 
 Adjust Ao to your workflow. Navigate to `~/.ao.json` or press <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd> and modify any shortcut key to your own preference. To reset simply delete the ao config file from your home directory.
 
+<div align="center">
+      <a href="https://github.com/klauscfhq/ao">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/ec52d820/media/custom-shortcut-keys.gif" alt="Custom Shortcut Keys" width="100%">
+      </a>
+</div>
+
 ### Scalable Interface
 
 Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd> or <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
