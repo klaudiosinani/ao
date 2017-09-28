@@ -65,6 +65,12 @@ Silky & relaxing. Make it yours by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 
 Get more for less. Simply downsize the window to enter the mode.
 
+<div align="center">
+      <a href="https://github.com/klauscfhq/ao">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/68a0d849/media/compact-mode.png" alt="Ao Compact Mode" width="70%">
+      </a>
+</div>
+
 ### List Navigation
 
 Navigate seamlessly between your lists by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd> / <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd> or jump directly to a specific list by using <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
