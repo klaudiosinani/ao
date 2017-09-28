@@ -51,6 +51,12 @@ Refreshing dark and light vibrant themes. Press <kbd>Cmd</kbd> <kbd>Alt</kbd> <k
 
 Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
 
+<div align="center">
+      <a href="https://github.com/klauscfhq/ao">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/3ff54861/media/sepia-theme.png" alt="Ao Sepia Theme" width="100%">
+      </a>
+</div>
+
 ### Dark Theme
 
 Silky & relaxing. Make it yours by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
