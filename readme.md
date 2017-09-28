@@ -55,6 +55,12 @@ Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>G</
 
 Silky & relaxing. Make it yours by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 
+<div align="center">
+      <a href="https://github.com/klauscfhq/ao">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/125924ed/media/dark-theme.png" alt="Ao Dark Theme" width="100%">
+      </a>
+</div>
+
 ### Compact Mode
 
 Get more for less. Simply downsize the window to enter the mode.
@@ -62,6 +68,12 @@ Get more for less. Simply downsize the window to enter the mode.
 ### List Navigation
 
 Navigate seamlessly between your lists by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd> / <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd> or jump directly to a specific list by using <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
+
+<div align="center">
+      <a href="https://github.com/klauscfhq/ao">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/e64a6aae/media/list-navigation.gif" alt="Note Navigation" width="100%">
+      </a>
+</div>
 
 ### Custom Shortcut Keys
 
