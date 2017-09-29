@@ -17,7 +17,7 @@ const homeConfig = join(homeDir, oaJSON); // Config file on home directory
 const defaultConfig = join(__dirname, '.', oaJSON); // Default config file directory
 
 const sourceURL = 'https://github.com/klauscfhq/ao';
-const homepageURL = 'https://github.com/klauscfhq/ao';
+const homepageURL = 'https://klauscfhq.github.io/ao';
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 const releaseURL = 'https://github.com/klauscfhq/ao/releases/latest';
 
