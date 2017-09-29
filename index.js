@@ -81,6 +81,10 @@ function createMainWindow() {
     e.preventDefault();
   });
 
+  aoWindow.on('unresponsive', e => {
+    console.log('Unresponsive Ao window. ', e);
+  });
+
   aoWindow.webContents.on('did-navigate-in-page', (e, url) => {
     config.set('lastURL', url);
   });
@@ -112,6 +116,10 @@ app.on('ready', () => {
     electron.shell.openExternal(url);
   });
 
+  windowContent.on('crashed', e => {
+    console.log('Ao window crashed. ', e);
+  });
+
   update.init(electron.Menu.getApplicationMenu());
 
   if (!isDevMode) {
@@ -133,6 +141,11 @@ ipcMain.on('activate-vibrant', () => {
     // Remove background vibrancy
     mainWindow.setVibrancy(null);
   }
+});
+
+process.on('uncaughtException', error => {
+  // Report uncaught exceptions
+  console.log(error);
 });
 
 app.on('activate', () => {
