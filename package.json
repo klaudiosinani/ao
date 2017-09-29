@@ -1,7 +1,7 @@
 {
   "name": "ao-app",
   "productName": "Ao",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "✔️Charming MS To-Do desktop app",
   "license": "MIT",
   "repository": "klauscfhq/ao",
@@ -14,7 +14,7 @@
     {
       "name": "Mario Sinani",
       "email": "mariosinani@protonmail.ch",
-      "url": "github.com/snowmancfhq"
+      "url": "github.com/mariocfhq"
     },
     {
       "name": "Thanasis Gkanos",
