@@ -6,11 +6,15 @@
 
 > ✔️ Charming MS To-Do desktop app
 
-[![Build Status](https://travis-ci.org/klauscfhq/ao.svg?branch=master)](https://travis-ci.org/klauscfhq/ao) [![Build status](https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true)](https://ci.appveyor.com/project/klauscfhq/ao) [![Dependency Status](https://dependencyci.com/github/klauscfhq/ao/badge)](https://dependencyci.com/github/klauscfhq/ao) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/klauscfhq/ao) [![Latest version](https://badge.fury.io/gh/klauscfhq%2Fao.svg)](https://github.com/klauscfhq/ao/releases) [![DLs](https://img.shields.io/github/downloads/klauscfhq/ao/total.svg)](https://github.com/klauscfhq/ao/releases)
+[![Build Status](https://travis-ci.org/klauscfhq/ao.svg?branch=master)](https://travis-ci.org/klauscfhq/ao) [![Build status](https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true)](https://ci.appveyor.com/project/klauscfhq/ao) [![Dependency Status](https://dependencyci.com/github/klauscfhq/ao/badge)](https://dependencyci.com/github/klauscfhq/ao) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/klauscfhq/ao) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/klauscfhq/ao) [![Latest version](https://badge.fury.io/gh/klauscfhq%2Fao.svg)](https://github.com/klauscfhq/ao/releases) [![DLs](https://img.shields.io/github/downloads/klauscfhq/ao/total.svg)](https://github.com/klauscfhq/ao/releases)
 
 ## Description
 
 Ao is an unofficial, open source, third-party, community driven, free Microsoft To-Do app with a handful of useful features.
+
+Come over to our [Gitter](https://gitter.im/klauscfhq/ao) channel to share your thoughts on the project or to just say hi.
+
+You can find more desktop apps [here](#related-apps).
 
 ## Contents
 
@@ -29,9 +33,9 @@ Ao is an unofficial, open source, third-party, community driven, free Microsoft 
   - Automagical Auto-updates ✔️
   - Desktop Notifications
   - Background Behavior
-- [Related](#related)
-- [Disclaimer](#disclaimer)
+- [Related Apps](#related-apps)
 - [Team](#team)
+- [Disclaimer](#disclaimer)
 - [License](#license)
 
 <sup>🍎 Macos only atm</sup><br/>
@@ -152,23 +156,23 @@ Hide Completed Todos       | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>H</kbd>
 Toggle Dev Tools           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd>
 Make Text Larger           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
 
-## Related
+## Related Apps
 
 More awesome desktop apps.
 
-- [Tusk](https://github.com/champloohq/tusk) - 🐘 Refined Evernote desktop app
-
-## Disclaimer
-
-Ao is an unofficial, open source, third-party, community driven, free app and is not affiliated in any way with Microsoft.
+- [Tusk](https://github.com/champloohq/tusk) - 🐘 Refined Evernote desktop app.
 
 ## Team
 
-**<>** with ❤ by
+Coded with ❤ by
 
 [![Klaus Sinani](https://avatars.githubusercontent.com/u/12670537?s=130)](https://github.com/klauscfhq) | [![Mario Sinani](https://avatars.githubusercontent.com/u/29512262?s=130)](https://github.com/mariocfhq) | [![Thanasis Gkanos](https://avatars1.githubusercontent.com/u/18072542?s=130)](https://github.com/ThanasisGkanos)
 --- | --- | ---
 [Klaus Sinani](https://github.com/klauscfhq) | [Mario Sinani](https://github.com/mariocfhq) | [Thanasis Gkanos](https://github.com/ThanasisGkanos)
+
+## Disclaimer
+
+Ao is an unofficial, open source, third-party, community driven, free app and is not affiliated in any way with Microsoft.
 
 ## License
 
