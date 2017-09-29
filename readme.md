@@ -47,6 +47,12 @@ Head to the [releases](https://github.com/klauscfhq/ao/releases/latest) page and
 
 Refreshing dark and light vibrant themes. Press <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> to activate them respectively.
 
+<div align="center">
+      <a href="https://github.com/klauscfhq/ao">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/7dfcf6cd/media/ao-vibrant.png" alt="Ao Vibrant Theme" width="100%">
+      </a>
+</div>
+
 ### Sepia Theme
 
 Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
