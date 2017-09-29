@@ -49,7 +49,7 @@ Head to the [releases](https://github.com/klauscfhq/ao/releases/latest) page and
 
 ### Vibrant Themes
 
-Refreshing dark and light vibrant themes. Press <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> to activate them respectively.
+Refreshing [dark](https://cdn.rawgit.com/klauscfhq/ao/55af062e/media/vibrant-dark-theme.png) and [light](https://cdn.rawgit.com/klauscfhq/ao/55af062e/media/vibrant-theme.png) vibrant themes. Press <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> to activate them respectively.
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
