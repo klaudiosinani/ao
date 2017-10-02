@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Preserve zoom factor
   const zoomFactor = config.get('zoomFactor');
   webFrame.setZoomFactor(zoomFactor);
-  //Toggle black mode
+  // Toggle black mode
   blackMode();
   // Toggle sepia mode
   sepiaMode();
