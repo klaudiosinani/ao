@@ -321,6 +321,12 @@ const darwinTpl = [{
       activate('toggle-sepia-mode');
     }
   }, {
+    label: 'Toggle Black Mode',
+    accelerator: setAcc('toggle-black-mode', 'CmdOrCtrl+W'),
+    click() {
+      activate('toggle-black-mode');
+    }
+  }, {
     label: 'Toggle Dark Mode',
     accelerator: setAcc('toggle-dark-mode', 'CmdorCtrl+H'),
     click() {
@@ -597,6 +603,12 @@ const otherTpl = [{
     accelerator: setAcc('toggle-dark-mode', 'CmdorCtrl+H'),
     click() {
       activate('toggle-dark-mode');
+    }
+  }, {
+    label: 'Toggle Black Mode',
+    accelerator: setAcc('toggle-black-mode', 'CmdorCtrl+W'),
+    click() {
+      activate('toggle-black-mode');
     }
   }, {
     type: 'separator'

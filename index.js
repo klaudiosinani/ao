@@ -35,7 +35,7 @@ if (functioning) {
 function createMainWindow() {
   const lastWindowState = config.get('lastWindowState');
   const maxWindowInteger = 2147483647;
-  const darkModeFlag = config.get('darkMode');
+  const darkModeFlag = config.get('darkMode') || config.get('blackMode');
   const lastURL = config.get('lastURL');
 
   const aoWindow = new electron.BrowserWindow({
@@ -104,6 +104,7 @@ app.on('ready', () => {
       // Make room for the traffic-lights on macos
       windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/macos.css'), 'utf8'));
     }
+    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/black-mode.css'), 'utf8'));
     windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/dark-mode.css'), 'utf8'));
     windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/sepia-mode.css'), 'utf8'));
     windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/vibrant-mode.css'), 'utf8'));

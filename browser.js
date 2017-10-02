@@ -145,6 +145,25 @@ function untoggleTheme(themeName, activateFunction) {
   }
 }
 
+function blackMode() {
+  document.documentElement.classList.toggle('black-mode', config.get('blackMode'));
+}
+
+function untoggleBlack() {
+  // Untoggle the black theme
+  untoggleTheme('blackMode', blackMode);
+}
+
+ipc.on('toggle-black-mode', () => {
+  untoggleDark();
+  untoggleSepia();
+  untoggleVibrant();
+  untoggleDarkVibrant();
+  // Toggle the black theme
+  config.set('blackMode', !config.get('blackMode'));
+  blackMode();
+});
+
 function darkMode() {
   document.documentElement.classList.toggle('dark-mode', config.get('darkMode'));
 }
@@ -155,6 +174,7 @@ function untoggleDark() {
 }
 
 ipc.on('toggle-dark-mode', () => {
+  untoggleBlack();
   untoggleSepia();
   untoggleVibrant();
   untoggleDarkVibrant();
@@ -173,6 +193,7 @@ function untoggleSepia() {
 }
 
 ipc.on('toggle-sepia-mode', () => {
+  untoggleBlack();
   untoggleDark();
   untoggleVibrant();
   untoggleDarkVibrant();
@@ -195,6 +216,7 @@ function untoggleVibrant() {
 }
 
 ipc.on('toggle-vibrant-mode', () => {
+  untoggleBlack();
   untoggleDark();
   untoggleSepia();
   untoggleDarkVibrant();
@@ -217,6 +239,7 @@ function untoggleDarkVibrant() {
 }
 
 ipc.on('toggle-vibrant-dark-mode', () => {
+  untoggleBlack();
   untoggleDark();
   untoggleSepia();
   untoggleVibrant();
@@ -354,6 +377,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Preserve zoom factor
   const zoomFactor = config.get('zoomFactor');
   webFrame.setZoomFactor(zoomFactor);
+  //Toggle black mode
+  blackMode();
   // Toggle sepia mode
   sepiaMode();
   // Toggle dark mode
