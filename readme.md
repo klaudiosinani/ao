@@ -138,6 +138,7 @@ Toggle My Day              | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
 Toggle Cortana             | <kbd>Cmd/Ctrl</kbd> <kbd>E</kbd>
 Toggle Dark Theme          | <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 Toggle Sepia Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
+Toggle Black Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>W</kbd>
 Toggle Settings            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
 Make Text Smaller          | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
 Edit Shortcut Keys         | <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd>
