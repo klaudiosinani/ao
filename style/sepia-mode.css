@@ -1,4 +1,4 @@
-fhtml.sepia-mode ::-webkit-scrollbar-track { /* Scrollbar track */
+html.sepia-mode ::-webkit-scrollbar-track { /* Scrollbar track */
   background: var(--sepia) !important;
 }
 html.sepia-mode select {

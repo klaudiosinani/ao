@@ -1,7 +1,7 @@
 html.vibrant-mode body {
   background: transparent !important;
 }
-fhtml.vibrant-mode ::-webkit-scrollbar-track { /* Scrollbar track */
+html.vibrant-mode ::-webkit-scrollbar-track { /* Scrollbar track */
   background: var(--transparent-white) !important;
 }
 html.vibrant-mode select {

@@ -1,4 +1,4 @@
-fhtml.dark-mode ::-webkit-scrollbar-track { /* Scrollbar track */
+html.dark-mode ::-webkit-scrollbar-track { /* Scrollbar track */
   background: var(--dark-grey) !important;
 }
 html.dark-mode select {
