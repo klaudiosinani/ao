@@ -86,6 +86,12 @@ exports.create = win => {
       activate('toggle-sepia-mode');
     }
   }, {
+    label: 'Toggle Black Mode',
+    click() {
+      showWin();
+      activate('toggle-black-mode');
+    }
+  }, {
     label: 'Toggle Dark Mode',
     click() {
       showWin();
