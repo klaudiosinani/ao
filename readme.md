@@ -67,6 +67,16 @@ Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>G</
       </a>
 </div>
 
+### Black Theme
+
+Deep focus materialized. Boost your productivity by pressing <kbd>Cmd/Ctrl</kbd> <kbd>W</kbd>
+
+<div align="center">
+      <a href="https://github.com/klauscfhq/ao">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/1e56aee0/media/black-theme.png" alt="Ao Black Theme" width="100%">
+      </a>
+</div>
+
 ### Dark Theme
 
 Silky & relaxing. Make it yours by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
