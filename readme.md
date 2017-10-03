@@ -23,6 +23,7 @@ You can find more desktop apps [here](#related-apps).
 - [Features](#features)
   - [Vibrant Themes](#vibrant-themes) 🍎
   - [Sepia Theme](#sepia-theme)
+  - [Black Theme](#black-theme)
   - [Dark Theme](#dark-theme)
   - [Compact Mode](#compact-mode)
   - [List Navigation](#note-navigation)
