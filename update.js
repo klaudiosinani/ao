@@ -23,8 +23,8 @@ function checkUpdate(err, res, data) {
     }
     // Intialize the update process
     latestVersion = data.version; // Get the latest version
-    console.log('Latest version of Tusk is: ' + latestVersion);
-    console.log('You are running Tusk on version: ' + currentVersion);
+    console.log('Latest version of Ao is: ' + latestVersion);
+    console.log('You are running Ao on version: ' + currentVersion);
     // Decide if the app should be updated
     decideUpdate(latestVersion, currentVersion);
     // Get user's response on update notification
@@ -46,7 +46,7 @@ function decideUpdate(latestVerion, currentVersion) {
       type: 'info',
       buttons: ['Download', 'Dismiss'],
       defaultId: 0, // Make `Download` the default action button
-      title: 'Update Tusk',
+      title: 'Update Ao',
       message: 'Version ' + latestVersion + ' is now available',
       detail: 'Click Download to get it now'
     });
