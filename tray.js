@@ -54,22 +54,25 @@ exports.create = win => {
   }, {
     type: 'separator'
   }, {
+    label: 'Create',
+    submenu: [{
+      label: 'New List',
+      click() {
+        showWin();
+        activate('new-list');
+      }
+    }, {
+      label: 'New Todo',
+      click() {
+        showWin();
+        activate('new-todo');
+      }
+    }]
+  }, {
     label: 'My Day',
     click() {
       showWin();
       activate('my-day');
-    }
-  }, {
-    label: 'New List',
-    click() {
-      showWin();
-      activate('new-list');
-    }
-  }, {
-    label: 'New Todo',
-    click() {
-      showWin();
-      activate('new-todo');
     }
   }, {
     type: 'separator'
@@ -80,23 +83,28 @@ exports.create = win => {
       activate('toggle-sidebar');
     }
   }, {
-    label: 'Toggle Sepia Mode',
-    click() {
-      showWin();
-      activate('toggle-sepia-mode');
-    }
+    type: 'separator'
   }, {
-    label: 'Toggle Black Mode',
-    click() {
-      showWin();
-      activate('toggle-black-mode');
-    }
-  }, {
-    label: 'Toggle Dark Mode',
-    click() {
-      showWin();
-      activate('toggle-dark-mode');
-    }
+    label: 'Toggle Theme',
+    submenu: [{
+      label: 'Sepia Theme',
+      click() {
+        showWin();
+        activate('toggle-sepia-mode');
+      }
+    }, {
+      label: 'Black Theme',
+      click() {
+        showWin();
+        activate('toggle-black-mode');
+      }
+    }, {
+      label: 'Dark Theme',
+      click() {
+        showWin();
+        activate('toggle-dark-mode');
+      }
+    }]
   }, {
     type: 'separator'
   }, {
