@@ -225,20 +225,6 @@ const darwinTpl = [{
   }, {
     type: 'separator'
   }, {
-    label: 'Settings',
-    accelerator: setAcc('settings', 'CmdorCtrl+,'),
-    click() {
-      activate('settings');
-    }
-  }, {
-    label: 'Sign out',
-    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
-    click() {
-      activate('sign-out');
-    }
-  }, {
-    type: 'separator'
-  }, {
     label: 'Toggle Sidebar',
     accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
     click() {
@@ -249,6 +235,20 @@ const darwinTpl = [{
     accelerator: setAcc('return', 'Esc'),
     click() {
       activate('return');
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Settings',
+    accelerator: setAcc('settings', 'CmdorCtrl+,'),
+    click() {
+      activate('settings');
+    }
+  }, {
+    label: 'Sign out',
+    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
+    click() {
+      activate('sign-out');
     }
   }, {
     type: 'separator'
@@ -315,35 +315,38 @@ const darwinTpl = [{
   }, {
     type: 'separator'
   }, {
-    label: 'Toggle Sepia Mode',
-    accelerator: setAcc('toggle-sepia-mode', 'CmdOrCtrl+G'),
-    click() {
-      activate('toggle-sepia-mode');
-    }
-  }, {
-    label: 'Toggle Black Mode',
-    accelerator: setAcc('toggle-black-mode', 'CmdOrCtrl+W'),
-    click() {
-      activate('toggle-black-mode');
-    }
-  }, {
-    label: 'Toggle Dark Mode',
-    accelerator: setAcc('toggle-dark-mode', 'CmdorCtrl+H'),
-    click() {
-      activate('toggle-dark-mode');
-    }
-  }, {
-    label: 'Toggle Vibrant Mode',
-    accelerator: setAcc('toggle-vibrant-mode', 'CmdOrCtrl+Alt+U'),
-    click() {
-      activate('toggle-vibrant-mode');
-    }
-  }, {
-    label: 'Toggle Vibrant Dark Mode',
-    accelerator: setAcc('toggle-vibrant-dark-mode', 'CmdOrCtrl+Alt+J'),
-    click() {
-      activate('toggle-vibrant-dark-mode');
-    }
+    label: 'Toggle Theme',
+    submenu: [{
+      label: 'Sepia Theme',
+      accelerator: setAcc('toggle-sepia-mode', 'CmdOrCtrl+G'),
+      click() {
+        activate('toggle-sepia-mode');
+      }
+    }, {
+      label: 'Black Theme',
+      accelerator: setAcc('toggle-black-mode', 'CmdOrCtrl+W'),
+      click() {
+        activate('toggle-black-mode');
+      }
+    }, {
+      label: 'Dark Theme',
+      accelerator: setAcc('toggle-dark-mode', 'CmdorCtrl+H'),
+      click() {
+        activate('toggle-dark-mode');
+      }
+    }, {
+      label: 'Vibrant Theme',
+      accelerator: setAcc('toggle-vibrant-mode', 'CmdOrCtrl+Alt+U'),
+      click() {
+        activate('toggle-vibrant-mode');
+      }
+    }, {
+      label: 'Vibrant Dark Theme',
+      accelerator: setAcc('toggle-vibrant-dark-mode', 'CmdOrCtrl+Alt+J'),
+      click() {
+        activate('toggle-vibrant-dark-mode');
+      }
+    }]
   }, {
     type: 'separator'
   }, {
@@ -499,20 +502,6 @@ const otherTpl = [{
   }, {
     type: 'separator'
   }, {
-    label: 'Settings',
-    accelerator: setAcc('settings', 'CmdorCtrl+,'),
-    click() {
-      activate('settings');
-    }
-  }, {
-    label: 'Sign out',
-    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
-    click() {
-      activate('sign-out');
-    }
-  }, {
-    type: 'separator'
-  }, {
     label: 'Toggle Sidebar',
     accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
     click() {
@@ -523,6 +512,20 @@ const otherTpl = [{
     accelerator: setAcc('return', 'Esc'),
     click() {
       activate('return');
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Settings',
+    accelerator: setAcc('settings', 'CmdorCtrl+,'),
+    click() {
+      activate('settings');
+    }
+  }, {
+    label: 'Sign out',
+    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
+    click() {
+      activate('sign-out');
     }
   }, {
     type: 'separator'
@@ -593,23 +596,26 @@ const otherTpl = [{
   }, {
     type: 'separator'
   }, {
-    label: 'Toggle Sepia Mode',
-    accelerator: setAcc('toggle-sepia-mode', 'CmdOrCtrl+G'),
-    click() {
-      activate('toggle-sepia-mode');
-    }
-  }, {
-    label: 'Toggle Dark Mode',
-    accelerator: setAcc('toggle-dark-mode', 'CmdorCtrl+H'),
-    click() {
-      activate('toggle-dark-mode');
-    }
-  }, {
-    label: 'Toggle Black Mode',
-    accelerator: setAcc('toggle-black-mode', 'CmdorCtrl+W'),
-    click() {
-      activate('toggle-black-mode');
-    }
+    label: 'Toggle Theme',
+    submenu: [{
+      label: 'Sepia Theme',
+      accelerator: setAcc('toggle-sepia-mode', 'CmdOrCtrl+G'),
+      click() {
+        activate('toggle-sepia-mode');
+      }
+    }, {
+      label: 'Dark Theme',
+      accelerator: setAcc('toggle-dark-mode', 'CmdorCtrl+H'),
+      click() {
+        activate('toggle-dark-mode');
+      }
+    }, {
+      label: 'Black Theme',
+      accelerator: setAcc('toggle-black-mode', 'CmdorCtrl+W'),
+      click() {
+        activate('toggle-black-mode');
+      }
+    }]
   }, {
     type: 'separator'
   }, {
