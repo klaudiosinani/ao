@@ -3,6 +3,7 @@ const path = require('path');
 const electron = require('electron');
 const os = require('os');
 const fs = require('fs-extra');
+const config = require('./config');
 
 const join = path.join;
 const app = electron.app;
@@ -632,6 +633,13 @@ const otherTpl = [{
     }
   }, {
     type: 'separator'
+  }, {
+    label: 'Toggle Menu Bar',
+    type: 'checkbox',
+    checked: config.get('menuBarVisible'),
+    click() {
+      activate('toggle-menu-bar');
+    }
   }, {
     label: 'Toggle Full Screen',
     accelerator: 'F11',

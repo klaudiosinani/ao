@@ -9,6 +9,7 @@ module.exports = new Config({
       height: 500
     },
     lastURL: 'https://todo.microsoft.com/?app',
+    menuBarVisible: false,
     blackMode: false,
     darkMode: false,
     sepiaMode: false,
