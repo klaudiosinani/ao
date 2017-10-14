@@ -1,10 +1,19 @@
 <h1 align="center">
-      <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/e64a6aae/media/list-navigation.gif" alt="Ao" width="100%">
-      </a>
+  <a href="https://github.com/klauscfhq/ao">
+    <img src="https://cdn.rawgit.com/klauscfhq/ao/99ec7f1f/media/logo.png"  alt="Ao" width="22%">
+  </a><br/>
+  Ao
 </h1>
 
-> ✔️ Elegant Microsoft To-Do desktop app
+<h4 align="center">
+  ✔️ Elegant Microsoft To-Do desktop app
+</h4>
+
+<div align="center">
+  <a href="https://github.com/klauscfhq/ao">
+    <img src="https://cdn.rawgit.com/klauscfhq/ao/e64a6aae/media/list-navigation.gif" alt="Ao" width="100%">
+  </a>
+</div>
 
 [![Build Status](https://travis-ci.org/klauscfhq/ao.svg?branch=master)](https://travis-ci.org/klauscfhq/ao) [![Build status](https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true)](https://ci.appveyor.com/project/klauscfhq/ao) [![Dependency Status](https://dependencyci.com/github/klauscfhq/ao/badge)](https://dependencyci.com/github/klauscfhq/ao) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/klauscfhq/ao) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/klauscfhq/ao) [![Latest version](https://badge.fury.io/gh/klauscfhq%2Fao.svg)](https://github.com/klauscfhq/ao/releases) [![DLs](https://img.shields.io/github/downloads/klauscfhq/ao/total.svg)](https://github.com/klauscfhq/ao/releases)
 
