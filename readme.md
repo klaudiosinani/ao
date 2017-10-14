@@ -1,8 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/klauscfhq/ao">
-    <img src="https://cdn.rawgit.com/klauscfhq/ao/99ec7f1f/media/logo.png"  alt="Ao" width="22%">
-  </a><br/>
-  Ao
+  <img src="https://cdn.rawgit.com/klauscfhq/ao/99ec7f1f/media/logo.png" width="23%"><br/>Ao
 </h1>
 
 <h4 align="center">
