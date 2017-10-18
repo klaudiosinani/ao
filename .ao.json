@@ -20,7 +20,7 @@
     "return": "Esc",
     "toggle-sepia-mode": "CmdOrCtrl+G",
     "toggle-dark-mode": "CmdorCtrl+H",
-    "toggle-black-mode": "CmdOrCtrl+W",
+    "toggle-black-mode": "CmdOrCtrl+B",
     "toggle-vibrant-mode": "CmdOrCtrl+Alt+U",
     "toggle-vibrant-dark-mode": "CmdOrCtrl+Alt+J"
   }

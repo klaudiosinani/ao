@@ -325,7 +325,7 @@ const darwinTpl = [{
       }
     }, {
       label: 'Black Theme',
-      accelerator: setAcc('toggle-black-mode', 'CmdOrCtrl+W'),
+      accelerator: setAcc('toggle-black-mode', 'CmdOrCtrl+B'),
       click() {
         activate('toggle-black-mode');
       }
@@ -621,7 +621,7 @@ const otherTpl = [{
       }
     }, {
       label: 'Black Theme',
-      accelerator: setAcc('toggle-black-mode', 'CmdorCtrl+W'),
+      accelerator: setAcc('toggle-black-mode', 'CmdorCtrl+B'),
       click() {
         activate('toggle-black-mode');
       }
