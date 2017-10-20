@@ -349,6 +349,15 @@ const darwinTpl = [{
       }
     }]
   }, {
+    label: 'Auto Night Mode',
+    type: 'checkbox',
+    checked: config.get('autoNightMode'),
+    accelerator: 'CmdorCtrl+Alt+N',
+    click(item) {
+      config.set('autoNightMode', item.checked);
+      activate('auto-night-mode');
+    }
+  }, {
     type: 'separator'
   }, {
     label: 'Navigate to Next List',
@@ -626,6 +635,15 @@ const otherTpl = [{
         activate('toggle-black-mode');
       }
     }]
+  }, {
+    label: 'Auto Night Mode',
+    type: 'checkbox',
+    checked: config.get('autoNightMode'),
+    accelerator: 'CmdorCtrl+Alt+N',
+    click(item) {
+      config.set('autoNightMode', item.checked);
+      activate('auto-night-mode');
+    }
   }, {
     type: 'separator'
   }, {

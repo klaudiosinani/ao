@@ -107,6 +107,15 @@ exports.create = win => {
       }
     }]
   }, {
+    label: 'Auto Night Mode',
+    type: 'checkbox',
+    checked: config.get('autoNightMode'),
+    click(item) {
+      showWin();
+      config.set('autoNightMode', item.checked);
+      activate('auto-night-mode');
+    }
+  }, {
     type: 'separator'
   }, {
     label: 'Hide Tray Icon',

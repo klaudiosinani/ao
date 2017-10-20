@@ -10,6 +10,7 @@ module.exports = new Config({
     },
     lastURL: 'https://todo.microsoft.com/?app',
     menuBarVisible: false,
+    autoNightMode: false,
     hideTray: false,
     blackMode: false,
     darkMode: false,
