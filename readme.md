@@ -35,6 +35,7 @@ You can find more desktop apps [here](#related-apps).
   - [List Navigation](#note-navigation)
   - [Custom Shortcut Keys](#custom-shortcut-keys)
   - [Scalable Interface](#scalable-interface)
+  - [Auto Night Mode](#auto-night-mode)
   - [Keyboard Shortcuts](#keyboard-shortcuts)
   - [Cross Platform](https://github.com/klauscfhq/ao/releases/latest)
   - Automagical Auto-updates ✔️
@@ -133,6 +134,10 @@ Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd>
         <img src="https://cdn.rawgit.com/klauscfhq/ao/51d7d3d2/media/scalable-interface.gif" alt="Scalable Interface" width="100%">
       </a>
 </div>
+
+### Auto Night Mode
+
+Press <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd> and allow Ao to intelligently adjust to your environment.
 
 ### Keyboard shortcuts
 
