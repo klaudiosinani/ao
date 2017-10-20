@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 const electron = require('electron');
+const config = require('./config');
 
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
@@ -105,6 +106,18 @@ exports.create = win => {
         activate('toggle-dark-mode');
       }
     }]
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Hide Tray Icon',
+    type: 'checkbox',
+    checked: config.get('hideTray'),
+    click(item) {
+      showWin();
+      config.set('hideTray', item.checked);
+      app.relaunch();
+      app.quit();
+    }
   }, {
     type: 'separator'
   }, {
