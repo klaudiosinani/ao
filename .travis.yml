@@ -15,6 +15,9 @@ addons:
       - icnsutils
       - graphicsmagick
       - rpm
+before_install:
+  # Remove expired MongoDB GPG key
+  - sudo rm /etc/apt/sources.list.d/mongodb-3.2.list
 install:
   - nvm install 6
   - npm install
