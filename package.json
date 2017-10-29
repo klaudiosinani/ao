@@ -37,6 +37,7 @@
     "fs-extra": "^4.0.2",
     "time-stamp": "^2.0.0",
     "simple-get": "^2.7.0",
+    "auto-launch": "^5.0.1",
     "electron-dl": "^1.10.0",
     "electron-is-dev": "^0.3.0",
     "electron-debug": "^1.4.0",

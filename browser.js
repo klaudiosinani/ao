@@ -375,6 +375,23 @@ ipc.on('next-list', goToNextList);
 
 ipc.on('previous-list', goToPreviewsList);
 
+function toggleAutoLaunch() {
+  // Decide whether or not the app should launch on login
+  const startup = require('./startup');
+
+  if (config.get('autoLaunch')) {
+    // Activate app launching
+    startup.activate();
+    console.log('Activated auto-launch on startup.');
+  } else {
+    // Deactivate app launching
+    startup.deactivate();
+    console.log('Deactivated auto-launch on startup.');
+  }
+}
+
+ipc.on('auto-launch', toggleAutoLaunch);
+
 ipc.on('zoom-in', () => {
   // Get zoom factor and increase it
   const currentZoomFactor = webFrame.getZoomFactor();
