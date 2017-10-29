@@ -47,12 +47,12 @@ function getConfig() {
 // Get the user-defined settings
 const aoConfig = getConfig();
 
-function setAcc(custom, predifined) {
-  // Return the custom or predifined shortcut keys
+function setAcc(custom, predefined) {
+  // Return the custom or predefined shortcut keys
   if (Object.prototype.hasOwnProperty.call(aoConfig.shortcutKeys, custom)) {
     return aoConfig.shortcutKeys[custom];
   }
-  return predifined;
+  return predefined;
 }
 
 function activate(custom) {
