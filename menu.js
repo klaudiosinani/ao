@@ -19,8 +19,10 @@ const defaultConfig = join(__dirname, '.', oaJSON); // Default config file direc
 
 const sourceURL = 'https://github.com/klauscfhq/ao';
 const homepageURL = 'https://klauscfhq.github.io/ao';
+const communityURL = 'https://gitter.im/klauscfhq/ao';
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
-const releaseURL = 'https://github.com/klauscfhq/ao/releases/latest';
+const searchURL = 'https://github.com/search?q=+is:issue+repo:klauscfhq/ao';
+const licenseURL = 'https://github.com/klauscfhq/ao/blob/master/license.md';
 
 function getConfig() {
   // Create a new default config file
@@ -61,6 +63,14 @@ function activate(custom) {
 }
 
 const helpSubmenu = [{
+  label: `View License`,
+  click() {
+    shell.openExternal(licenseURL);
+  }
+}, {
+  label: 'Version ' + app.getVersion(),
+  enabled: false
+}, {
   label: `Ao Homepage`,
   click() {
     shell.openExternal(homepageURL);
@@ -78,9 +88,14 @@ const helpSubmenu = [{
     shell.openExternal(issueURL);
   }
 }, {
-  label: `Latest Release`,
+  label: `Search Issues`,
   click() {
-    shell.openExternal(releaseURL);
+    shell.openExternal(searchURL);
+  }
+}, {
+  label: `Community Discussion`,
+  click() {
+    shell.openExternal(communityURL);
   }
 }];
 
