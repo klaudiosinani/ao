@@ -131,6 +131,10 @@ app.on('ready', () => {
     setTimeout(() => {
       update.checkUpdate();
     }, ms('2m'));
+
+    setInterval(() => {
+      update.checkUpdate();
+    }, ms('1h'));
   }
 });
 
