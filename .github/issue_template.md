@@ -5,7 +5,7 @@ Thank you for taking the time to contribute to Ao! ✨🎉
 ## Suggested quick smart steps
 
 - Run through the [contributing guidelines](https://github.com/klauscfhq/ao/blob/master/contributing.md)
-- Support questions are better asked in the project's [chat](https://gitter.im/tusk/Lobby). We will get back at you in a flash.
+- Support questions are better asked in the project's [chat](https://gitter.im/klauscfhq/ao). We will get back at you in a flash.
 - Ensure the issue is not already reported
 
 *Delete the above section and the content in the sections below before submitting your issue*
@@ -26,7 +26,7 @@ Copy the error message here
 
 ## Environment
 
-Tell us which operating system you are using, as well as which versions of [Ao](https://github.com/klauscfhq/ao/releases/latest).
+Tell us which operating system you are using, as well as which version of [Ao](https://github.com/klauscfhq/ao/releases/latest).
 Run the following script to get your OS info quickly.
 
 ```bash
