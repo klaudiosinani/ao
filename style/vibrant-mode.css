@@ -11,6 +11,9 @@ html.vibrant-mode select {
 html.vibrant-mode #sidebar {
   background: var(--transparent-white) !important;
 }
+html.vibrant-mode .sidebar-inner {
+  background: var(--transparent-white) !important;
+}
 html.vibrant-mode .todayToolbar-item.active, html.vibrant-mode .todayToolbar.active {
   background: var(--vibrant-dark-grey) !important;
 }
