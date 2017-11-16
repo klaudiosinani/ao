@@ -236,6 +236,20 @@ const darwinTpl = [{
       click() {
         activate('complete-todo');
       }
+    }, {
+      type: 'separator'
+    }, {
+      label: 'Set Reminder',
+      accelerator: setAcc('set-reminder', 'CmdorCtrl+Shift+E'),
+      click() {
+        activate('set-reminder');
+      }
+    }, {
+      label: 'Add Due Date',
+      accelerator: setAcc('add-due-date', 'CmdorCtrl+Shift+T'),
+      click() {
+        activate('add-due-date');
+      }
     }]
   }, {
     type: 'separator'
@@ -246,30 +260,10 @@ const darwinTpl = [{
       activate('my-day');
     }
   }, {
-    label: 'Set Reminder',
-    accelerator: setAcc('set-reminder', 'CmdorCtrl+Shift+E'),
-    click() {
-      activate('set-reminder');
-    }
-  }, {
-    label: 'Add Due Date',
-    accelerator: setAcc('add-due-date', 'CmdorCtrl+Shift+T'),
-    click() {
-      activate('add-due-date');
-    }
-  }, {
     label: 'Toggle Cortana',
     accelerator: setAcc('toggle-cortana', 'CmdorCtrl+E'),
     click() {
       activate('toggle-cortana');
-    }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Toggle Sidebar',
-    accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
-    click() {
-      activate('toggle-sidebar');
     }
   }, {
     label: 'Return to Todos',
@@ -286,14 +280,6 @@ const darwinTpl = [{
       activate('settings');
     }
   }, {
-    label: 'Sign out',
-    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
-    click() {
-      activate('sign-out');
-    }
-  }, {
-    type: 'separator'
-  }, {
     label: 'Launch on Start',
     type: 'checkbox',
     checked: config.get('autoLaunch'),
@@ -306,6 +292,14 @@ const darwinTpl = [{
     accelerator: 'CmdorCtrl+.',
     click() {
       activate('edit-shortcuts');
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Sign out',
+    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
+    click() {
+      activate('sign-out');
     }
   }]
 }, {
@@ -434,6 +428,12 @@ const darwinTpl = [{
       focusedWindow.setAlwaysOnTop(item.checked);
     }
   }, {
+    label: 'Toggle Side Bar',
+    accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
+    click() {
+      activate('toggle-sidebar');
+    }
+  }, {
     label: 'Toggle Full Screen',
     accelerator: 'Ctrl+Command+F',
     click: (item, focusedWindow) => {
@@ -542,6 +542,20 @@ const otherTpl = [{
       click() {
         activate('complete-todo');
       }
+    }, {
+      type: 'separator'
+    }, {
+      label: 'Set Reminder',
+      accelerator: setAcc('set-reminder', 'CmdorCtrl+Shift+E'),
+      click() {
+        activate('set-reminder');
+      }
+    }, {
+      label: 'Add Due Date',
+      accelerator: setAcc('add-due-date', 'CmdorCtrl+Shift+T'),
+      click() {
+        activate('add-due-date');
+      }
     }]
   }, {
     type: 'separator'
@@ -552,30 +566,10 @@ const otherTpl = [{
       activate('my-day');
     }
   }, {
-    label: 'Set Reminder',
-    accelerator: setAcc('set-reminder', 'CmdorCtrl+Shift+E'),
-    click() {
-      activate('set-reminder');
-    }
-  }, {
-    label: 'Add Due Date',
-    accelerator: setAcc('add-due-date', 'CmdorCtrl+Shift+T'),
-    click() {
-      activate('add-due-date');
-    }
-  }, {
     label: 'Toggle Cortana',
     accelerator: setAcc('toggle-cortana', 'CmdorCtrl+E'),
     click() {
       activate('toggle-cortana');
-    }
-  }, {
-    type: 'separator'
-  }, {
-    label: 'Toggle Sidebar',
-    accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
-    click() {
-      activate('toggle-sidebar');
     }
   }, {
     label: 'Return to Todos',
@@ -592,14 +586,6 @@ const otherTpl = [{
       activate('settings');
     }
   }, {
-    label: 'Sign out',
-    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
-    click() {
-      activate('sign-out');
-    }
-  }, {
-    type: 'separator'
-  }, {
     label: 'Launch on Start',
     type: 'checkbox',
     checked: config.get('autoLaunch'),
@@ -612,6 +598,14 @@ const otherTpl = [{
     accelerator: 'CmdorCtrl+.',
     click() {
       activate('edit-shortcuts');
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Sign out',
+    accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
+    click() {
+      activate('sign-out');
     }
   }, {
     type: 'separator'
@@ -742,6 +736,12 @@ const otherTpl = [{
     }
   }, {
     type: 'separator'
+  }, {
+    label: 'Toggle Side Bar',
+    accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
+    click() {
+      activate('toggle-sidebar');
+    }
   }, {
     label: 'Toggle Menu Bar',
     type: 'checkbox',
