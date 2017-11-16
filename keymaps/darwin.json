@@ -1,0 +1,27 @@
+{
+  "shortcutKeys":
+  {
+    "new-list": "Cmd+L",
+    "delete-list": "Cmd+Shift+D",
+    "rename-list": "Cmd+Y",
+    "hide-todo": "Cmd+Shift+H",
+    "new-todo": "Cmd+N",
+    "delete-todo": "Cmd+D",
+    "rename-todo": "Cmd+T",
+    "add-my-day": "Cmd+K",
+    "complete-todo": "Cmd+Shift+N",
+    "my-day": "Cmd+M",
+    "set-reminder": "Cmd+Shift+E",
+    "add-due-date": "Cmd+Shift+T",
+    "toggle-cortana": "Cmd+E",
+    "settings": "Cmd+,",
+    "sign-out": "Cmd+Alt+Q",
+    "toggle-sidebar": "Cmd+O",
+    "return": "Esc",
+    "toggle-sepia-mode": "Cmd+G",
+    "toggle-dark-mode": "Cmd+H",
+    "toggle-black-mode": "Cmd+B",
+    "toggle-vibrant-mode": "Cmd+Alt+U",
+    "toggle-vibrant-dark-mode": "Cmd+Alt+J"
+  }
+}
