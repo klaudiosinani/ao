@@ -28,6 +28,7 @@
     "pack": "build --dir",
     "dist": "build --publish never",
     "clean": "node ./bin/clean.js",
+    "authors": "./bin/update-authors.sh",
     "pack-all": "npm run pack:macos && npm run pack:linux && npm run pack:windows",
     "pack:macos": "electron-packager . --no-prune --overwrite --asar --out=dist --platform=darwin --arch=x64 --icon=static/Icon.icns && cd dist/Ao-darwin-x64 && zip -ryXq9 ../Ao-macos-v${npm_package_version}.zip Ao.app && electron-installer-dmg ../Ao-darwin-x64/Ao.app Ao --icon=../../static/Icon.icns && cp Ao.dmg  ../../dist",
     "pack:linux": "electron-packager . --no-prune --overwrite --out=dist --platform=linux --arch=x64 && cd dist/Ao-linux-x64/ && zip -ryq9 ../Ao-linux-v${npm_package_version}.zip *",
