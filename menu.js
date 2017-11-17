@@ -6,10 +6,11 @@ const fs = require('fs-extra');
 const config = require('./config');
 
 const join = path.join;
-const resolve = path.resolve;
 const app = electron.app;
+const resolve = path.resolve;
 const shell = electron.shell;
 const appName = app.getName();
+const platform = process.platform;
 const BrowserWindow = electron.BrowserWindow;
 
 let configData;
@@ -17,6 +18,7 @@ let defaultConfigPath; // Default config file directory
 const oaJSON = '.ao.json'; // Config file name
 const homeDir = os.homedir();
 const homeConfig = join(homeDir, oaJSON); // Config file on home directory
+const keymapsDir = resolve(__dirname, 'keymaps'); // Keymaps directory
 
 const sourceURL = 'https://github.com/klauscfhq/ao';
 const homepageURL = 'https://klauscfhq.github.io/ao';
@@ -25,32 +27,31 @@ const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 const searchURL = 'https://github.com/search?q=+is:issue+repo:klauscfhq/ao';
 const licenseURL = 'https://github.com/klauscfhq/ao/blob/master/license.md';
 
-function getPath(platform) {
+function getPath() {
   // Retrieve the default path of the platform-dedicated config file
   switch (platform) {
     case ('darwin'):
-      defaultConfigPath = resolve('keymaps', 'darwin.json');
+      defaultConfigPath = join(keymapsDir, 'darwin.json');
       break;
 
     case ('linux'):
-      defaultConfigPath = resolve('keymaps', 'linux.json');
+      defaultConfigPath = join(keymapsDir, 'linux.json');
       break;
 
     case ('win32'):
-      defaultConfigPath = resolve('keymaps', 'win32.json');
+      defaultConfigPath = join(keymapsDir, 'win32.json');
       break;
 
     default:
-      defaultConfigPath = resolve('keymaps', 'linux.json');
+      defaultConfigPath = join(keymapsDir, 'linux.json');
       break;
   }
   return defaultConfigPath;
 }
 
 function getConfig() {
-  const platform = process.platform;
   // Get the dedicated config file for each platform
-  const defaultConfig = getPath(platform);
+  const defaultConfig = getPath();
   // Create a new default config file if it does not already exist
   if (!fs.existsSync(homeConfig)) {
     try {
