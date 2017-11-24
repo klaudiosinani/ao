@@ -22,32 +22,35 @@ Come over to our [Gitter](https://gitter.im/klauscfhq/ao) channel to share your 
 
 You can find more desktop apps [here](#related-apps).
 
+## Features
+
+- [Vibrant Themes](#vibrant-themes) 🍎
+- [Sepia Theme](#sepia-theme)
+- [Black Theme](#black-theme)
+- [Dark Theme](#dark-theme)
+- [Compact Mode](#compact-mode)
+- [List Navigation](#note-navigation)
+- [Custom Shortcut Keys](#custom-shortcut-keys)
+- [Scalable Interface](#scalable-interface)
+- [Auto Night Mode](#auto-night-mode)
+- [Keyboard Shortcuts](#keyboard-shortcuts)
+- [Cross Platform](https://github.com/klauscfhq/ao/releases/latest)
+- Automagical Auto-updates ✔️
+- Desktop Notifications
+- Background Behavior
+
+<sup>🍎 Macos only atm</sup><br/>
+<sup>✔️ Windows only atm</sup>
+
 ## Contents
 
 - [Description](#description)
-- [Install](#install)
 - [Features](#features)
-  - [Vibrant Themes](#vibrant-themes) 🍎
-  - [Sepia Theme](#sepia-theme)
-  - [Black Theme](#black-theme)
-  - [Dark Theme](#dark-theme)
-  - [Compact Mode](#compact-mode)
-  - [List Navigation](#note-navigation)
-  - [Custom Shortcut Keys](#custom-shortcut-keys)
-  - [Scalable Interface](#scalable-interface)
-  - [Auto Night Mode](#auto-night-mode)
-  - [Keyboard Shortcuts](#keyboard-shortcuts)
-  - [Cross Platform](https://github.com/klauscfhq/ao/releases/latest)
-  - Automagical Auto-updates ✔️
-  - Desktop Notifications
-  - Background Behavior
+- [Install](#install)
 - [Related Apps](#related-apps)
 - [Team](#team)
 - [Disclaimer](#disclaimer)
 - [License](#license)
-
-<sup>🍎 Macos only atm</sup><br/>
-<sup>✔️ Windows only atm</sup>
 
 ## Install
 
