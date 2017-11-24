@@ -78,14 +78,6 @@ exports.create = win => {
   }, {
     type: 'separator'
   }, {
-    label: 'Toggle Sidebar',
-    click() {
-      showWin();
-      activate('toggle-sidebar');
-    }
-  }, {
-    type: 'separator'
-  }, {
     label: 'Toggle Theme',
     submenu: [{
       label: 'Sepia Theme',
