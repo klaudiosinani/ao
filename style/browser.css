@@ -29,6 +29,12 @@ body {
 #sidebar .sidebar-header { /* Remove box sidebar-header shadow */
   box-shadow: 0 0px 0 rgba(0,0,0,0) !important;
 }
+#main .addTask {
+  box-shadow: none !important;
+}
+#main .backgroundLines {
+  border-top: none !important;
+}
 @media all and (max-width: 540px) {
 	#sidebar { /* Hide sidebar on Compact Mode */
     display: none !important;
