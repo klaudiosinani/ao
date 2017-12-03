@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "xo": "^0.19.0",
-    "electron": "1.7.8",
+    "electron": "1.7.9",
     "electron-packager": "9.1.0",
     "electron-builder": "19.33.0",
     "electron-builder-squirrel-windows": "19.33.0",
