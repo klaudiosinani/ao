@@ -37,6 +37,8 @@ You can find more desktop apps [here](#related-apps).
 - [Cross Platform](https://github.com/klauscfhq/ao/releases/latest)
 - Automagical Auto-updates ✔️
 - Desktop Notifications
+- Launch on Start
+- Launch Minimized
 - Background Behavior
 
 <sup>🍎 Macos only atm</sup><br/>
