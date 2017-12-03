@@ -104,15 +104,15 @@ ipc.on('sign-out', () => {
   document.querySelector('.popoverMenu').children[3].click();
 });
 
+function toggleSideBar() {
+  // Toggle the side bar & adjust the background theme
+  document.documentElement.classList.toggle('side-bar-hidden', config.get('sideBarHidden'));
+}
+
 ipc.on('toggle-sidebar', () => {
-  // Toggle sidebar
-  const sidebar = document.querySelector('#sidebar');
-  const display = sidebar.style.display;
-  sidebar.style.display = display === '' ? 'none' : '';
-  // Adjust background theme
-  const themeBackground = document.querySelector('html[dir=ltr] .themeBackground');
-  const left = themeBackground.style.left;
-  themeBackground.style.left = left === '-280px' ? '280px' : '-280px';
+  // Toggle on and off the side bar
+  config.set('sideBarHidden', !config.get('sideBarHidden'));
+  toggleSideBar();
 });
 
 ipc.on('return', () => {
@@ -454,6 +454,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Toggle the menu bar
   toggleMenuBar();
+  // Toggle the side bar
+  toggleSideBar();
   // Toggle black mode
   blackMode();
   // Toggle sepia mode

@@ -35,6 +35,12 @@ body {
 #main .backgroundLines {
   border-top: none !important;
 }
+html.side-bar-hidden div#sidebar {
+  display: none !important;
+}
+html.side-bar-hidden .themeBackground {
+  left: -280px !important;
+}
 @media all and (max-width: 540px) {
 	#sidebar { /* Hide sidebar on Compact Mode */
     display: none !important;

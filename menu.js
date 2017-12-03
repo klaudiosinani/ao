@@ -430,6 +430,8 @@ const darwinTpl = [{
     }
   }, {
     label: 'Toggle Side Bar',
+    type: 'checkbox',
+    checked: !config.get('sideBarHidden'),
     accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
     click() {
       activate('toggle-sidebar');
@@ -748,6 +750,8 @@ const otherTpl = [{
     type: 'separator'
   }, {
     label: 'Toggle Side Bar',
+    type: 'checkbox',
+    checked: !config.get('sideBarHidden'),
     accelerator: setAcc('toggle-sidebar', 'CmdorCtrl+O'),
     click() {
       activate('toggle-sidebar');
