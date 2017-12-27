@@ -1,27 +1,26 @@
 {
-  "shortcutKeys":
-  {
-    "new-list": "Ctrl+L",
-    "delete-list": "Ctrl+Shift+D",
-    "rename-list": "Ctrl+Y",
-    "hide-todo": "Ctrl+Shift+H",
-    "new-todo": "Ctrl+N",
-    "delete-todo": "Ctrl+D",
-    "rename-todo": "Ctrl+T",
+  "shortcutKeys": {
+    "add-due-date": "Ctrl+Shift+T",
     "add-my-day": "Ctrl+K",
     "complete-todo": "Ctrl+Shift+N",
+    "delete-list": "Ctrl+Shift+D",
+    "delete-todo": "Ctrl+D",
+    "hide-todo": "Ctrl+Shift+H",
     "my-day": "Ctrl+M",
+    "new-list": "Ctrl+L",
+    "new-todo": "Ctrl+N",
+    "rename-list": "Ctrl+Y",
+    "rename-todo": "Ctrl+T",
+    "return": "Esc",
     "set-reminder": "Ctrl+Shift+E",
-    "add-due-date": "Ctrl+Shift+T",
-    "toggle-cortana": "Ctrl+E",
     "settings": "Ctrl+,",
     "sign-out": "Ctrl+Alt+Q",
-    "toggle-sidebar": "Ctrl+O",
-    "return": "Esc",
-    "toggle-sepia-mode": "Ctrl+G",
-    "toggle-dark-mode": "Ctrl+H",
     "toggle-black-mode": "Ctrl+B",
-    "toggle-vibrant-mode": "Ctrl+Alt+U",
-    "toggle-vibrant-dark-mode": "Ctrl+Alt+J"
+    "toggle-cortana": "Ctrl+E",
+    "toggle-dark-mode": "Ctrl+H",
+    "toggle-sepia-mode": "Ctrl+G",
+    "toggle-sidebar": "Ctrl+O",
+    "toggle-vibrant-dark-mode": "Ctrl+Alt+J",
+    "toggle-vibrant-mode": "Ctrl+Alt+U"
   }
 }
