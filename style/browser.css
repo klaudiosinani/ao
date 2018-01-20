@@ -29,6 +29,9 @@ body {
 #sidebar .sidebar-header { /* Remove box sidebar-header shadow */
   box-shadow: 0 0px 0 rgba(0,0,0,0) !important;
 }
+#sidebar .otherApps { /* Hide `Download App` message */
+  display: none !important;
+}
 #main .addTask {
   box-shadow: none !important;
 }
