@@ -39,19 +39,19 @@ install:
   - npm prune
 script:
   - npm test
-- |
-  if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-    docker run --rm -ti \
-      --env-file <(env | grep -iE 'DEBUG|NODE_|ELECTRON_|YARN_|NPM_|CI|CIRCLE|TRAVIS|APPVEYOR_|CSC_|GH_|GITHUB_|BT_|AWS_|STRIP|BUILD_') \
-      --env ELECTRON_CACHE="/root/.cache/electron" \
-      --env ELECTRON_BUILDER_CACHE="/root/.cache/electron-builder" \
-      -v ${PWD}:/project \
-      -v ~/.cache/electron:/root/.cache/electron \
-      -v ~/.cache/electron-builder:/root/.cache/electron-builder \
-      -v ~/.cache/snapcraft:/root/.cache/snapcraft \
-      electronuserland/builder:8 \
-      /bin/bash -c "apt-get update && apt-get install libsecret-1-dev -y && npm run dist"
-  fi
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      docker run --rm -ti \
+        --env-file <(env | grep -iE 'DEBUG|NODE_|ELECTRON_|YARN_|NPM_|CI|CIRCLE|TRAVIS|APPVEYOR_|CSC_|GH_|GITHUB_|BT_|AWS_|STRIP|BUILD_') \
+        --env ELECTRON_CACHE="/root/.cache/electron" \
+        --env ELECTRON_BUILDER_CACHE="/root/.cache/electron-builder" \
+        -v ${PWD}:/project \
+        -v ~/.cache/electron:/root/.cache/electron \
+        -v ~/.cache/electron-builder:/root/.cache/electron-builder \
+        -v ~/.cache/snapcraft:/root/.cache/snapcraft \
+        electronuserland/builder:8 \
+        /bin/bash -c "apt-get update && apt-get install libsecret-1-dev -y && npm run dist"
+    fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then npm run pack:macos; fi
 before_deploy:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf dist/linux-*; fi
