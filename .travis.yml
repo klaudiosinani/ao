@@ -54,7 +54,7 @@ script:
     fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then npm run pack:macos; fi
 before_deploy:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf dist/linux-*; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo rm -rf dist/linux-*; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then rm -rf dist/Ao-darwin-x64; fi
 deploy:
   provider: releases
