@@ -8,8 +8,8 @@ matrix:
     - os: linux
       env: CC=clang CXX=clang++ npm_config_clang=1
       compiler: clang
-    services:
-      - docker
+      services:
+        - docker
 addons:
   apt:
     packages:
