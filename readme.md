@@ -22,7 +22,7 @@ Come over to our [Gitter](https://gitter.im/klauscfhq/ao) channel to share your 
 
 You can find more desktop apps [here](#related-apps).
 
-## Features
+## Highlights
 
 - [Vibrant Themes](#vibrant-themes) 🍎
 - [Sepia Theme](#sepia-theme)
@@ -47,8 +47,9 @@ You can find more desktop apps [here](#related-apps).
 ## Contents
 
 - [Description](#description)
-- [Features](#features)
+- [Highlights](#highlights)
 - [Install](#install)
+- [Features](#features)
 - [Related Apps](#related-apps)
 - [Team](#team)
 - [Disclaimer](#disclaimer)
@@ -198,9 +199,9 @@ More awesome desktop apps.
 
 Coded with ❤ by
 
-[![Klaus Sinani](https://avatars.githubusercontent.com/u/12670537?s=130)](https://github.com/klauscfhq) | [![Mario Sinani](https://avatars.githubusercontent.com/u/29512262?s=130)](https://github.com/mariocfhq) | [![Thanasis Gkanos](https://avatars1.githubusercontent.com/u/18072542?s=130)](https://github.com/ThanasisGkanos)
---- | --- | ---
-[Klaus Sinani](https://github.com/klauscfhq) | [Mario Sinani](https://github.com/mariocfhq) | [Thanasis Gkanos](https://github.com/ThanasisGkanos)
+- Klaus Sinani [(@klauscfhq)](https://github.com/klauscfhq) 
+- Mario Sinani [(@mariocfhq)](https://github.com/mariocfhq)
+- Thanasis Gkanos [(@ThanasisGkanos)](https://github.com/ThanasisGkanos)
 
 ## Disclaimer
 
