@@ -61,7 +61,11 @@ Head to the [releases](https://github.com/klauscfhq/ao/releases/latest) page and
 
 Ubuntu Linux users can directly install through [`Snap`](https://snapcraft.io/ao-app/) `snap install ao-app`
 
-Arch Linux users can directly install through [AUR](https://aur.archlinux.org/packages/ao/) `yaourt ao` 
+Arch Linux users can directly install through [`AUR`](https://aur.archlinux.org/packages/ao/) `yaourt ao` 
+
+#### Note
+
+The version available on `AUR` may not be the latest. If that is the case, please consider downloading directly from the [Github releases](https://github.com/klauscfhq/ao/releases/latest) page.
 
 ## Features
 
