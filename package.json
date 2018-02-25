@@ -60,6 +60,10 @@
     ]
   },
   "build": {
+    "snap": {
+      "grade": "stable",
+      "confinement": "classic"
+    },
     "files": [
       "**/*",
       "!media${/*}",
