@@ -23,7 +23,7 @@ exports.create = win => {
   }
 
   const iconPath = path.join(__dirname, 'static/IconTray.png');
-  const notifyIconPath = path.join(__dirname, 'static/i.jpg');
+  const notifyIconPath = path.join(__dirname, 'static/NotifyIconTray.png');
 
   const toggleWin = () => {
     // Toggle/untoggle window
