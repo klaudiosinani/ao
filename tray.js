@@ -145,20 +145,22 @@ exports.create = win => {
   tray.setToolTip(`${app.getName()}`);
   tray.setContextMenu(contextMenu);
   tray.on('click', toggleWin);
+
+  ipcMain.on('notification-shown', (event, arg) => {
+    if (win.isMinimized() || !win.isVisible()) {
+      tray.setImage(notificationTrayIconPath);
+    }
+    //var nodeConsole = require('console');
+    //nodecon.log('TTTest');
+    //mainWindow.setMenuBarVisibility(false);
+    console.log('changed!!!!');
+  });
+  
+  ipcMain.on('notification-hidden', (event, arg) => {
+    tray.setImage(defaultTrayIconPath);
+    //var nodeConsole = require('console');
+    //nodecon.log('TTTest');
+    //mainWindow.setMenuBarVisibility(false);
+    //console.log('changed!!!!');
+  });
 };
-
-ipcMain.on('notification-shown', (event, arg) => {
-  tray.setImage(notificationTrayIconPath);
-  //var nodeConsole = require('console');
-  //nodecon.log('TTTest');
-  //mainWindow.setMenuBarVisibility(false);
-  //console.log('changed!!!!');
-});
-
-ipcMain.on('notification-hidden', (event, arg) => {
-  tray.setImage(defaultTrayIconPath);
-  //var nodeConsole = require('console');
-  //nodecon.log('TTTest');
-  //mainWindow.setMenuBarVisibility(false);
-  //console.log('changed!!!!');
-});

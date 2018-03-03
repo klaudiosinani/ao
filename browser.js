@@ -471,6 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.backgroundColor = '#212121';
   }
 
+  // intercept notification (reminder) block changes and throw our own event in case of any change
   addEventForChild(document.getElementsByTagName('body')[0], 'DOMSubtreeModified', '.notifications', function (matchingChild) {
     if (matchingChild != null) {
       console.log('matchingChild', matchingChild.innerHTML);
@@ -495,10 +496,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // observer.observe(targetNode, { attributes: true, childList: true });  
 });
 
+// analog of jQuery.on(...)
 function addEventForChild(parent, eventName, childSelector, cb){      
   parent.addEventListener(eventName, function(event){
     let clickedElement = event.target;
-    if (clickedElement != null) {
+    if (clickedElement && clickedElement.closest) {
       let matchingChild = clickedElement.closest(childSelector)
       cb(matchingChild)
     }
