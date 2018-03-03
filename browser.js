@@ -482,18 +482,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-  // console.log('targNode', document.querySelector('body'));
-  // //console.log('targNode', document.querySelector('body'));
-  // var targetNode = document.querySelector('.notifications')[0];
-  
-  // //ipc.send('notification-change');
-
-  // var observer = new MutationObserver(function(mutationsList) {
-  //   ipc.send('notification-change');
-  // });
-
-  // // Start observing the target node for configured mutations
-  // observer.observe(targetNode, { attributes: true, childList: true });  
 });
 
 // analog of jQuery.on(...)

@@ -149,18 +149,10 @@ exports.create = win => {
     if (win.isMinimized() || !win.isVisible()) {
       tray.setImage(notifyIconPath);
     }
-    //var nodeConsole = require('console');
-    //nodecon.log('TTTest');
-    //mainWindow.setMenuBarVisibility(false);
-    console.log('changed!!!!');
   });
   
   ipcMain.on('notification-hidden', (event, arg) => {
     setDefaultTrayImage();
-    //var nodeConsole = require('console');
-    //nodecon.log('TTTest');
-    //mainWindow.setMenuBarVisibility(false);
-    //console.log('changed!!!!');
   });
 
   win.on('show', function () {
