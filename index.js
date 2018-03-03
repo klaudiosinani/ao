@@ -186,12 +186,14 @@ ipcMain.on('activate-menu-bar', () => {
 
 ipcMain.on('notification-shown', (event, arg) => {
   if (aoTray && mainWindow.isMinimized() || !mainWindow.isVisible()) {
+    mainWindow.flashFrame(true);
     aoTray.setNotifyTrayImage();
     mainWindow.setIcon(notifyAppIcon);
   }
 });
 
 ipcMain.on('notification-hidden', (event, arg) => {
+  //mainWindow.flashFrame(false);
   setDefaultAppImages();
 });
 
