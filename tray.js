@@ -9,6 +9,8 @@ const shell = electron.shell;
 let tray = null;
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 const ipcMain = electron.ipcMain;
+const defaultTrayIconPath = 'static/IconTray.png';
+const notificationTrayIconPath = 'static/i.jpg';
 
 function activate(command) {
   const appWindow = BrowserWindow.getAllWindows()[0];
@@ -22,7 +24,7 @@ exports.create = win => {
     return;
   }
 
-  const iconPath = path.join(__dirname, 'static/IconTray.png');
+  const iconPath = path.join(__dirname, defaultTrayIconPath);
 
   const toggleWin = () => {
     // Toggle/untoggle window
@@ -146,7 +148,7 @@ exports.create = win => {
 };
 
 ipcMain.on('notification-shown', (event, arg) => {
-  tray.setImage('static/i.jpg')
+  tray.setImage(notificationTrayIconPath);
   //var nodeConsole = require('console');
   //nodecon.log('TTTest');
   //mainWindow.setMenuBarVisibility(false);
@@ -154,7 +156,7 @@ ipcMain.on('notification-shown', (event, arg) => {
 });
 
 ipcMain.on('notification-hidden', (event, arg) => {
-  tray.setImage('static/IconTray.png')
+  tray.setImage(defaultTrayIconPath);
   //var nodeConsole = require('console');
   //nodecon.log('TTTest');
   //mainWindow.setMenuBarVisibility(false);

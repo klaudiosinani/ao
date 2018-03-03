@@ -497,9 +497,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function addEventForChild(parent, eventName, childSelector, cb){      
   parent.addEventListener(eventName, function(event){
-    var clickedElement = event.target;
+    let clickedElement = event.target;
     if (clickedElement != null) {
-      var matchingChild = clickedElement.closest(childSelector)
+      let matchingChild = clickedElement.closest(childSelector)
       cb(matchingChild)
     }
   })
