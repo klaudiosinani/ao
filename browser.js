@@ -472,11 +472,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Intercept notification (reminder) block changes and throw our own event in case of any change
-  addEventForChild(document.getElementsByTagName('body')[0], 'DOMSubtreeModified', '.notifications', (matchingChild) => {
+  addEventForChild(document.getElementsByTagName('body')[0], 'DOMSubtreeModified', '.notifications', matchingChild => {
     if (matchingChild !== null) {
       console.log('matchingChild', matchingChild.innerHTML);
-      if (matchingChild.innerHTML.trim() == '') {
-        ipc.send('notification-hidden');        
+      if (matchingChild.innerHTML.trim() === '') {
+        ipc.send('notification-hidden');
       } else {
         ipc.send('notification-shown');
       }
@@ -486,11 +486,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Analog of jQuery.on(...)
 function addEventForChild(parent, eventName, childSelector, cb) {
-  parent.addEventListener(eventName, (event) => {
+  parent.addEventListener(eventName, event => {
     const clickedElement = event.target;
     if (clickedElement && clickedElement.closest) {
       const matchingChild = clickedElement.closest(childSelector);
       cb(matchingChild);
     }
-  })
+  });
 }
