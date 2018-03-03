@@ -145,26 +145,17 @@ exports.create = win => {
   tray.setContextMenu(contextMenu);
   tray.on('click', toggleWin);
 
-  ipcMain.on('notification-shown', (event, arg) => {
-    if (win.isMinimized() || !win.isVisible()) {
-      tray.setImage(notifyIconPath);
-    }
-  });
-  
-  ipcMain.on('notification-hidden', (event, arg) => {
-    setDefaultTrayImage();
-  });
-
-  win.on('show', function () {
-    setDefaultTrayImage();
-  });
-
-  win.on('restore', function () {
-    setDefaultTrayImage();
-  });
-
   function setDefaultTrayImage() {
     tray.setImage(iconPath);
-  }    
-};
+  }
 
+  function setNotifyTrayImage() {
+    tray.setImage(notifyIconPath);
+  }
+  
+  return {
+    instance: tray,
+    setDefaultTrayImage: setDefaultTrayImage,
+    setNotifyTrayImage: setNotifyTrayImage
+  };
+};

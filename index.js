@@ -18,6 +18,7 @@ require('electron-context-menu')();
 
 let mainWindow;
 let exiting = false;
+let aoTray;
 
 const functioning = app.makeSingleInstance(() => {
   if (mainWindow) {
@@ -89,6 +90,14 @@ function createMainWindow() {
     config.set('lastURL', url);
   });
 
+  aoWindow.on('show', function () {
+    setDefaultTrayImage();
+  });
+
+  aoWindow.on('restore', function () {
+    setDefaultTrayImage();
+  });  
+
   return aoWindow;
 }
 
@@ -98,7 +107,7 @@ app.on('ready', () => {
   if (!config.get('hideTray')) {
     // Check whether or not the tray
     // icon is set to be hidden
-    tray.create(mainWindow);
+    aoTray = tray.create(mainWindow);
   }
   const windowContent = mainWindow.webContents;
 
@@ -172,6 +181,22 @@ ipcMain.on('activate-menu-bar', () => {
     mainWindow.setAutoHideMenuBar(true);
   }
 });
+
+ipcMain.on('notification-shown', (event, arg) => {
+  if (aoTray && mainWindow.isMinimized() || !mainWindow.isVisible()) {
+    aoTray.setNotifyTrayImage();
+  }
+});
+
+ipcMain.on('notification-hidden', (event, arg) => {
+  setDefaultTrayImage();
+});
+
+function setDefaultTrayImage() {
+  if (aoTray) {
+    aoTray.setDefaultTrayImage();
+  }
+}
 
 process.on('uncaughtException', error => {
   // Report uncaught exceptions
