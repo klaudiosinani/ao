@@ -8,6 +8,7 @@ const BrowserWindow = electron.BrowserWindow;
 const shell = electron.shell;
 let tray = null;
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
+const ipcMain = electron.ipcMain;
 
 function activate(command) {
   const appWindow = BrowserWindow.getAllWindows()[0];
@@ -143,3 +144,19 @@ exports.create = win => {
   tray.setContextMenu(contextMenu);
   tray.on('click', toggleWin);
 };
+
+ipcMain.on('notification-shown', (event, arg) => {
+  tray.setImage('static/i.jpg')
+  //var nodeConsole = require('console');
+  //nodecon.log('TTTest');
+  //mainWindow.setMenuBarVisibility(false);
+  //console.log('changed!!!!');
+});
+
+ipcMain.on('notification-hidden', (event, arg) => {
+  tray.setImage('static/IconTray.png')
+  //var nodeConsole = require('console');
+  //nodecon.log('TTTest');
+  //mainWindow.setMenuBarVisibility(false);
+  //console.log('changed!!!!');
+});

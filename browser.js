@@ -470,4 +470,37 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!config.get('vibrantMode') && !config.get('vibrantDarkMode')) {
     document.documentElement.style.backgroundColor = '#212121';
   }
+
+  addEventForChild(document.getElementsByTagName('body')[0], 'DOMSubtreeModified', '.notifications', function (matchingChild) {
+    if (matchingChild != null) {
+      console.log('matchingChild', matchingChild.innerHTML);
+      if (matchingChild.innerHTML.trim() != '') {
+        ipc.send('notification-shown');
+      } else {
+        ipc.send('notification-hidden');
+      }
+    }
+  });
+  // console.log('targNode', document.querySelector('body'));
+  // //console.log('targNode', document.querySelector('body'));
+  // var targetNode = document.querySelector('.notifications')[0];
+  
+  // //ipc.send('notification-change');
+
+  // var observer = new MutationObserver(function(mutationsList) {
+  //   ipc.send('notification-change');
+  // });
+
+  // // Start observing the target node for configured mutations
+  // observer.observe(targetNode, { attributes: true, childList: true });  
 });
+
+function addEventForChild(parent, eventName, childSelector, cb){      
+  parent.addEventListener(eventName, function(event){
+    var clickedElement = event.target;
+    if (clickedElement != null) {
+      var matchingChild = clickedElement.closest(childSelector)
+      cb(matchingChild)
+    }
+  })
+};
