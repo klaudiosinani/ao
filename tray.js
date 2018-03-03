@@ -8,7 +8,6 @@ const BrowserWindow = electron.BrowserWindow;
 const shell = electron.shell;
 let tray = null;
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
-const ipcMain = electron.ipcMain;
 
 function activate(command) {
   const appWindow = BrowserWindow.getAllWindows()[0];
@@ -145,17 +144,13 @@ exports.create = win => {
   tray.setContextMenu(contextMenu);
   tray.on('click', toggleWin);
 
-  function setDefaultTrayImage() {
-    tray.setImage(iconPath);
-  }
-
-  function setNotifyTrayImage() {
-    tray.setImage(notifyIconPath);
-  }
-  
   return {
     instance: tray,
-    setDefaultTrayImage: setDefaultTrayImage,
-    setNotifyTrayImage: setNotifyTrayImage
+    setDefaultTrayImage() {
+      tray.setImage(iconPath);
+    },
+    setNotifyTrayImage() {
+      tray.setImage(notifyIconPath);
+    }
   };
 };
