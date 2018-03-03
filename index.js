@@ -92,13 +92,13 @@ function createMainWindow() {
     config.set('lastURL', url);
   });
 
-  aoWindow.on('show', function () {
+  aoWindow.on('show', () => {
     setDefaultAppImages();
   });
 
-  aoWindow.on('restore', function () {
+  aoWindow.on('restore', () => {
     setDefaultAppImages();
-  });  
+  });
 
   return aoWindow;
 }
@@ -184,16 +184,15 @@ ipcMain.on('activate-menu-bar', () => {
   }
 });
 
-ipcMain.on('notification-shown', (event, arg) => {
-  if (aoTray && mainWindow.isMinimized() || !mainWindow.isVisible()) {
+ipcMain.on('notification-shown', () => {
+  if (aoTray && (mainWindow.isMinimized() || !mainWindow.isVisible())) {
     mainWindow.flashFrame(true);
     aoTray.setNotifyTrayImage();
     mainWindow.setIcon(notifyAppIcon);
   }
 });
 
-ipcMain.on('notification-hidden', (event, arg) => {
-  //mainWindow.flashFrame(false);
+ipcMain.on('notification-hidden', () => {
   setDefaultAppImages();
 });
 

@@ -471,26 +471,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.backgroundColor = '#212121';
   }
 
-  // intercept notification (reminder) block changes and throw our own event in case of any change
-  addEventForChild(document.getElementsByTagName('body')[0], 'DOMSubtreeModified', '.notifications', function (matchingChild) {
-    if (matchingChild != null) {
+  // Intercept notification (reminder) block changes and throw our own event in case of any change
+  addEventForChild(document.getElementsByTagName('body')[0], 'DOMSubtreeModified', '.notifications', (matchingChild) => {
+    if (matchingChild !== null) {
       console.log('matchingChild', matchingChild.innerHTML);
-      if (matchingChild.innerHTML.trim() != '') {
-        ipc.send('notification-shown');
+      if (matchingChild.innerHTML.trim() == '') {
+        ipc.send('notification-hidden');        
       } else {
-        ipc.send('notification-hidden');
+        ipc.send('notification-shown');
       }
     }
   });
 });
 
-// analog of jQuery.on(...)
-function addEventForChild(parent, eventName, childSelector, cb){      
-  parent.addEventListener(eventName, function(event){
-    let clickedElement = event.target;
+// Analog of jQuery.on(...)
+function addEventForChild(parent, eventName, childSelector, cb) {
+  parent.addEventListener(eventName, (event) => {
+    const clickedElement = event.target;
     if (clickedElement && clickedElement.closest) {
-      let matchingChild = clickedElement.closest(childSelector)
-      cb(matchingChild)
+      const matchingChild = clickedElement.closest(childSelector);
+      cb(matchingChild);
     }
   })
-};
+}
