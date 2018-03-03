@@ -47,7 +47,7 @@ function createMainWindow() {
     height: lastWindowState.height,
     minWidth: 400,
     minHeight: 200,
-    icon: process.platform === 'linux' && path.join(__dirname, 'static/Icon.png'),
+    icon: (process.platform === 'win32' || process.platform === 'linux') && path.join(__dirname, 'static/Icon.png'),
     alwaysOnTop: config.get('alwaysOnTop'),
     titleBarStyle: 'hiddenInset',
     darkTheme: darkModeFlag,
