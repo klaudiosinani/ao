@@ -9,8 +9,6 @@ const shell = electron.shell;
 let tray = null;
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 const ipcMain = electron.ipcMain;
-const defaultTrayIconPath = 'static/IconTray.png';
-const notificationTrayIconPath = 'static/i.jpg';
 
 function activate(command) {
   const appWindow = BrowserWindow.getAllWindows()[0];
@@ -24,7 +22,8 @@ exports.create = win => {
     return;
   }
 
-  const iconPath = path.join(__dirname, defaultTrayIconPath);
+  const iconPath = path.join(__dirname, 'static/IconTray.png');
+  const notifyIconPath = path.join(__dirname, 'static/i.jpg');
 
   const toggleWin = () => {
     // Toggle/untoggle window
@@ -148,7 +147,7 @@ exports.create = win => {
 
   ipcMain.on('notification-shown', (event, arg) => {
     if (win.isMinimized() || !win.isVisible()) {
-      tray.setImage(notificationTrayIconPath);
+      tray.setImage(notifyIconPath);
     }
     //var nodeConsole = require('console');
     //nodecon.log('TTTest');
@@ -157,7 +156,7 @@ exports.create = win => {
   });
   
   ipcMain.on('notification-hidden', (event, arg) => {
-    setDefaultTrayIcon();
+    setDefaultTrayImage();
     //var nodeConsole = require('console');
     //nodecon.log('TTTest');
     //mainWindow.setMenuBarVisibility(false);
@@ -165,14 +164,15 @@ exports.create = win => {
   });
 
   win.on('show', function () {
-    setDefaultTrayIcon();
+    setDefaultTrayImage();
   });
 
   win.on('restore', function () {
-    setDefaultTrayIcon();
+    setDefaultTrayImage();
   });
+
+  function setDefaultTrayImage() {
+    tray.setImage(iconPath);
+  }    
 };
 
-function setDefaultTrayIcon() {
-  tray.setImage(defaultTrayIconPath);
-}
