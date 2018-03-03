@@ -157,10 +157,22 @@ exports.create = win => {
   });
   
   ipcMain.on('notification-hidden', (event, arg) => {
-    tray.setImage(defaultTrayIconPath);
+    setDefaultTrayIcon();
     //var nodeConsole = require('console');
     //nodecon.log('TTTest');
     //mainWindow.setMenuBarVisibility(false);
     //console.log('changed!!!!');
   });
+
+  win.on('show', function () {
+    setDefaultTrayIcon();
+  });
+
+  win.on('restore', function () {
+    setDefaultTrayIcon();
+  });
 };
+
+function setDefaultTrayIcon() {
+  tray.setImage(defaultTrayIconPath);
+}
