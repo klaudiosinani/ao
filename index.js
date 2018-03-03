@@ -19,6 +19,8 @@ require('electron-context-menu')();
 let mainWindow;
 let exiting = false;
 let aoTray;
+const defaultAppIcon = path.join(__dirname, 'static/Icon.png');
+const notifyAppIcon = path.join(__dirname, 'static/NotifyIcon.png');
 
 const functioning = app.makeSingleInstance(() => {
   if (mainWindow) {
@@ -47,7 +49,7 @@ function createMainWindow() {
     height: lastWindowState.height,
     minWidth: 400,
     minHeight: 200,
-    icon: (process.platform === 'win32' || process.platform === 'linux') && path.join(__dirname, 'static/Icon.png'),
+    icon: (process.platform === 'win32' || process.platform === 'linux') && defaultAppIcon,
     alwaysOnTop: config.get('alwaysOnTop'),
     titleBarStyle: 'hiddenInset',
     darkTheme: darkModeFlag,
@@ -91,11 +93,11 @@ function createMainWindow() {
   });
 
   aoWindow.on('show', function () {
-    setDefaultTrayImage();
+    setDefaultAppImages();
   });
 
   aoWindow.on('restore', function () {
-    setDefaultTrayImage();
+    setDefaultAppImages();
   });  
 
   return aoWindow;
@@ -185,17 +187,19 @@ ipcMain.on('activate-menu-bar', () => {
 ipcMain.on('notification-shown', (event, arg) => {
   if (aoTray && mainWindow.isMinimized() || !mainWindow.isVisible()) {
     aoTray.setNotifyTrayImage();
+    mainWindow.setIcon(notifyAppIcon);
   }
 });
 
 ipcMain.on('notification-hidden', (event, arg) => {
-  setDefaultTrayImage();
+  setDefaultAppImages();
 });
 
-function setDefaultTrayImage() {
+function setDefaultAppImages() {
   if (aoTray) {
     aoTray.setDefaultTrayImage();
   }
+  mainWindow.setIcon(defaultAppIcon);
 }
 
 process.on('uncaughtException', error => {
