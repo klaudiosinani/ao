@@ -12,7 +12,29 @@
   </a>
 </div>
 
-[![Build Status](https://travis-ci.org/klauscfhq/ao.svg?branch=master)](https://travis-ci.org/klauscfhq/ao) [![Build status](https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true)](https://ci.appveyor.com/project/klauscfhq/ao) [![Dependency Status](https://dependencyci.com/github/klauscfhq/ao/badge)](https://dependencyci.com/github/klauscfhq/ao) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/klauscfhq/ao) [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/klauscfhq/ao) [![Latest version](https://badge.fury.io/gh/klauscfhq%2Fao.svg)](https://github.com/klauscfhq/ao/releases) [![DLs](https://img.shields.io/github/downloads/klauscfhq/ao/total.svg)](https://github.com/klauscfhq/ao/releases)
+<p align="center">
+  <a href="https://travis-ci.org/klauscfhq/ao">
+    <img alt="Build Status" src="https://travis-ci.org/klauscfhq/ao.svg?branch=master">
+  </a>
+  <a href="https://ci.appveyor.com/project/klauscfhq/ao">
+    <img alt="Build Status" src="https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true">
+  </a>
+  <a href="https://tidelift.com/repo/github/klauscfhq/ao">
+    <img alt="Dependency Status" src="https://tidelift.com/badges/github/klauscfhq/ao?style=flat">
+  </a>
+  <a href="https://github.com/klauscfhq/ao">
+    <img alt="XO code style" src="https://img.shields.io/badge/code_style-XO-5ed9c7.svg">
+  </a>
+  <a href="https://gitter.im/klauscfhq/ao">
+    <img alt="Gitter" src="https://img.shields.io/gitter/room/nwjs/nw.js.svg">
+  </a>
+  <a href="https://github.com/klauscfhq/ao/releases">
+    <img alt="Latest version" src="https://badge.fury.io/gh/klauscfhq%2Fao.svg">
+  </a>
+  <a href="https://github.com/klauscfhq/ao/releases">
+    <img alt="DLs" src="https://img.shields.io/github/downloads/klauscfhq/ao/total.svg">
+  </a>
+</p>
 
 ## Description
 
