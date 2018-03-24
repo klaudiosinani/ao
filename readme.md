@@ -42,7 +42,7 @@ You can find more desktop apps [here](#related-apps).
 - Background Behavior
 
 <sup>🍎 Macos only atm</sup><br/>
-<sup>✔️ Windows only atm</sup>
+<sup>✔️ Windows & Linux only atm</sup>
 
 ## Contents
 
@@ -59,9 +59,9 @@ You can find more desktop apps [here](#related-apps).
 
 Head to the [releases](https://github.com/klauscfhq/ao/releases/latest) page and download the appropriate installer for your system.
 
-Ubuntu Linux users can directly install through [`Snap`](https://snapcraft.io/ao-app/) `snap install ao-app`
+Ubuntu Linux users can directly install through [`Snap`](https://snapcraft.io/ao) `snap install ao`
 
-Arch Linux users can directly install through [`AUR`](https://aur.archlinux.org/packages/ao/) `yaourt ao` 
+Arch Linux users can directly install through [`AUR`](https://aur.archlinux.org/packages/ao/) `yaourt ao`
 
 #### Note
 
@@ -205,7 +205,7 @@ More awesome desktop apps.
 
 Coded with ❤ by
 
-- Klaus Sinani [(@klauscfhq)](https://github.com/klauscfhq) 
+- Klaus Sinani [(@klauscfhq)](https://github.com/klauscfhq)
 - Mario Sinani [(@mariocfhq)](https://github.com/mariocfhq)
 - Thanasis Gkanos [(@ThanasisGkanos)](https://github.com/ThanasisGkanos)
 
