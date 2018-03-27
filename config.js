@@ -1,25 +1,27 @@
 'use strict';
-const Config = require('electron-config');
+const settings = require('electron-settings');
 
-module.exports = new Config({
-  defaults: {
-    zoomFactor: 1,
-    lastWindowState: {
-      width: 900,
-      height: 500
-    },
-    lastURL: 'https://todo.microsoft.com/?app',
-    menuBarVisible: true,
-    sideBarHidden: false,
-    launchMinimized: false,
-    autoNightMode: false,
-    autoLaunch: false,
-    hideTray: false,
-    blackMode: false,
-    darkMode: false,
-    sepiaMode: false,
-    vibrantMode: false,
-    vibrantDarkMode: false,
-    alwaysOnTop: false
-  }
+settings.setAll({
+  zoomFactor: settings.get('zoomFactor', 1),
+  lastWindowState: {
+    x: settings.get('lastWindowState.x'),
+    y: settings.get('lastWindowState.y'),
+    width: settings.get('lastWindowState.width', 900),
+    height: settings.get('lastWindowState.height', 500)
+  },
+  lastURL: settings.get('lastURL', 'https://todo.microsoft.com/?app'),
+  menuBarVisible: settings.get('menuBarVisible', true),
+  sideBarHidden: settings.get('sideBarHidden', false),
+  launchMinimized: settings.get('launchMinimized', false),
+  autoNightMode: settings.get('autoNightMode', false),
+  autoLaunch: settings.get('autoLaunch', false),
+  hideTray: settings.get('hideTray', false),
+  blackMode: settings.get('blackMode', false),
+  darkMode: settings.get('darkMode', false),
+  sepiaMode: settings.get('sepiaMode', false),
+  vibrantMode: settings.get('vibrantMode', false),
+  vibrantDarkMode: settings.get('vibrantDarkMode', false),
+  alwaysOnTop: settings.get('alwaysOnTop', false)
 });
+
+module.exports = settings;
