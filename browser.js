@@ -308,13 +308,18 @@ function goToList(key) {
 }
 
 const listSelector = '.listItem';
-const listCollection = '.lists > span';
 const listCollectionSelector = '.lists';
 const selectedListSelector = '.listItem.active';
 
 function selectList(index) {
   // Select the appropriate list based on given index
-  document.querySelector(listCollection).children[index].firstChild.firstChild.firstChild.firstChild.click();
+  if (index === 0) {
+    // Index corresponds to `My Day` list
+    document.querySelector(listCollectionSelector).children[0].firstChild.firstChild.firstChild.firstChild.click();
+  } else {
+    // Index corresponds to list residing inside of the list of lists
+    document.querySelector(listCollectionSelector).children[1].children[index - 1].firstChild.firstChild.firstChild.firstChild.click();
+  }
 }
 
 function goToNextList() {
