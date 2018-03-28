@@ -26,6 +26,7 @@ const communityURL = 'https://gitter.im/klauscfhq/ao';
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 const searchURL = 'https://github.com/search?q=+is:issue+repo:klauscfhq/ao';
 const licenseURL = 'https://github.com/klauscfhq/ao/blob/master/license.md';
+const keyboardShortcutsRefURL = 'https://github.com/klauscfhq/ao#keyboard-shortcuts';
 
 function getPath() {
   // Retrieve the default path of the platform-dedicated config file
@@ -103,6 +104,13 @@ const helpSubmenu = [{
   label: `Ao Homepage`,
   click() {
     shell.openExternal(homepageURL);
+  }
+}, {
+  type: 'separator'
+}, {
+  label: 'Keyboard Shortcuts Reference',
+  click() {
+    shell.openExternal(keyboardShortcutsRefURL);
   }
 }, {
   type: 'separator'
