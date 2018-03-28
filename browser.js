@@ -327,8 +327,10 @@ function goToNextList() {
   // Navigate to the next list
   const index = getCurrentIndex();
   if (isLastList(index)) {
+    // Currently on the last list thus move to the first one
     selectList(0);
   } else {
+    // Navigate to the next list
     const nextIndex = getNextIndex(index);
     selectList(nextIndex);
   }
@@ -338,19 +340,21 @@ function goToPreviewsList() {
   // Navigate to the previews list
   const index = getCurrentIndex();
   if (isFirstList(index)) {
+    // Currently on the first list thus move to the last one
     const lastIndex = getLastListIndex();
     selectList(lastIndex);
   } else {
+    // Navigate to the previews list
     const previewsIndex = getPreviewsIndex(index);
     selectList(previewsIndex);
   }
 }
 
-// Calculate the index of the current list
 function getCurrentIndex() {
+  // Calculate the index of the current list
   let i;
-  let currentIndex; // Index of current list
-  let listsArray = []; // Array of lists
+  let currentIndex;
+  let listsArray = [];
 
   // Get the css meta of the currently selected list
   const selectedList = document.querySelector(selectedListSelector);
@@ -367,11 +371,9 @@ function getCurrentIndex() {
     for (i = 0; i < listsArray.length; i++) {
       if (listsArray[i] === selectedList) {
         currentIndex = i + 1;
-        console.log('The currently selected list has an index of: ' + currentIndex);
       }
     }
   }
-  // Return the current list index
   return currentIndex;
 }
 
@@ -393,19 +395,15 @@ function isFirstList(index) {
   return (index === 0);
 }
 
-// Calculate the index of the next list
-// relatively to the current list index
 function getNextIndex(currentIndex) {
-  const nextIndex = currentIndex + 1; // Index value of next list
-  console.log('The next list will have an index of: ' + nextIndex);
+  // Calculate the index of the next list relatively to the current list index
+  const nextIndex = currentIndex + 1;
   return nextIndex;
 }
 
-// Calculate the index of the previews list
-// relatively to the current list index
 function getPreviewsIndex(currentIndex) {
-  const previewsIndex = currentIndex - 1; // Index value of previews list
-  console.log('The previews list will have an index of: ' + previewsIndex);
+  // Calculate the index of the previews list relatively to the current list index
+  const previewsIndex = currentIndex - 1;
   return previewsIndex;
 }
 
