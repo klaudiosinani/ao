@@ -309,7 +309,8 @@ function goToList(key) {
 
 const listSelector = '.listItem';
 const listCollectionSelector = '.lists';
-const selectedListSelector = '.listItem.active';
+const selectedListSelector = '.active';
+const myDayListSelector = '.todayToolbar-item.active';
 
 function selectList(index) {
   // Select the appropriate list based on given index
@@ -325,17 +326,24 @@ function selectList(index) {
 function goToNextList() {
   // Navigate to the next list
   const index = getCurrentIndex();
-  const nextIndex = getNextIndex(index);
-  console.log('Next list index is: ' + nextIndex);
-  selectList(nextIndex);
+  if (isLastList(index)) {
+    selectList(0);
+  } else {
+    const nextIndex = getNextIndex(index);
+    selectList(nextIndex);
+  }
 }
 
 function goToPreviewsList() {
   // Navigate to the previews list
   const index = getCurrentIndex();
-  const previewsIndex = getPreviewsIndex(index);
-  console.log('Previews list index is: ' + previewsIndex);
-  selectList(previewsIndex);
+  if (isFirstList(index)) {
+    const lastIndex = getLastListIndex();
+    selectList(lastIndex);
+  } else {
+    const previewsIndex = getPreviewsIndex(index);
+    selectList(previewsIndex);
+  }
 }
 
 // Calculate the index of the current list
@@ -346,18 +354,43 @@ function getCurrentIndex() {
 
   // Get the css meta of the currently selected list
   const selectedList = document.querySelector(selectedListSelector);
+  // Get the css meta of the `My Day` list
+  const myDayList = document.querySelector(myDayListSelector);
   // Create an array of lists relative to the currently selected list
   listsArray = document.querySelector(listCollectionSelector).querySelectorAll(listSelector);
 
-  // Traverse the array and find the index of selected list
-  for (i = 0; i < listsArray.length; i++) {
-    if (listsArray[i] === selectedList) {
-      currentIndex = i;
-      console.log('The currently selected list has an index of: ' + currentIndex);
+  if (selectedList === myDayList) {
+    // `My Day` list is selected thus the list index is zero
+    currentIndex = 0;
+  } else {
+    // Traverse the array and find the index of selected list
+    for (i = 0; i < listsArray.length; i++) {
+      if (listsArray[i] === selectedList) {
+        currentIndex = i + 1;
+        console.log('The currently selected list has an index of: ' + currentIndex);
+      }
     }
   }
   // Return the current list index
   return currentIndex;
+}
+
+function getLastListIndex() {
+  // Get the index of the last list item
+  const listsArray = document.querySelector(listCollectionSelector).querySelectorAll(listSelector);
+  const lastListIndex = listsArray.length;
+  return lastListIndex;
+}
+
+function isLastList(index) {
+  // Check whether the given index belongs to the last list item
+  const lastListIndex = getLastListIndex();
+  return (index === lastListIndex);
+}
+
+function isFirstList(index) {
+  // Check whether the given index belongs to the first list item
+  return (index === 0);
 }
 
 // Calculate the index of the next list
