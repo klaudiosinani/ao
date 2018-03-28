@@ -136,8 +136,8 @@ if (process.platform !== 'darwin') {
     click() {
       electron.dialog.showMessageBox({
         title: `About Ao`,
-        message: `Ao ${app.getVersion()}`,
-        detail: 'Coded with love by Klaus Sinani',
+        message: `Ao ${app.getVersion()} (${os.arch()})`,
+        detail: 'Created by Klaus Sinani',
         icon: path.join(__dirname, 'static/Icon.png'),
         buttons: []
       });
