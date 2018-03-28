@@ -22,6 +22,7 @@ exports.create = win => {
   }
 
   const iconPath = path.join(__dirname, 'static/IconTray.png');
+  const notifyIconPath = path.join(__dirname, 'static/NotifyIconTray.png');
 
   const toggleWin = () => {
     // Toggle/untoggle window
@@ -142,4 +143,14 @@ exports.create = win => {
   tray.setToolTip(`${app.getName()}`);
   tray.setContextMenu(contextMenu);
   tray.on('click', toggleWin);
+
+  return {
+    instance: tray,
+    setDefaultTrayImage() {
+      tray.setImage(iconPath);
+    },
+    setNotifyTrayImage() {
+      tray.setImage(notifyIconPath);
+    }
+  };
 };

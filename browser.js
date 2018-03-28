@@ -506,4 +506,26 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!config.get('vibrantMode') && !config.get('vibrantDarkMode')) {
     document.documentElement.style.backgroundColor = '#212121';
   }
+
+  // Intercept notification (reminder) block changes and throw our own event in case of any change
+  addEventForChild(document.getElementsByTagName('body')[0], 'DOMSubtreeModified', '.notifications', matchingChild => {
+    if (matchingChild !== null) {
+      if (matchingChild.innerHTML.trim() === '') {
+        ipc.send('notification-hidden');
+      } else {
+        ipc.send('notification-shown');
+      }
+    }
+  });
 });
+
+// Analog of jQuery.on(...)
+function addEventForChild(parent, eventName, childSelector, cb) {
+  parent.addEventListener(eventName, event => {
+    const clickedElement = event.target;
+    if (clickedElement && clickedElement.closest) {
+      const matchingChild = clickedElement.closest(childSelector);
+      cb(matchingChild);
+    }
+  });
+}
