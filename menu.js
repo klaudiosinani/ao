@@ -27,6 +27,7 @@ const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 const searchURL = 'https://github.com/search?q=+is:issue+repo:klauscfhq/ao';
 const licenseURL = 'https://github.com/klauscfhq/ao/blob/master/license.md';
 const keyboardShortcutsRefURL = 'https://github.com/klauscfhq/ao#keyboard-shortcuts';
+const searchFeatureRequestsURL = 'https://github.com/klauscfhq/ao/labels/feature-request';
 
 function getPath() {
   // Retrieve the default path of the platform-dedicated config file
@@ -128,6 +129,11 @@ const helpSubmenu = [{
   label: `Search Issues`,
   click() {
     shell.openExternal(searchURL);
+  }
+}, {
+  label: `Search Feature Requests`,
+  click() {
+    shell.openExternal(searchFeatureRequestsURL);
   }
 }, {
   label: `Community Discussion`,
