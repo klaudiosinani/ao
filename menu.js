@@ -4,6 +4,7 @@ const electron = require('electron');
 const os = require('os');
 const fs = require('fs-extra');
 const config = require('./config');
+const update = require('./update');
 
 const join = path.join;
 const app = electron.app;
@@ -105,6 +106,11 @@ const helpSubmenu = [{
   label: `Ao Homepage`,
   click() {
     shell.openExternal(homepageURL);
+  }
+}, {
+  label: `Check for Update`,
+  click() {
+    update.manualUpdateCheck();
   }
 }, {
   type: 'separator'
