@@ -13,23 +13,23 @@ const launchAo = new AutoLaunch({
 function activate() {
   // Activate app launch on login
   return launchAo
-  .isEnabled()
-  .then(enabled => {
-    if (!enabled) {
-      return launchAo.enable();
-    }
-  });
+    .isEnabled()
+    .then(enabled => {
+      if (!enabled) {
+        return launchAo.enable();
+      }
+    });
 }
 
 function deactivate() {
   // Deactivate app launch on login
   return launchAo
-  .isEnabled()
-  .then(enabled => {
-    if (enabled) {
-      return launchAo.disable();
-    }
-  });
+    .isEnabled()
+    .then(enabled => {
+      if (enabled) {
+        return launchAo.disable();
+      }
+    });
 }
 
 module.exports = {activate, deactivate};
