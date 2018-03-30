@@ -135,11 +135,11 @@ app.on('ready', () => {
 
   if (!isDevMode) {
     setTimeout(() => {
-      update.checkUpdate();
+      update.autoUpdateCheck();
     }, ms('2m'));
 
     setInterval(() => {
-      update.checkUpdate();
+      update.autoUpdateCheck();
     }, ms('1h'));
   }
 });
