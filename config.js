@@ -21,7 +21,8 @@ settings.setAll({
   sepiaMode: settings.get('sepiaMode', false),
   vibrantMode: settings.get('vibrantMode', false),
   vibrantDarkMode: settings.get('vibrantDarkMode', false),
-  alwaysOnTop: settings.get('alwaysOnTop', false)
+  alwaysOnTop: settings.get('alwaysOnTop', false),
+  updateCheckPeriod: settings.get('updateCheckPeriod', '2h')
 });
 
 module.exports = settings;

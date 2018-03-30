@@ -134,13 +134,9 @@ app.on('ready', () => {
   update.init(electron.Menu.getApplicationMenu());
 
   if (!isDevMode) {
-    setTimeout(() => {
-      update.autoUpdateCheck();
-    }, ms('2m'));
-
     setInterval(() => {
       update.autoUpdateCheck();
-    }, ms('1h'));
+    }, ms(config.get('updateCheckPeriod')));
   }
 });
 
