@@ -18,7 +18,8 @@ function displayAvailableUpdate(latestVersion) {
     message: 'Version ' + latestVersion + ' is now available',
     detail: 'Click Download to get it now',
     buttons: ['Download', 'Dismiss'],
-    defaultId: 0 // Make `Download` the default action button
+    defaultId: 0, // Make `Download` the default action button
+    cancelId: 1
   });
   console.log('Update to version', latestVersion, 'is now available');
   return result;
