@@ -13,6 +13,7 @@ const shell = electron.shell;
 const appName = app.getName();
 const platform = process.platform;
 const BrowserWindow = electron.BrowserWindow;
+const globalShortcut = electron.globalShortcut;
 
 let configData;
 let defaultConfigPath; // Default config file directory
@@ -92,6 +93,31 @@ function activate(custom) {
   }
 
   appWindow.webContents.send(custom);
+}
+
+function toggleWin() {
+  // Toggle/untoggle main app window
+  const appWindow = BrowserWindow.getAllWindows()[0];
+  if (appWindow.isVisible() && appWindow.isFocused()) {
+    appWindow.hide();
+    appWindow.blur();
+  } else {
+    appWindow.show();
+    appWindow.focus();
+  }
+}
+
+function registerGlobalShortcuts() {
+  const globalToggleAo = globalShortcut.register('Shift+Alt+A', () => {
+    // Global shortcut key for toggling/untoggling main app window
+    toggleWin();
+  });
+
+  if (globalToggleAo) {
+    console.log('Successfully registered global shortcut keys');
+  } else {
+    console.log('Global shortcut keys registration failed');
+  }
 }
 
 const helpSubmenu = [{
@@ -849,3 +875,5 @@ const otherTpl = [{
 const tpl = process.platform === 'darwin' ? darwinTpl : otherTpl;
 
 module.exports = electron.Menu.buildFromTemplate(tpl);
+
+module.exports.registerGlobalShortcuts = registerGlobalShortcuts;
