@@ -51,11 +51,12 @@ You can find more desktop apps [here](#related-apps).
 - [Black Theme](#black-theme)
 - [Dark Theme](#dark-theme)
 - [Compact Mode](#compact-mode)
-- [List Navigation](#note-navigation)
+- [List Navigation](#list-navigation)
 - [Custom Shortcut Keys](#custom-shortcut-keys)
 - [Scalable Interface](#scalable-interface)
 - [Auto Night Mode](#auto-night-mode)
 - [Keyboard Shortcuts](#keyboard-shortcuts)
+- [Global Shortcut Keys](#global-shortcut-keys)
 - [Cross Platform](https://github.com/klauscfhq/ao/releases/latest)
 - Automagical Auto-updates ✔️
 - Desktop Notifications
@@ -147,7 +148,7 @@ Navigate seamlessly between your lists by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Tab<
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/e64a6aae/media/list-navigation.gif" alt="Note Navigation" width="100%">
+        <img src="https://cdn.rawgit.com/klauscfhq/ao/e64a6aae/media/list-navigation.gif" alt="List Navigation" width="100%">
       </a>
 </div>
 
@@ -201,7 +202,7 @@ Toggle Settings            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
 Make Text Smaller          | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
 Edit Shortcut Keys         | <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd>
 Reset Zoom Level           | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
-Navigate to Next Note      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
+Navigate to Next List      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
 Jump to List               | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
 Sign out                   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
 Toggle Vibrant Light Theme | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>U</kbd>
@@ -216,6 +217,16 @@ Hide Completed Todos       | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>H</kbd>
 Toggle Dev Tools           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd>
 Set Always on Top          | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>
 Make Text Larger           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
+
+### Global Shortcut Keys
+
+Access Ao at any moment from anywhere within your operating system. All global shortcuts can be customized to match your own preference through the configuration file `~/.ao.json`.
+
+Description                | Global Shortcut
+-------------------------- | --------------------------
+Toggle Ao Window           | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>A</kbd>
+Create New Todo            | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>C</kbd>
+Search Todos               | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>F</kbd>
 
 ## Related Apps
 
