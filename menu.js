@@ -398,10 +398,21 @@ const darwinTpl = [{
       activate('auto-launch');
     }
   }, {
+    type: 'separator'
+  }, {
     label: 'Edit Shortcut Keys',
     accelerator: 'CmdorCtrl+.',
     click() {
       activate('edit-shortcuts');
+    }
+  }, {
+    label: 'Enable Global Shortcut Keys',
+    type: 'checkbox',
+    checked: config.get('useGlobalShortcuts'),
+    click(item) {
+      config.set('useGlobalShortcuts', item.checked);
+      app.relaunch();
+      app.quit();
     }
   }, {
     type: 'separator'
@@ -715,10 +726,21 @@ const otherTpl = [{
       config.set('launchMinimized', item.checked);
     }
   }, {
+    type: 'separator'
+  }, {
     label: 'Edit Shortcut Keys',
     accelerator: 'CmdorCtrl+.',
     click() {
       activate('edit-shortcuts');
+    }
+  }, {
+    label: 'Enable Global Shortcut Keys',
+    type: 'checkbox',
+    checked: config.get('useGlobalShortcuts'),
+    click(item) {
+      config.set('useGlobalShortcuts', item.checked);
+      app.relaunch();
+      app.quit();
     }
   }, {
     type: 'separator'
