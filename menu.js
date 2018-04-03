@@ -122,13 +122,19 @@ function registerGlobalShortcuts() {
     toggleWin();
   });
 
-  const globalSearchNote = globalShortcut.register('Shift+Alt+F', () => {
-    // Global shortcut key for note searching
+  const globalSearchTodo = globalShortcut.register('Shift+Alt+F', () => {
+    // Global shortcut key for todo searching
     showWin();
     activate('search');
   });
 
-  if (globalToggleAo && globalSearchNote) {
+  const globalCreateTodo = globalShortcut.register('Shift+Alt+C', () => {
+    // Global shortcut key for todo creation
+    showWin();
+    activate('new-todo');
+  });
+
+  if (globalToggleAo && globalSearchTodo && globalCreateTodo) {
     console.log('Successfully registered global shortcut keys');
   } else {
     console.log('Global shortcut keys registration failed');
