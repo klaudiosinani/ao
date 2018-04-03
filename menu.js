@@ -117,22 +117,25 @@ function toggleWin() {
 }
 
 function registerGlobalShortcuts() {
-  const globalToggleAo = globalShortcut.register('Shift+Alt+A', () => {
+  const globalToggleAo = globalShortcut.register(
     // Global shortcut key for toggling/untoggling main app window
-    toggleWin();
-  });
+    setAcc('global-toggle-ao', 'Shift+Alt+A'), () => {
+      toggleWin();
+    });
 
-  const globalSearchTodo = globalShortcut.register('Shift+Alt+F', () => {
+  const globalSearchTodo = globalShortcut.register(
     // Global shortcut key for todo searching
-    showWin();
-    activate('search');
-  });
+    setAcc('global-search', 'Shift+Alt+F'), () => {
+      showWin();
+      activate('search');
+    });
 
-  const globalCreateTodo = globalShortcut.register('Shift+Alt+C', () => {
+  const globalCreateTodo = globalShortcut.register(
     // Global shortcut key for todo creation
-    showWin();
-    activate('new-todo');
-  });
+    setAcc('global-new-todo', 'Shift+Alt+C'), () => {
+      showWin();
+      activate('new-todo');
+    });
 
   if (globalToggleAo && globalSearchTodo && globalCreateTodo) {
     console.log('Successfully registered global shortcut keys');
