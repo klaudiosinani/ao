@@ -22,8 +22,6 @@ html.vibrant-dark-mode .settingsSection-header, html.vibrant-dark-mode button.no
 }
 html.vibrant-dark-mode #main .main-background {
   background: var(--transparent-white) !important;
-}
-html.vibrant-dark-mode #main .main-background {
   border-left: 1px solid var(--transparent-white) !important;
 }
 html.vibrant-dark-mode html[dir=ltr] #main .main-background {
@@ -56,7 +54,7 @@ html.vibrant-dark-mode .taskCard {
   background-color: var(--dark-grey) !important;
 }
 html.vibrant-dark-mode .detailFooter .detailFooter-trash:hover, html.vibrant-dark-mode .detailFooter .detailFooter-close:hover, html.vibrant-dark-mode .userToolbar:hover, html.vibrant-dark-mode .listItem:hover, html.vibrant-dark-mode .todayToolbar:hover, html.vibrant-dark-mode .searchToolbar:hover, html.vibrant-dark-mode .popoverMenuItem:hover, html.vibrant-dark-mode .todayToolbar-item:hover, html.vibrant-dark-mode #sidebar.search-is-open .searchToolbar-icon.stop:hover {
-    background-color: var(--grey) !important;
+  background-color: var(--grey) !important;
 }
 html.vibrant-dark-mode .popover, html.vibrant-dark-mode .popover-footer, html.vibrant-dark-mode .popover-footerRight {
   background-color: var(--dark-grey) !important;

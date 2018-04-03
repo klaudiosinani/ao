@@ -16,8 +16,6 @@ html.dark-mode .settingsSection-header, html.dark-mode .modal-settings .modal-ti
 }
 html.dark-mode #main .main-background {
   background: var(--dark-grey) !important;
-}
-html.dark-mode #main .main-background {
   border-left: 1px solid var(--dark-grey) !important;
 }
 html.dark-mode html[dir=ltr] #main .main-background {
@@ -50,7 +48,7 @@ html.dark-mode .taskCard {
   background-color: var(--dark-grey) !important;
 }
 html.dark-mode .detailFooter .detailFooter-trash:hover, html.dark-mode .detailFooter .detailFooter-close:hover, html.dark-mode .userToolbar:hover, html.dark-mode .listItem:hover, html.dark-mode .todayToolbar:hover, html.dark-mode .searchToolbar:hover, html.dark-mode .popoverMenuItem:hover, html.dark-mode .todayToolbar-item:hover, html.dark-mode #sidebar.search-is-open .searchToolbar-icon.stop:hover {
-    background-color: var(--grey) !important;
+  background-color: var(--grey) !important;
 }
 html.dark-mode .popover, html.dark-mode .popover-footer, html.dark-mode .popover-footerRight {
   background-color: var(--dark-grey) !important;

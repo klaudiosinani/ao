@@ -16,8 +16,6 @@ html.sepia-mode .settingsSection-header, html.sepia-mode button.notificationToas
 }
 html.sepia-mode #main .main-background {
   background: var(--sepia) !important;
-}
-html.sepia-mode #main .main-background {
   border-left: 1px solid var(--sepia) !important;
 }
 html.sepia-mode html[dir=ltr] #main .main-background {
@@ -50,7 +48,7 @@ html.sepia-mode .taskCard {
   background-color: var(--sepia) !important;
 }
 html.sepia-mode .detailFooter .detailFooter-trash:hover, html.sepia-mode .detailFooter .detailFooter-close:hover, html.sepia-mode .userToolbar:hover, html.sepia-mode .listItem:hover, html.sepia-mode .todayToolbar:hover, html.sepia-mode .searchToolbar:hover, html.sepia-mode .popoverMenuItem:hover, html.sepia-mode .todayToolbar-item:hover, html.sepia-mode #sidebar.search-is-open .searchToolbar-icon.stop:hover {
-    background-color: var(--dark-sepia) !important;
+  background-color: var(--dark-sepia) !important;
 }
 html.sepia-mode .popover, html.sepia-mode .popover-footer, html.sepia-mode .popover-footerRight {
   background-color: var(--sepia) !important;

@@ -16,8 +16,6 @@ html.black-mode .settingsSection-header, html.black-mode .modal-settings .modal-
 }
 html.black-mode #main .main-background {
   background: var(--black) !important;
-}
-html.black-mode #main .main-background {
   border-left: 1px solid var(--black) !important;
 }
 html.black-mode html[dir=ltr] #main .main-background {
@@ -50,7 +48,7 @@ html.black-mode .taskCard {
   background-color: var(--black) !important;
 }
 html.black-mode .detailFooter .detailFooter-trash:hover, html.black-mode .detailFooter .detailFooter-close:hover, html.black-mode .userToolbar:hover, html.black-mode .listItem:hover, html.black-mode .todayToolbar:hover, html.black-mode .searchToolbar:hover, html.black-mode .popoverMenuItem:hover, html.black-mode .todayToolbar-item:hover, html.black-mode #sidebar.search-is-open .searchToolbar-icon.stop:hover {
-    background-color: var(--light-black) !important;
+  background-color: var(--light-black) !important;
 }
 html.black-mode .popover, html.black-mode .popover-footer, html.black-mode .popover-footerRight {
   background-color: var(--black) !important;

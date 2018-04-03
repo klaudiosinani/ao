@@ -1,4 +1,4 @@
-:root{
+:root {
   --sepia: rgba(251, 240, 217, 1);
   --dark-sepia: rgba(232, 222, 201, 1);
   --dark-grey: rgba(33, 33, 33, 1);
@@ -45,7 +45,7 @@ html.side-bar-hidden .themeBackground {
   left: -280px !important;
 }
 @media all and (max-width: 540px) {
-	#sidebar { /* Hide sidebar on Compact Mode */
+  #sidebar { /* Hide sidebar on Compact Mode */
     display: none !important;
   }
   html[dir=ltr] .themeBackground { /* Make background image cover */
