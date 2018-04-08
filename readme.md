@@ -82,6 +82,8 @@ You can find more desktop apps [here](#related-apps).
 
 Head to the [releases](https://github.com/klauscfhq/ao/releases/latest) page and download the appropriate installer for your system.
 
+Mac OS users can directly install through homebrew cask: `brew cask install ao`
+
 Ubuntu Linux users can directly install through [`Snap`](https://snapcraft.io/ao) `snap install ao`
 
 Arch Linux users can directly install through [`AUR`](https://aur.archlinux.org/packages/ao/) `yaourt ao`
