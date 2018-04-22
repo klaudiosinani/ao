@@ -163,6 +163,23 @@ function requestAppRestart() {
   }
 }
 
+function confirmSignOut() {
+  // Display sign-out confirmation dialog
+  const result = dialog.showMessageBox({
+    icon: path.join(__dirname, 'static/Icon.png'),
+    title: 'Sign out Confirmation',
+    message: 'Sign out of Ao',
+    detail: 'Are you sure you want to sign out?',
+    buttons: ['Sign out', 'Dismiss'],
+    defaultId: 0, // Make `Sign out` the default action button
+    cancelId: 1
+  });
+  // Check whether the sign-out button was pressed
+  if (result === 0) {
+    activate('sign-out');
+  }
+}
+
 const helpSubmenu = [{
   label: `View License`,
   click() {
@@ -437,7 +454,7 @@ const darwinTpl = [{
     label: 'Sign out',
     accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
     click() {
-      activate('sign-out');
+      confirmSignOut();
     }
   }]
 }, {
@@ -764,7 +781,7 @@ const otherTpl = [{
     label: 'Sign out',
     accelerator: setAcc('sign-out', 'CmdorCtrl+Alt+Q'),
     click() {
-      activate('sign-out');
+      confirmSignOut();
     }
   }, {
     type: 'separator'
