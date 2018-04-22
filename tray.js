@@ -110,18 +110,6 @@ exports.create = win => {
   }, {
     type: 'separator'
   }, {
-    label: 'Hide Tray Icon',
-    type: 'checkbox',
-    checked: config.get('hideTray'),
-    click(item) {
-      showWin();
-      config.set('hideTray', item.checked);
-      app.relaunch();
-      app.quit();
-    }
-  }, {
-    type: 'separator'
-  }, {
     label: `Settings`,
     click() {
       showWin();
