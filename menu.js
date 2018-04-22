@@ -6,14 +6,15 @@ const fs = require('fs-extra');
 const config = require('./config');
 const update = require('./update');
 
-const join = path.join;
 const app = electron.app;
+const appName = app.getName();
+const BrowserWindow = electron.BrowserWindow;
+const dialog = electron.dialog;
+const globalShortcut = electron.globalShortcut;
+const join = path.join;
+const platform = process.platform;
 const resolve = path.resolve;
 const shell = electron.shell;
-const appName = app.getName();
-const platform = process.platform;
-const BrowserWindow = electron.BrowserWindow;
-const globalShortcut = electron.globalShortcut;
 
 let configData;
 let defaultConfigPath; // Default config file directory
@@ -144,6 +145,24 @@ function registerGlobalShortcuts() {
   }
 }
 
+function requestAppRestart() {
+  // Display restart dialog on settings update
+  const result = dialog.showMessageBox({
+    icon: path.join(__dirname, 'static/Icon.png'),
+    title: 'Restart Required',
+    message: 'Restart Ao to activate new settings.',
+    detail: 'Would you like to restart now?',
+    buttons: ['Restart', 'Dismiss'],
+    defaultId: 0, // Make `Restart` the default action button
+    cancelId: 1
+  });
+  // Check whether the restart button was pressed
+  if (result === 0) {
+    app.quit();
+    app.relaunch();
+  }
+}
+
 const helpSubmenu = [{
   label: `View License`,
   click() {
@@ -170,8 +189,7 @@ const helpSubmenu = [{
     checked: (config.get('updateCheckPeriod') === '2h'),
     click() {
       config.set('updateCheckPeriod', '2h');
-      app.relaunch();
-      app.quit();
+      requestAppRestart();
     }
   }, {
     label: 'Once Every 6 Hours',
@@ -179,8 +197,7 @@ const helpSubmenu = [{
     checked: (config.get('updateCheckPeriod') === '6h'),
     click() {
       config.set('updateCheckPeriod', '6h');
-      app.relaunch();
-      app.quit();
+      requestAppRestart();
     }
   }, {
     label: 'Once Every 12 Hours',
@@ -188,8 +205,7 @@ const helpSubmenu = [{
     checked: (config.get('updateCheckPeriod') === '12h'),
     click() {
       config.set('updateCheckPeriod', '12h');
-      app.relaunch();
-      app.quit();
+      requestAppRestart();
     }
   }, {
     label: 'Once a Day',
@@ -197,8 +213,7 @@ const helpSubmenu = [{
     checked: (config.get('updateCheckPeriod') === '24h'),
     click() {
       config.set('updateCheckPeriod', '24h');
-      app.relaunch();
-      app.quit();
+      requestAppRestart();
     }
   }]
 }, {
@@ -414,8 +429,7 @@ const darwinTpl = [{
     checked: config.get('useGlobalShortcuts'),
     click(item) {
       config.set('useGlobalShortcuts', item.checked);
-      app.relaunch();
-      app.quit();
+      requestAppRestart();
     }
   }, {
     type: 'separator'
@@ -742,8 +756,7 @@ const otherTpl = [{
     checked: config.get('useGlobalShortcuts'),
     click(item) {
       config.set('useGlobalShortcuts', item.checked);
-      app.relaunch();
-      app.quit();
+      requestAppRestart();
     }
   }, {
     type: 'separator'
@@ -877,8 +890,7 @@ const otherTpl = [{
     checked: config.get('hideTray'),
     click(item) {
       config.set('hideTray', item.checked);
-      app.relaunch();
-      app.quit();
+      requestAppRestart();
     }
   }, {
     type: 'separator'
