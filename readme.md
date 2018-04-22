@@ -73,6 +73,7 @@ You can find more desktop apps [here](#related-apps).
 - [Highlights](#highlights)
 - [Install](#install)
 - [Features](#features)
+- [Development](#development)
 - [Related Apps](#related-apps)
 - [Team](#team)
 - [Disclaimer](#disclaimer)
@@ -229,6 +230,17 @@ Description                | Global Shortcut
 Toggle Ao Window           | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>A</kbd>
 Create New Todo            | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>C</kbd>
 Search Todos               | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>F</kbd>
+
+## Development
+
+For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klauscfhq/ao/blob/master/contributing.md).
+
+- Fork the repository and clone it to your machine
+- Navigate to your local fork `cd ao`
+- Install the project dependencies `npm install` or `yarn install`
+- Run Ao on dev mode `npm start` or `yarn start`
+- Lint code for errors `npm test` or `yarn test`
+- Build binaries and installers `npm run dist` or `yarn dist`
 
 ## Related Apps
 
