@@ -280,7 +280,7 @@ if (process.platform !== 'darwin') {
         message: `Ao ${app.getVersion()} (${os.arch()})`,
         detail: 'Created by Klaus Sinani',
         icon: path.join(__dirname, 'static/Icon.png'),
-        buttons: []
+        buttons: ['OK']
       });
     }
   });

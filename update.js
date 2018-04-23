@@ -31,7 +31,8 @@ function displayUnavailableUpdate(installedVersion) {
     icon: path.join(__dirname, 'static/Icon.png'),
     title: 'No Update Available',
     message: 'No update available',
-    detail: 'Version ' + installedVersion + ' is the latest version'
+    detail: ['Version', installedVersion, 'is the latest version'].join(' '),
+    buttons: ['OK']
   });
   console.log('You are on the latest version', installedVersion);
   return result;
