@@ -150,7 +150,7 @@ function requestAppRestart() {
   const result = dialog.showMessageBox({
     icon: path.join(__dirname, 'static/Icon.png'),
     title: 'Restart Required',
-    message: 'Restart Ao to activate new settings.',
+    message: 'Restart Ao to activate new settings',
     detail: 'Would you like to restart now?',
     buttons: ['Restart', 'Dismiss'],
     defaultId: 0, // Make `Restart` the default action button
