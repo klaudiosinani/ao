@@ -110,7 +110,7 @@ exports.create = win => {
   }, {
     type: 'separator'
   }, {
-    label: `Settings`,
+    label: `To-Do Settings`,
     click() {
       showWin();
       activate('settings');

@@ -419,7 +419,7 @@ const darwinTpl = [{
   }, {
     type: 'separator'
   }, {
-    label: 'Settings',
+    label: 'To-Do Settings',
     accelerator: setAcc('settings', 'CmdorCtrl+,'),
     click() {
       activate('settings');
@@ -737,7 +737,7 @@ const otherTpl = [{
   }, {
     type: 'separator'
   }, {
-    label: 'Settings',
+    label: 'To-Do Settings',
     accelerator: setAcc('settings', 'CmdorCtrl+,'),
     click() {
       activate('settings');
