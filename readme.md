@@ -38,7 +38,7 @@
 
 ## Description
 
-Ao is an unofficial, open source, third-party, community driven, free Microsoft To-Do app with a handful of useful features.
+Ao is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than [120 countries](https://snapcraft.io/ao).
 
 Come over to our [Gitter](https://gitter.im/klauscfhq/ao) channel to share your thoughts on the project or to just say hi.
 
@@ -258,7 +258,7 @@ Coded with ❤ by
 
 ## Disclaimer
 
-Ao is an unofficial, open source, third-party, community driven, free app and is not affiliated in any way with Microsoft.
+Ao is an unofficial, open source, third-party, community-driven, free app and is not affiliated in any way with Microsoft.
 
 ## License
 
