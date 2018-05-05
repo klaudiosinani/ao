@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://cdn.rawgit.com/klauscfhq/ao/99ec7f1f/media/logo.png" width="23%"><br/>Ao
+  <img src="https://cdn.rawgit.com/klauscfhq/ao/99ec7f1f/media/logo.png" width="21%"><br/>Ao
 </h1>
 
 <h4 align="center">
@@ -58,11 +58,8 @@ You can find more desktop apps [here](#related-apps).
 - [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Global Shortcut Keys](#global-shortcut-keys)
 - [Cross Platform](https://github.com/klauscfhq/ao/releases/latest)
-- Automagical Auto-updates ✔️
-- Desktop Notifications
-- Launch on Start
-- Launch Minimized
-- Background Behavior
+- Automatic Updates ✔️
+- Deep OS Integration
 
 <sup>🍎 Macos only atm</sup><br/>
 <sup>✔️ Windows & Linux only atm</sup>
@@ -73,6 +70,7 @@ You can find more desktop apps [here](#related-apps).
 - [Highlights](#highlights)
 - [Install](#install)
 - [Features](#features)
+- [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Development](#development)
 - [Related Apps](#related-apps)
 - [Team](#team)
@@ -81,11 +79,19 @@ You can find more desktop apps [here](#related-apps).
 
 ## Install
 
+#### Github Releases
+
 Head to the [releases](https://github.com/klauscfhq/ao/releases/latest) page and download the appropriate installer for your system.
 
-Mac OS users can directly install through homebrew cask: `brew cask install ao`
+#### Homebrew
+
+Macos users can directly install through [Homebrew Cask](https://caskroom.github.io/) `brew cask install ao`
+
+#### Snap
 
 Ubuntu Linux users can directly install through [`Snap`](https://snapcraft.io/ao) `snap install ao`
+
+#### AUR
 
 Arch Linux users can directly install through [`AUR`](https://aur.archlinux.org/packages/ao/) `yaourt ao`
 
@@ -179,9 +185,16 @@ Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd>
 
 Press <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd> and allow Ao to intelligently adjust to your environment.
 
-### Keyboard shortcuts
+## Keyboard Shortcuts
 
-40+ keyboard shortcuts. Toggle anything in a flash.
+### Local Shortcut Keys
+
+40+ local keyboard shortcuts. Toggle anything in a flash.
+
+<details>
+<summary>View all the available local keyboard shortcuts.</summary>
+
+<br/>
 
 Description                | Keys
 -------------------------- | --------------------------
@@ -221,15 +234,28 @@ Toggle Dev Tools           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd>
 Set Always on Top          | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>
 Make Text Larger           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
 
+<br/>
+
+</details>
+
 ### Global Shortcut Keys
 
 Access Ao at any moment from anywhere within your operating system. All global shortcuts can be customized to match your own preference through the configuration file `~/.ao.json`.
+
+<details>
+<summary>View all the available global keyboard shortcuts.</summary>
+
+<br>
 
 Description                | Global Shortcut
 -------------------------- | --------------------------
 Toggle Ao Window           | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>A</kbd>
 Create New Todo            | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>C</kbd>
 Search Todos               | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>F</kbd>
+
+<br/>
+
+</details>
 
 ## Development
 
