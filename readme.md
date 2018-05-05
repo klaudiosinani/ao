@@ -46,22 +46,16 @@ You can find more desktop apps [here](#related-apps).
 
 ## Highlights
 
-- [Vibrant Themes](#vibrant-themes) 🍎
-- [Sepia Theme](#sepia-theme)
-- [Black Theme](#black-theme)
-- [Dark Theme](#dark-theme)
-- [Compact Mode](#compact-mode)
-- [List Navigation](#list-navigation)
-- [Custom Shortcut Keys](#custom-shortcut-keys)
-- [Scalable Interface](#scalable-interface)
-- [Auto Night Mode](#auto-night-mode)
-- [Keyboard Shortcuts](#keyboard-shortcuts)
-- [Global Shortcut Keys](#global-shortcut-keys)
-- [Cross Platform](https://github.com/klauscfhq/ao/releases/latest)
+- Black, Dark, Sepia & Vibrant Themes
+- Cross Platform
+- Compact & Auto Night Modes
+- Local & Global Keyboard Shortcuts
+- Customizable Keyboard Shortcuts
 - Automatic Updates ✔️
+- List Navigation
+- Scalable Interface
 - Deep OS Integration
 
-<sup>🍎 Macos only atm</sup><br/>
 <sup>✔️ Windows & Linux only atm</sup>
 
 ## Contents
@@ -85,7 +79,7 @@ Head to the [releases](https://github.com/klauscfhq/ao/releases/latest) page and
 
 #### Homebrew
 
-Macos users can directly install through [Homebrew Cask](https://caskroom.github.io/) `brew cask install ao`
+Macos users can directly install through [`Homebrew Cask`](https://caskroom.github.io/) `brew cask install ao`
 
 #### Snap
 
@@ -103,7 +97,9 @@ The version available on `AUR` may not be the latest. If that is the case, pleas
 
 ### Vibrant Themes
 
-Refreshing [dark](https://cdn.rawgit.com/klauscfhq/ao/55af062e/media/vibrant-dark-theme.png) and [light](https://cdn.rawgit.com/klauscfhq/ao/55af062e/media/vibrant-theme.png) vibrant themes. Press <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> to activate them respectively.
+Press <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> to activate the [dark](https://cdn.rawgit.com/klauscfhq/ao/55af062e/media/vibrant-dark-theme.png) or [light](https://cdn.rawgit.com/klauscfhq/ao/55af062e/media/vibrant-theme.png) vibrant theme respectively.
+
+Please note that the feature is available **only on Macos**.
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
