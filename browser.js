@@ -5,10 +5,8 @@ const os = require('os');
 const timeStamp = require('time-stamp');
 const config = require('./config');
 
-const join = path.join;
-const shell = electron.shell;
-const ipc = electron.ipcRenderer;
-const webFrame = electron.webFrame;
+const {join} = path;
+const {ipcRenderer: ipc, shell, webFrame} = electron;
 
 const oaJSON = '.ao.json'; // Config file name
 const homeDir = os.homedir();

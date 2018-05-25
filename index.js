@@ -9,8 +9,7 @@ const tray = require('./tray');
 const config = require('./config');
 const update = require('./update');
 
-const app = electron.app;
-const ipcMain = electron.ipcMain;
+const {app, ipcMain} = electron;
 
 require('electron-debug')({enabled: true});
 require('electron-dl')();

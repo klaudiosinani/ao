@@ -6,15 +6,11 @@ const fs = require('fs-extra');
 const config = require('./config');
 const update = require('./update');
 
-const app = electron.app;
+const {platform} = process;
+const {join, resolve} = path;
+const {app, BrowserWindow, dialog, globalShortcut, shell} = electron;
+
 const appName = app.getName();
-const BrowserWindow = electron.BrowserWindow;
-const dialog = electron.dialog;
-const globalShortcut = electron.globalShortcut;
-const join = path.join;
-const platform = process.platform;
-const resolve = path.resolve;
-const shell = electron.shell;
 
 let configData;
 let defaultConfigPath; // Default config file directory
