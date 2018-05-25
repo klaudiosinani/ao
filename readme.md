@@ -19,41 +19,26 @@
   <a href="https://ci.appveyor.com/project/klauscfhq/ao">
     <img alt="Build Status" src="https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true">
   </a>
-  <a href="https://tidelift.com/repo/github/klauscfhq/ao">
-    <img alt="Dependency Status" src="https://tidelift.com/badges/github/klauscfhq/ao?style=flat">
-  </a>
-  <a href="https://github.com/klauscfhq/ao">
-    <img alt="XO code style" src="https://img.shields.io/badge/code_style-XO-5ed9c7.svg">
-  </a>
-  <a href="https://gitter.im/klauscfhq/ao">
-    <img alt="Gitter" src="https://img.shields.io/gitter/room/nwjs/nw.js.svg">
-  </a>
-  <a href="https://github.com/klauscfhq/ao/releases">
-    <img alt="Latest version" src="https://badge.fury.io/gh/klauscfhq%2Fao.svg">
-  </a>
-  <a href="https://github.com/klauscfhq/ao/releases">
-    <img alt="DLs" src="https://img.shields.io/github/downloads/klauscfhq/ao/total.svg">
-  </a>
 </p>
 
 ## Description
 
 Ao is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than [120 countries](https://snapcraft.io/ao).
 
-Come over to our [Gitter](https://gitter.im/klauscfhq/ao) channel to share your thoughts on the project or to just say hi.
+Come over to [Gitter](https://gitter.im/klauscfhq/ao) or [Twitter](https://twitter.com/klauscfhq) to share your thoughts on the project.
 
 You can find more desktop apps [here](#related-apps).
 
 ## Highlights
 
-- Black, Dark, Sepia & Vibrant Themes
-- Cross Platform
-- Compact & Auto Night Modes
-- Local & Global Keyboard Shortcuts
-- Customizable Keyboard Shortcuts
+- [Black](#black-theme), [Dark](#dark-theme), [Sepia](#sepia-theme) & [Vibrant](#vibrant-themes) Themes
+- [Compact](#compact-mode) & [Auto-Night](#auto-night-mode) Modes
+- [Local](#local-shortcut-keys) & [Global](#global-shortcut-keys) Keyboard Shortcuts
+- [Customizable Keyboard Shortcuts](#custom-shortcut-keys)
+- [List Navigation](#list-navigation)
+- [Scalable Interface](#scalable-interface)
 - Automatic Updates ✔️
-- List Navigation
-- Scalable Interface
+- Cross Platform
 - Deep OS Integration
 
 <sup>✔️ Windows & Linux only atm</sup>
@@ -266,9 +251,7 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## Related Apps
 
-More awesome desktop apps.
-
-- [Tusk](https://github.com/champloohq/tusk) - 🐘 Refined Evernote desktop app.
+- [Tusk](https://github.com/champloohq/tusk) - Refined Evernote desktop app.
 
 ## Team
 
