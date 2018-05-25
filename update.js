@@ -3,9 +3,8 @@ const path = require('path');
 const electron = require('electron');
 const get = require('simple-get');
 
-const app = electron.app;
-const shell = electron.shell;
-const dialog = electron.dialog;
+const {app, dialog, shell} = electron;
+
 const installedVersion = app.getVersion();
 const updateURL = 'https://klauscfhq.github.io/ao/update.json';
 const releaseURL = 'https://github.com/klauscfhq/ao/releases/latest';

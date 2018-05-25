@@ -3,9 +3,8 @@ const path = require('path');
 const electron = require('electron');
 const config = require('./config');
 
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
-const shell = electron.shell;
+const {app, BrowserWindow, shell} = electron;
+
 let tray = null;
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 
