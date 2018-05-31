@@ -1,7 +1,7 @@
 'use strict';
 const path = require('path');
-const fs = require('fs');
 const electron = require('electron');
+const fs = require('fs-extra');
 const isDevMode = require('electron-is-dev');
 const ms = require('ms');
 const appMenu = require('./menu');
@@ -81,7 +81,7 @@ function createMainWindow() {
   });
 
   aoWindow.on('unresponsive', e => {
-    console.log('Unresponsive Ao window. ', e);
+    console.log('Unresponsive window', e);
   });
 
   aoWindow.webContents.on('did-navigate-in-page', (e, url) => {
@@ -94,14 +94,15 @@ function createMainWindow() {
 app.on('ready', () => {
   electron.Menu.setApplicationMenu(appMenu);
   mainWindow = createMainWindow();
+
   if (config.get('useGlobalShortcuts')) {
-    // Check whether the global shortcuts should be activated
     appMenu.registerGlobalShortcuts();
   }
+
   if (!config.get('hideTray')) {
-    // Check whether the tray icon should be activated
     tray.create(mainWindow);
   }
+
   const windowContent = mainWindow.webContents;
 
   windowContent.on('dom-ready', () => {
@@ -117,7 +118,6 @@ app.on('ready', () => {
     windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/vibrant-dark-mode.css'), 'utf8'));
 
     if (config.get('launchMinimized')) {
-      // Check whether to launch the main window minimized
       mainWindow.minimize();
     } else {
       mainWindow.show();
@@ -130,7 +130,7 @@ app.on('ready', () => {
   });
 
   windowContent.on('crashed', e => {
-    console.log('Ao window crashed. ', e);
+    console.log('Window crashed', e);
   });
 
   update.init(electron.Menu.getApplicationMenu());
@@ -143,36 +143,26 @@ app.on('ready', () => {
 });
 
 ipcMain.on('activate-vibrant', () => {
-  // Check if the vibrant theme was activated
   if (config.get('vibrantMode')) {
-    // Set the app's background vibrant light
     mainWindow.setVibrancy('light');
   } else if (config.get('vibrantDarkMode')) {
-    // Set the app's background vibrant ultra dark
     mainWindow.setVibrancy('ultra-dark');
   } else {
-    // Remove background vibrancy
     mainWindow.setVibrancy(null);
   }
 });
 
 ipcMain.on('activate-menu-bar', () => {
-  // Check if the menu bar was activated
   if (config.get('menuBarVisible')) {
-    // Make the menu bar persistently visible
     mainWindow.setMenuBarVisibility(true);
-    // Disable ALT key toggling
     mainWindow.setAutoHideMenuBar(false);
   } else {
-    // Hide the menu bar
     mainWindow.setMenuBarVisibility(false);
-    // Restore ALT key toggling
     mainWindow.setAutoHideMenuBar(true);
   }
 });
 
 process.on('uncaughtException', error => {
-  // Report uncaught exceptions
   console.log(error);
 });
 
