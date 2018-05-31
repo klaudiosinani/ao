@@ -1,21 +1,20 @@
 'use strict';
-const fs = require('fs');
 const path = require('path');
-const chalk = require('chalk');
-const rimraf = require('rimraf');
+const fs = require('fs-extra');
+const {Signale} = require('signale');
 
 const {resolve} = path;
-const {green, yellow} = chalk.bold;
-
 const distPath = resolve(__dirname, '../dist');
+
+const signale = new Signale({scope: 'Ao'});
 
 if (fs.existsSync(distPath)) {
   try {
-    rimraf.sync(distPath);
-    console.log(green('✔ Cleaning up'));
+    fs.removeSync(distPath);
+    signale.success('Cleaned up');
   } catch (err) {
-    console.error(err);
+    signale.error(err);
   }
 } else {
-  console.log(yellow('Nothing to clean-up'));
+  signale.warn('Nothing to clean up');
 }
