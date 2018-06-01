@@ -34,7 +34,7 @@ cache:
     - $HOME/.cache/electron-builder
     - $HOME/.cache/snapcraft
 install:
-  - nvm install 6
+  - nvm install 8
   - npm install
   - npm prune
 script:

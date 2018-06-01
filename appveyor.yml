@@ -3,7 +3,7 @@ platform:
 init:
   - git config --global core.autocrlf input
 install:
-  - ps: Install-Product node 6 x64
+  - ps: Install-Product node 8 x64
   - npm install npm
   - set PATH=%APPDATA%\npm;%PATH%
   - npm --version
@@ -21,7 +21,7 @@ artifacts:
   - path: dist\win\*.exe
     name: installer
 deploy:
-  description: 'Ao - Charming MS To-DO desktop app'
+  description: 'Ao - Elegant Microsoft To-Do desktop app'
   provider: GitHub
   artifact: nupkg, releases, installer
   auth_token:
