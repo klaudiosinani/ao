@@ -431,8 +431,4 @@ document.addEventListener('DOMContentLoaded', () => {
   vibrantMode();
 
   vibrantDarkMode();
-
-  if (!config.get('vibrantMode') && !config.get('vibrantDarkMode')) {
-    document.documentElement.style.backgroundColor = '#212121';
-  }
 });
