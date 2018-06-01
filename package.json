@@ -26,7 +26,7 @@
     "dist": "build --publish never",
     "clean": "node ./bin/clean.js",
     "authors": "./bin/update-authors.sh",
-    "pack:macos": "electron-packager . --no-prune --overwrite --asar --out=dist --platform=darwin --arch=x64 --icon=static/Icon.icns && cd dist/Ao-darwin-x64 && zip -ryXq9 ../Ao-macos-v${npm_package_version}.zip Ao.app && electron-installer-dmg ../Ao-darwin-x64/Ao.app Ao --icon=../../static/Icon.icns && cp Ao.dmg  ../../dist"
+    "pack:macos": "electron-packager . --no-prune --overwrite --asar --out=dist --platform=darwin --arch=x64 --icon=static/Icon.icns && cd dist/Ao-darwin-x64 && zip -ryXq9 ../ao-macos-${npm_package_version}.zip Ao.app && electron-installer-dmg ../Ao-darwin-x64/Ao.app Ao --icon=../../static/Icon.icns && cp Ao.dmg ../../dist/ao-macos-${npm_package_version}.dmg"
   },
   "dependencies": {
     "auto-launch": "^5.0.1",
