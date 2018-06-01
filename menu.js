@@ -10,26 +10,21 @@ const {platform} = process;
 const {join, resolve} = path;
 const {app, BrowserWindow, dialog, globalShortcut, shell} = electron;
 
-const appName = app.getName();
+const url = {
+  community: 'https://gitter.im/klauscfhq/ao',
+  issue: 'https://github.com/klauscfhq/ao/issues/new',
+  homepage: 'https://klauscfhq.github.io/ao',
+  keyboardShortcutsRef: 'https://github.com/klauscfhq/ao#keyboard-shortcuts',
+  license: 'https://github.com/klauscfhq/ao/blob/master/license.md',
+  search: 'https://github.com/search?q=+is:issue+repo:klauscfhq/ao',
+  searchFeatureRequests: 'https://github.com/klauscfhq/ao/labels/feature-request',
+  source: 'https://github.com/klauscfhq/ao'
+};
 
-let configData;
-let defaultConfigPath; // Default config file directory
-const oaJSON = '.ao.json'; // Config file name
-const homeDir = os.homedir();
-const homeConfig = join(homeDir, oaJSON); // Config file on home directory
-const keymapsDir = resolve(__dirname, 'keymaps'); // Keymaps directory
+function getConfigPath() {
+  let defaultConfigPath;
+  const keymapsDir = resolve(__dirname, 'keymaps');
 
-const sourceURL = 'https://github.com/klauscfhq/ao';
-const homepageURL = 'https://klauscfhq.github.io/ao';
-const communityURL = 'https://gitter.im/klauscfhq/ao';
-const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
-const searchURL = 'https://github.com/search?q=+is:issue+repo:klauscfhq/ao';
-const licenseURL = 'https://github.com/klauscfhq/ao/blob/master/license.md';
-const keyboardShortcutsRefURL = 'https://github.com/klauscfhq/ao#keyboard-shortcuts';
-const searchFeatureRequestsURL = 'https://github.com/klauscfhq/ao/labels/feature-request';
-
-function getPath() {
-  // Retrieve the default path of the platform-dedicated config file
   switch (platform) {
     case ('darwin'):
       defaultConfigPath = join(keymapsDir, 'darwin.json');
@@ -47,13 +42,15 @@ function getPath() {
       defaultConfigPath = join(keymapsDir, 'linux.json');
       break;
   }
+
   return defaultConfigPath;
 }
 
-function getConfig() {
-  // Get the dedicated config file for each platform
-  const defaultConfig = getPath();
-  // Create a new default config file if it does not already exist
+function getConfigData() {
+  let configData;
+  const defaultConfig = getConfigPath();
+  const homeConfig = join(os.homedir(), '.ao.json');
+
   if (!fs.existsSync(homeConfig)) {
     try {
       fs.copySync(defaultConfig, homeConfig);
@@ -62,30 +59,30 @@ function getConfig() {
       console.error(err);
     }
   }
-  // Parse the content of the config file
+
   try {
     configData = JSON.parse(fs.readFileSync(homeConfig, 'utf8'));
   } catch (err) {
     console.log('Invalid JSON object');
   }
+
   return configData;
 }
 
-// Get the user-defined settings
-const aoConfig = getConfig();
-
 function setAcc(custom, predefined) {
-  // Return the custom or predefined shortcut keys
-  if (Object.prototype.hasOwnProperty.call(aoConfig.shortcutKeys, custom)) {
-    return aoConfig.shortcutKeys[custom];
+  const config = getConfigData();
+
+  if (Object.prototype.hasOwnProperty.call(config.shortcutKeys, custom)) {
+    return config.shortcutKeys[custom];
   }
+
   return predefined;
 }
 
 function activate(custom) {
   const [appWindow] = BrowserWindow.getAllWindows();
 
-  if (process.platform === 'darwin') {
+  if (platform === 'darwin') {
     appWindow.restore();
   }
 
@@ -93,7 +90,6 @@ function activate(custom) {
 }
 
 function showWin() {
-  // Bring main app window on top if not visible or focused
   const appWindow = BrowserWindow.getAllWindows()[0];
   if (!appWindow.isVisible() || !appWindow.isFocused()) {
     appWindow.show();
@@ -102,7 +98,6 @@ function showWin() {
 }
 
 function toggleWin() {
-  // Toggle/untoggle main app window
   const appWindow = BrowserWindow.getAllWindows()[0];
   if (appWindow.isVisible() && appWindow.isFocused()) {
     appWindow.hide();
@@ -115,20 +110,17 @@ function toggleWin() {
 
 function registerGlobalShortcuts() {
   const globalToggleAo = globalShortcut.register(
-    // Global shortcut key for toggling/untoggling main app window
     setAcc('global-toggle-ao', 'Shift+Alt+A'), () => {
       toggleWin();
     });
 
   const globalSearchTodo = globalShortcut.register(
-    // Global shortcut key for todo searching
     setAcc('global-search', 'Shift+Alt+F'), () => {
       showWin();
       activate('search');
     });
 
   const globalCreateTodo = globalShortcut.register(
-    // Global shortcut key for todo creation
     setAcc('global-new-todo', 'Shift+Alt+C'), () => {
       showWin();
       activate('new-todo');
@@ -142,17 +134,16 @@ function registerGlobalShortcuts() {
 }
 
 function requestAppRestart() {
-  // Display restart dialog on settings update
   const result = dialog.showMessageBox({
-    icon: path.join(__dirname, 'static/Icon.png'),
+    icon: join(__dirname, 'static/Icon.png'),
     title: 'Restart Required',
     message: 'Restart Ao to activate new settings',
     detail: 'Would you like to restart now?',
     buttons: ['Restart', 'Dismiss'],
-    defaultId: 0, // Make `Restart` the default action button
+    defaultId: 0,
     cancelId: 1
   });
-  // Check whether the restart button was pressed
+
   if (result === 0) {
     app.quit();
     app.relaunch();
@@ -160,9 +151,8 @@ function requestAppRestart() {
 }
 
 function confirmSignOut() {
-  // Display sign-out confirmation dialog
   const result = dialog.showMessageBox({
-    icon: path.join(__dirname, 'static/Icon.png'),
+    icon: join(__dirname, 'static/Icon.png'),
     title: 'Sign out Confirmation',
     message: 'Sign out of Ao',
     detail: 'Are you sure you want to sign out?',
@@ -170,7 +160,7 @@ function confirmSignOut() {
     defaultId: 0, // Make `Sign out` the default action button
     cancelId: 1
   });
-  // Check whether the sign-out button was pressed
+
   if (result === 0) {
     activate('sign-out');
   }
@@ -179,7 +169,7 @@ function confirmSignOut() {
 const helpSubmenu = [{
   label: `View License`,
   click() {
-    shell.openExternal(licenseURL);
+    shell.openExternal(url.license);
   }
 }, {
   label: 'Version ' + app.getVersion(),
@@ -187,7 +177,7 @@ const helpSubmenu = [{
 }, {
   label: `Ao Homepage`,
   click() {
-    shell.openExternal(homepageURL);
+    shell.openExternal(url.homepage);
   }
 }, {
   label: `Check for Update`,
@@ -234,48 +224,48 @@ const helpSubmenu = [{
 }, {
   label: 'Keyboard Shortcuts Reference',
   click() {
-    shell.openExternal(keyboardShortcutsRefURL);
+    shell.openExternal(url.keyboardShortcutsRef);
   }
 }, {
   type: 'separator'
 }, {
   label: 'Fork Source',
   click() {
-    shell.openExternal(sourceURL);
+    shell.openExternal(url.source);
   }
 }, {
   label: `Report Issue`,
   click() {
-    shell.openExternal(issueURL);
+    shell.openExternal(url.issue);
   }
 }, {
   label: `Search Issues`,
   click() {
-    shell.openExternal(searchURL);
+    shell.openExternal(url.search);
   }
 }, {
   label: `Search Feature Requests`,
   click() {
-    shell.openExternal(searchFeatureRequestsURL);
+    shell.openExternal(url.searchFeatureRequests);
   }
 }, {
   label: `Community Discussion`,
   click() {
-    shell.openExternal(communityURL);
+    shell.openExternal(url.community);
   }
 }];
 
-if (process.platform !== 'darwin') {
+if (platform !== 'darwin') {
   helpSubmenu.push({
     type: 'separator'
   }, {
     role: 'about',
     click() {
-      electron.dialog.showMessageBox({
+      dialog.showMessageBox({
         title: `About Ao`,
         message: `Ao ${app.getVersion()} (${os.arch()})`,
         detail: 'Created by Klaus Sinani',
-        icon: path.join(__dirname, 'static/Icon.png'),
+        icon: join(__dirname, 'static/Icon.png'),
         buttons: ['OK']
       });
     }
@@ -283,7 +273,7 @@ if (process.platform !== 'darwin') {
 }
 
 const darwinTpl = [{
-  label: appName,
+  label: app.getName(),
   submenu: [{
     role: 'about'
   }, {
@@ -943,7 +933,7 @@ const otherTpl = [{
   submenu: helpSubmenu
 }];
 
-const tpl = process.platform === 'darwin' ? darwinTpl : otherTpl;
+const tpl = platform === 'darwin' ? darwinTpl : otherTpl;
 
 module.exports = electron.Menu.buildFromTemplate(tpl);
 

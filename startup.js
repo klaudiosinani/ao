@@ -3,15 +3,14 @@ const electron = require('electron');
 const AutoLaunch = require('auto-launch');
 
 const {app} = electron;
+const {platform} = process;
 
-const launchAo = new AutoLaunch({
-  name: 'Ao',
-  path: (process.platform === 'darwin') ? app.getPath('exe').replace(/\.app\/Content.*/, '.app') : undefined,
-  isHidden: true
-});
+const [name, executable] = [app.getName(), app.getPath('exe')];
+const path = platform === 'darwin' ? executable.replace(/\.app\/Content.*/, '.app') : undefined;
+
+const launchAo = new AutoLaunch({path, name, isHidden: true});
 
 function activate() {
-  // Activate app launch on login
   return launchAo
     .isEnabled()
     .then(enabled => {
@@ -22,7 +21,6 @@ function activate() {
 }
 
 function deactivate() {
-  // Deactivate app launch on login
   return launchAo
     .isEnabled()
     .then(enabled => {

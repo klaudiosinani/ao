@@ -9,7 +9,10 @@ const tray = require('./tray');
 const config = require('./config');
 const update = require('./update');
 
-const {app, ipcMain} = electron;
+const {join} = path;
+const {readFileSync} = fs;
+const {platform} = process;
+const {app, BrowserWindow, ipcMain, Menu, shell} = electron;
 
 require('electron-debug')({enabled: true});
 require('electron-dl')();
@@ -37,7 +40,7 @@ function createMainWindow() {
   const darkModeFlag = config.get('darkMode') || config.get('blackMode');
   const lastURL = config.get('lastURL');
 
-  const aoWindow = new electron.BrowserWindow({
+  const aoWindow = new BrowserWindow({
     title: app.getName(),
     x: lastWindowState.x,
     y: lastWindowState.y,
@@ -45,14 +48,14 @@ function createMainWindow() {
     height: lastWindowState.height,
     minWidth: 400,
     minHeight: 200,
-    icon: process.platform === 'linux' && path.join(__dirname, 'static/Icon.png'),
+    icon: platform === 'linux' && join(__dirname, 'static/Icon.png'),
     alwaysOnTop: config.get('alwaysOnTop'),
     titleBarStyle: 'hiddenInset',
     darkTheme: darkModeFlag,
     autoHideMenuBar: true,
     show: false,
     webPreferences: {
-      preload: path.join(__dirname, 'browser.js'),
+      preload: join(__dirname, 'browser.js'),
       nodeIntegration: false,
       plugins: true
     }
@@ -64,7 +67,7 @@ function createMainWindow() {
     if (!exiting) {
       e.preventDefault();
 
-      if (process.platform === 'darwin') {
+      if (platform === 'darwin') {
         app.hide();
       } else {
         aoWindow.hide();
@@ -92,7 +95,7 @@ function createMainWindow() {
 }
 
 app.on('ready', () => {
-  electron.Menu.setApplicationMenu(appMenu);
+  Menu.setApplicationMenu(appMenu);
   mainWindow = createMainWindow();
 
   if (config.get('useGlobalShortcuts')) {
@@ -106,16 +109,16 @@ app.on('ready', () => {
   const windowContent = mainWindow.webContents;
 
   windowContent.on('dom-ready', () => {
-    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/browser.css'), 'utf8'));
-    if (process.platform === 'darwin') {
+    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'browser.css'), 'utf8'));
+    if (platform === 'darwin') {
       // Make room for the traffic-lights on macos
-      windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/macos.css'), 'utf8'));
+      windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'macos.css'), 'utf8'));
     }
-    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/black-mode.css'), 'utf8'));
-    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/dark-mode.css'), 'utf8'));
-    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/sepia-mode.css'), 'utf8'));
-    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/vibrant-mode.css'), 'utf8'));
-    windowContent.insertCSS(fs.readFileSync(path.join(__dirname, 'style/vibrant-dark-mode.css'), 'utf8'));
+    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'black-mode.css'), 'utf8'));
+    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'dark-mode.css'), 'utf8'));
+    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'sepia-mode.css'), 'utf8'));
+    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'vibrant-mode.css'), 'utf8'));
+    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'vibrant-dark-mode.css'), 'utf8'));
 
     if (config.get('launchMinimized')) {
       mainWindow.minimize();
@@ -126,14 +129,14 @@ app.on('ready', () => {
 
   windowContent.on('new-window', (e, url) => {
     e.preventDefault();
-    electron.shell.openExternal(url);
+    shell.openExternal(url);
   });
 
   windowContent.on('crashed', e => {
     console.log('Window crashed', e);
   });
 
-  update.init(electron.Menu.getApplicationMenu());
+  update.init(Menu.getApplicationMenu());
 
   if (!isDevMode) {
     setInterval(() => {

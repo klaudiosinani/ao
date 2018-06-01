@@ -6,83 +6,68 @@ const get = require('simple-get');
 const {app, dialog, shell} = electron;
 
 const installedVersion = app.getVersion();
-const updateURL = 'https://klauscfhq.github.io/ao/update.json';
-const releaseURL = 'https://github.com/klauscfhq/ao/releases/latest';
+const urls = {
+  update: 'https://klauscfhq.github.io/ao/update.json',
+  release: 'https://github.com/klauscfhq/ao/releases/latest'
+};
 
 function displayAvailableUpdate(latestVersion) {
-  // Display available update info-window
-  const result = dialog.showMessageBox({
+  return dialog.showMessageBox({
     icon: path.join(__dirname, 'static/Icon.png'),
     title: 'Update Ao',
-    message: 'Version ' + latestVersion + ' is now available',
+    message: ['Version', latestVersion, 'is now available'].join(' '),
     detail: 'Click Download to get it now',
     buttons: ['Download', 'Dismiss'],
-    defaultId: 0, // Make `Download` the default action button
+    defaultId: 0,
     cancelId: 1
   });
-  console.log('Update to version', latestVersion, 'is now available');
-  return result;
 }
 
 function displayUnavailableUpdate(installedVersion) {
-  // Display unavailable update info-window
-  const result = dialog.showMessageBox({
+  return dialog.showMessageBox({
     icon: path.join(__dirname, 'static/Icon.png'),
     title: 'No Update Available',
     message: 'No update available',
-    detail: ['Version', installedVersion, 'is the latest version'].join(' '),
+    detail: ['Version', installedVersion, 'is the latest'].join(' '),
     buttons: ['OK']
   });
-  console.log('You are on the latest version', installedVersion);
-  return result;
 }
 
 function getLatestVersion(err, res, data) {
   if (err) {
-    console.log('Update error.');
+    console.log('Update error');
   } else if (res.statusCode === 200) {
-    // Updating URL resolved properly
     try {
-      // Safely parse JSON
       data = JSON.parse(data);
     } catch (err) {
       console.log('Invalid JSON object');
     }
-    // Get latest version
-    const latestVersion = data.version;
+    const {version: latestVersion} = data;
     return latestVersion;
   } else {
-    // Updating URL did not resolve properly
     console.log('Unexpected status code error');
   }
 }
 
 function response(result) {
-  // If the `Download` button was pressed
-  // send the user to the latest Github release
   if (result === 0) {
-    shell.openExternal(releaseURL);
+    shell.openExternal(urls.release);
   }
 }
 
 function manualUpdateCheck(err, res, data) {
-  // Manually check for updates
   const latestVersion = getLatestVersion(err, res, data);
   if (latestVersion === installedVersion) {
-    // No updates available
     displayUnavailableUpdate(installedVersion);
   } else {
-    // Set out update notification & get user response
     const result = displayAvailableUpdate(latestVersion);
     response(result);
   }
 }
 
 function autoUpdateCheck(err, res, data) {
-  // Automatically check for updates
   const latestVersion = getLatestVersion(err, res, data);
   if (latestVersion !== installedVersion) {
-    // Set out update notification & get user response
     const result = displayAvailableUpdate(latestVersion);
     response(result);
   }
@@ -120,15 +105,12 @@ module.exports.init = () => {
 
 module.exports.autoUpdateCheck = () => {
   if (process.platform === 'win32') {
-    // Auto-update on Windows
     electron.autoUpdater.checkForUpdates();
   } else {
-    // Check for updates automatically on Linux/Macos
-    get.concat(updateURL, autoUpdateCheck);
+    get.concat(urls.update, autoUpdateCheck);
   }
 };
 
 module.exports.manualUpdateCheck = () => {
-  // Check for updates manually
-  get.concat(updateURL, manualUpdateCheck);
+  get.concat(urls.update, manualUpdateCheck);
 };

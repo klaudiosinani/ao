@@ -3,27 +3,27 @@ const path = require('path');
 const electron = require('electron');
 const config = require('./config');
 
-const {app, BrowserWindow, shell} = electron;
+const {join} = path;
+const {platform} = process;
+const {app, BrowserWindow, Menu, shell, Tray} = electron;
 
 let tray = null;
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 
 function activate(command) {
   const appWindow = BrowserWindow.getAllWindows()[0];
-  // Extra measure in order to be shown
   appWindow.show();
   appWindow.webContents.send(command);
 }
 
 exports.create = win => {
-  if (process.platform === 'darwin' || tray) {
+  if (platform === 'darwin' || tray) {
     return;
   }
 
-  const iconPath = path.join(__dirname, 'static/IconTray.png');
+  const iconPath = join(__dirname, 'static/IconTray.png');
 
   const toggleWin = () => {
-    // Toggle/untoggle window
     if (win.isVisible()) {
       win.hide();
     } else {
@@ -32,13 +32,12 @@ exports.create = win => {
   };
 
   const showWin = () => {
-    // Bring window on top if not visible
     if (!win.isVisible()) {
       win.show();
     }
   };
 
-  const contextMenu = electron.Menu.buildFromTemplate([{
+  const contextMenu = Menu.buildFromTemplate([{
     label: 'Open Ao',
     click() {
       toggleWin();
@@ -125,7 +124,7 @@ exports.create = win => {
     role: 'quit'
   }]);
 
-  tray = new electron.Tray(iconPath);
+  tray = new Tray(iconPath);
   tray.setToolTip(`${app.getName()}`);
   tray.setContextMenu(contextMenu);
   tray.on('click', toggleWin);
