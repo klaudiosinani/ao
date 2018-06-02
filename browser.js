@@ -272,32 +272,29 @@ function selectList(index) {
     document.querySelector(listCollectionSelector).children[0].firstChild.firstChild.firstChild.firstChild.click();
   } else {
     // Index corresponds to list residing inside of the list of lists
-    document.querySelector(listCollectionSelector).children[1].children[index - 1].firstChild.firstChild.firstChild.firstChild.click();
+    const listIndex = index > 1 ? index : index - 1;
+    document.querySelector(listCollectionSelector).children[1].children[listIndex].firstChild.firstChild.firstChild.firstChild.click();
   }
 }
 
 function goToNextList() {
   const index = getCurrentIndex();
   if (isLastList(index)) {
-    // Currently on the last list thus move to the first one
     selectList(0);
   } else {
-    // Navigate to the next list
     const nextIndex = getNextIndex(index);
     selectList(nextIndex);
   }
 }
 
-function goToPreviewsList() {
+function goToPreviousList() {
   const index = getCurrentIndex();
   if (isFirstList(index)) {
-    // Currently on the first list thus move to the last one
     const lastIndex = getLastListIndex();
     selectList(lastIndex);
   } else {
-    // Navigate to the previews list
-    const previewsIndex = getPreviewsIndex(index);
-    selectList(previewsIndex);
+    const previousIndex = getPreviousIndex(index);
+    selectList(previousIndex);
   }
 }
 
@@ -306,26 +303,25 @@ function getCurrentIndex() {
   const selectedList = document.querySelector(selectedListSelector);
   const myDayList = document.querySelector(myDayListSelector);
 
-  const listsArray = document.querySelector(listCollectionSelector).querySelectorAll(listSelector);
+  const lists = document.querySelector(listCollectionSelector).querySelectorAll(listSelector);
 
   if (selectedList === myDayList) {
-    // `My Day` list is selected thus the list index is zero
-    currentIndex = 0;
+    currentIndex = 0; // `My Day` list is selected thus the list index is zero
   } else {
     // Traverse the array and find the index of selected list
-    for (let i = 0; i < listsArray.length; i++) {
-      if (listsArray[i] === selectedList) {
+    for (let i = 0; i < lists.length; i++) {
+      if (lists[i] === selectedList) {
         currentIndex = i + 1;
       }
     }
   }
+
   return currentIndex;
 }
 
 function getLastListIndex() {
   const listsArray = document.querySelector(listCollectionSelector).querySelectorAll(listSelector);
-  const lastListIndex = listsArray.length;
-  return lastListIndex;
+  return listsArray.length;
 }
 
 function isLastList(index) {
@@ -338,18 +334,16 @@ function isFirstList(index) {
 }
 
 function getNextIndex(currentIndex) {
-  const nextIndex = currentIndex + 1;
-  return nextIndex;
+  return ++currentIndex;
 }
 
-function getPreviewsIndex(currentIndex) {
-  const previewsIndex = currentIndex - 1;
-  return previewsIndex;
+function getPreviousIndex(currentIndex) {
+  return --currentIndex;
 }
 
 ipc.on('next-list', goToNextList);
 
-ipc.on('previous-list', goToPreviewsList);
+ipc.on('previous-list', goToPreviousList);
 
 function toggleAutoLaunch() {
   const startup = require('./startup');
