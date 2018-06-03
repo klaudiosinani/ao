@@ -99,10 +99,10 @@ exports.create = win => {
   }, {
     label: 'Auto Night Mode',
     type: 'checkbox',
-    checked: config.get('autoNightMode'),
+    checked: config.get('mode.autoNight'),
     click(item) {
       showWin();
-      config.set('autoNightMode', item.checked);
+      config.set('mode.autoNight', item.checked);
       activate('auto-night-mode');
     }
   }, {

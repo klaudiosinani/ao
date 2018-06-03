@@ -122,11 +122,11 @@ function untoggleTheme(themeName, activateFunction) {
 }
 
 function blackMode() {
-  document.documentElement.classList.toggle('black-mode', config.get('blackMode'));
+  document.documentElement.classList.toggle('black-mode', config.get('mode.black'));
 }
 
 function untoggleBlack() {
-  untoggleTheme('blackMode', blackMode);
+  untoggleTheme('mode.black', blackMode);
 }
 
 ipc.on('toggle-black-mode', () => {
@@ -134,16 +134,16 @@ ipc.on('toggle-black-mode', () => {
   untoggleSepia();
   untoggleVibrant();
   untoggleDarkVibrant();
-  config.set('blackMode', !config.get('blackMode'));
+  config.set('mode.black', !config.get('mode.black'));
   blackMode();
 });
 
 function darkMode() {
-  document.documentElement.classList.toggle('dark-mode', config.get('darkMode'));
+  document.documentElement.classList.toggle('dark-mode', config.get('mode.dark'));
 }
 
 function untoggleDark() {
-  untoggleTheme('darkMode', darkMode);
+  untoggleTheme('mode.dark', darkMode);
 }
 
 ipc.on('toggle-dark-mode', () => {
@@ -151,16 +151,16 @@ ipc.on('toggle-dark-mode', () => {
   untoggleSepia();
   untoggleVibrant();
   untoggleDarkVibrant();
-  config.set('darkMode', !config.get('darkMode'));
+  config.set('mode.dark', !config.get('mode.dark'));
   darkMode();
 });
 
 function sepiaMode() {
-  document.documentElement.classList.toggle('sepia-mode', config.get('sepiaMode'));
+  document.documentElement.classList.toggle('sepia-mode', config.get('mode.sepia'));
 }
 
 function untoggleSepia() {
-  untoggleTheme('sepiaMode', sepiaMode);
+  untoggleTheme('mode.sepia', sepiaMode);
 }
 
 ipc.on('toggle-sepia-mode', () => {
@@ -168,18 +168,18 @@ ipc.on('toggle-sepia-mode', () => {
   untoggleDark();
   untoggleVibrant();
   untoggleDarkVibrant();
-  config.set('sepiaMode', !config.get('sepiaMode'));
+  config.set('mode.sepia', !config.get('mode.sepia'));
   sepiaMode();
 });
 
 function vibrantMode() {
-  document.documentElement.classList.toggle('vibrant-mode', config.get('vibrantMode'));
+  document.documentElement.classList.toggle('vibrant-mode', config.get('mode.vibrant'));
   ipc.send('activate-vibrant');
   document.documentElement.style.backgroundColor = 'transparent';
 }
 
 function untoggleVibrant() {
-  untoggleTheme('vibrantMode', vibrantMode);
+  untoggleTheme('mode.vibrant', vibrantMode);
 }
 
 ipc.on('toggle-vibrant-mode', () => {
@@ -187,18 +187,18 @@ ipc.on('toggle-vibrant-mode', () => {
   untoggleDark();
   untoggleSepia();
   untoggleDarkVibrant();
-  config.set('vibrantMode', !config.get('vibrantMode'));
+  config.set('mode.vibrant', !config.get('mode.vibrant'));
   vibrantMode();
 });
 
 function vibrantDarkMode() {
-  document.documentElement.classList.toggle('vibrant-dark-mode', config.get('vibrantDarkMode'));
+  document.documentElement.classList.toggle('vibrant-dark-mode', config.get('mode.vibrantDark'));
   ipc.send('activate-vibrant');
   document.documentElement.style.backgroundColor = 'transparent';
 }
 
 function untoggleDarkVibrant() {
-  untoggleTheme('vibrantDarkMode', vibrantDarkMode);
+  untoggleTheme('mode.vibrantDark', vibrantDarkMode);
 }
 
 ipc.on('toggle-vibrant-dark-mode', () => {
@@ -206,7 +206,7 @@ ipc.on('toggle-vibrant-dark-mode', () => {
   untoggleDark();
   untoggleSepia();
   untoggleVibrant();
-  config.set('vibrantDarkMode', !config.get('vibrantDarkMode'));
+  config.set('mode.vibrantDark', !config.get('mode.vibrantDark'));
   vibrantDarkMode();
 });
 
@@ -226,7 +226,7 @@ function autoNightMode() {
       untoggleSepia();
       untoggleVibrant();
       untoggleDarkVibrant();
-      config.set('darkMode', true);
+      config.set('mode.dark', true);
       darkMode();
       break;
 

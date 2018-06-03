@@ -37,7 +37,7 @@ if (functioning) {
 function createMainWindow() {
   const lastWindowState = config.get('lastWindowState');
   const maxWindowInteger = 2147483647;
-  const darkModeFlag = config.get('darkMode') || config.get('blackMode');
+  const darkModeFlag = config.get('mode.dark') || config.get('mode.black');
   const lastURL = config.get('lastURL');
 
   const aoWindow = new BrowserWindow({
@@ -146,9 +146,9 @@ app.on('ready', () => {
 });
 
 ipcMain.on('activate-vibrant', () => {
-  if (config.get('vibrantMode')) {
+  if (config.get('mode.vibrant')) {
     mainWindow.setVibrancy('light');
-  } else if (config.get('vibrantDarkMode')) {
+  } else if (config.get('mode.vibrantDark')) {
     mainWindow.setVibrancy('ultra-dark');
   } else {
     mainWindow.setVibrancy(null);
