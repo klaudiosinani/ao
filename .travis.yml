@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 language: c
-osx_image: xcode9
+osx_image: xcode9.2
 matrix:
   include:
     - os: osx
@@ -34,7 +34,7 @@ cache:
     - $HOME/.cache/electron-builder
     - $HOME/.cache/snapcraft
 install:
-  - nvm install 6
+  - nvm install 8
   - npm install
   - npm prune
 script:
