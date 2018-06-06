@@ -40,12 +40,15 @@ function createMainWindow() {
   const darkModeFlag = config.get('mode.dark') || config.get('mode.black');
   const lastURL = config.get('lastURL');
 
+  const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
+  const [defaultWidth, defaultHeight] = [width, height].map(x => Math.round((x * 3) / 4));
+
   const aoWindow = new BrowserWindow({
     title: app.getName(),
     x: lastWindowState.x,
     y: lastWindowState.y,
-    width: lastWindowState.width,
-    height: lastWindowState.height,
+    width: lastWindowState.width || defaultWidth,
+    height: lastWindowState.height || defaultHeight,
     minWidth: 400,
     minHeight: 200,
     icon: platform === 'linux' && join(__dirname, 'static/Icon.png'),
