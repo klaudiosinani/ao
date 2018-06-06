@@ -37,8 +37,7 @@
     "ms": "^2.0.0",
     "signale": "*",
     "simple-get": "^2.7.0",
-    "stylelint": "^9.2.0",
-    "time-stamp": "^2.0.0"
+    "stylelint": "^9.2.0"
   },
   "devDependencies": {
     "electron": "2.0.2",
