@@ -50,7 +50,7 @@ html.side-bar-hidden div#sidebar {
 html.side-bar-hidden .themeBackground {
   left: -280px !important;
 }
-@media all and (max-width: 540px) {
+@media all and (max-width: 640px) {
   #sidebar { /* Hide sidebar on Compact Mode */
     display: none !important;
   }
