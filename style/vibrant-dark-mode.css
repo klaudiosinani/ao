@@ -1,106 +1,106 @@
-html.vibrant-dark-mode body {
+html.vibrantDark-mode body {
   background: transparent !important;
 }
-html.vibrant-dark-mode ::-webkit-scrollbar-track { /* Scrollbar track */
+html.vibrantDark-mode ::-webkit-scrollbar-track { /* Scrollbar track */
   background: var(--transparent-white) !important;
 }
-html.vibrant-dark-mode select {
+html.vibrantDark-mode select {
   background: var(--dark-grey);
   border: 1px solid var(--dark-grey);
 }
-html.vibrant-dark-mode #sidebar {
+html.vibrantDark-mode #sidebar {
   background: var(--transparent-white) !important;
 }
-html.vibrant-dark-mode .sidebar-inner {
+html.vibrantDark-mode .sidebar-inner {
   background: var(--transparent-white) !important;
 }
-html.vibrant-dark-mode .todayToolbar-item.active, html.vibrant-dark-mode .todayToolbar.active {
+html.vibrantDark-mode .todayToolbar-item.active, html.vibrantDark-mode .todayToolbar.active {
   background: var(--grey) !important;
 }
-html.vibrant-dark-mode .settingsSection-header, html.vibrant-dark-mode button.notificationToast-cancelButton, html.vibrant-dark-mode .notificationToast-text, html.vibrant-dark-mode .modal .modal-content, html.vibrant-dark-mode .editableContent-edit, html.vibrant-dark-mode .datePicker-headerLabel, html.vibrant-dark-mode .popover-title, html.vibrant-dark-mode #detail .section-item:hover .section-description, html.vibrant-dark-mode #detail .section-item:hover .section-title, html.vibrant-dark-mode .editableContent.multiLine .editableContent-display, html.vibrant-dark-mode .listItem .listItem-title, html.vibrant-dark-mode .todayToolbar-title, html.vibrant-dark-mode .userToolbar-name, html.vibrant-dark-mode .taskItem-titleWrapper, html.vibrant-dark-mode .taskCard-label, html.vibrant-dark-mode .listItem.active .listItem-count, html.vibrant-dark-mode .listItem:hover .listItem-count, html.vibrant-dark-mode .addTask .addTask-input, html.vibrant-dark-mode .popoverMenuItem .popoverMenuItem-label, html.vibrant-dark-mode .searchToolbar input.searchToolbar-input[type=text], html.vibrant-dark-mode .popover-header {
+html.vibrantDark-mode .settingsSection-header, html.vibrantDark-mode button.notificationToast-cancelButton, html.vibrantDark-mode .notificationToast-text, html.vibrantDark-mode .modal .modal-content, html.vibrantDark-mode .editableContent-edit, html.vibrantDark-mode .datePicker-headerLabel, html.vibrantDark-mode .popover-title, html.vibrantDark-mode #detail .section-item:hover .section-description, html.vibrantDark-mode #detail .section-item:hover .section-title, html.vibrantDark-mode .editableContent.multiLine .editableContent-display, html.vibrantDark-mode .listItem .listItem-title, html.vibrantDark-mode .todayToolbar-title, html.vibrantDark-mode .userToolbar-name, html.vibrantDark-mode .taskItem-titleWrapper, html.vibrantDark-mode .taskCard-label, html.vibrantDark-mode .listItem.active .listItem-count, html.vibrantDark-mode .listItem:hover .listItem-count, html.vibrantDark-mode .addTask .addTask-input, html.vibrantDark-mode .popoverMenuItem .popoverMenuItem-label, html.vibrantDark-mode .searchToolbar input.searchToolbar-input[type=text], html.vibrantDark-mode .popover-header {
   color: #767678 !important;
 }
-html.vibrant-dark-mode #main .main-background {
+html.vibrantDark-mode #main .main-background {
   background: var(--transparent-white) !important;
   border-left: 1px solid var(--transparent-white) !important;
 }
-html.vibrant-dark-mode html[dir=ltr] #main .main-background {
+html.vibrantDark-mode html[dir=ltr] #main .main-background {
   background: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode .taskItem {
+html.vibrantDark-mode .taskItem {
   background: var(--transparent-white) !important;
 }
-html.vibrant-dark-mode .taskItem.selected .taskItem-body {
+html.vibrantDark-mode .taskItem.selected .taskItem-body {
   background: var(--grey) !important;
   box-shadow: inset 0 0 0 1px var(--grey) !important;
 }
-html.vibrant-dark-mode .taskItem:hover .taskItem-body {
+html.vibrantDark-mode .taskItem:hover .taskItem-body {
   background-color: var(--grey) !important;
   box-shadow: inset 0 0 0 1px var(--grey) !important;
 }
-html.vibrant-dark-mode .active {
+html.vibrantDark-mode .active {
   background-color: var(--grey) !important;
 }
-html.vibrant-dark-mode .addTask {
+html.vibrantDark-mode .addTask {
   background: var(--transparenet-white) !important;
 }
-html.vibrant-dark-mode .listItem.active .emoji {
+html.vibrantDark-mode .listItem.active .emoji {
   background-color: var(--trasparent-white) !important;
 }
-html.vibrant-dark-mode div.backgroundLines, html.vibrant-dark-mode #detail .detail-inner {
+html.vibrantDark-mode div.backgroundLines, html.vibrantDark-mode #detail .detail-inner {
   background: var(--trasparent-white) !important;
 }
-html.vibrant-dark-mode .taskCard {
+html.vibrantDark-mode .taskCard {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode .detailFooter .detailFooter-trash:hover, html.vibrant-dark-mode .detailFooter .detailFooter-close:hover, html.vibrant-dark-mode .userToolbar:hover, html.vibrant-dark-mode .listItem:hover, html.vibrant-dark-mode .todayToolbar:hover, html.vibrant-dark-mode .searchToolbar:hover, html.vibrant-dark-mode .popoverMenuItem:hover, html.vibrant-dark-mode .todayToolbar-item:hover, html.vibrant-dark-mode #sidebar.search-is-open .searchToolbar-icon.stop:hover {
+html.vibrantDark-mode .detailFooter .detailFooter-trash:hover, html.vibrantDark-mode .detailFooter .detailFooter-close:hover, html.vibrantDark-mode .userToolbar:hover, html.vibrantDark-mode .listItem:hover, html.vibrantDark-mode .todayToolbar:hover, html.vibrantDark-mode .searchToolbar:hover, html.vibrantDark-mode .popoverMenuItem:hover, html.vibrantDark-mode .todayToolbar-item:hover, html.vibrantDark-mode #sidebar.search-is-open .searchToolbar-icon.stop:hover {
   background-color: var(--grey) !important;
 }
-html.vibrant-dark-mode .popover, html.vibrant-dark-mode .popover-footer, html.vibrant-dark-mode .popover-footerRight {
+html.vibrantDark-mode .popover, html.vibrantDark-mode .popover-footer, html.vibrantDark-mode .popover-footerRight {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode #sidebar.search-is-open .sidebar-header .searchToolbar {
+html.vibrantDark-mode #sidebar.search-is-open .sidebar-header .searchToolbar {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode .avatar {
+html.vibrantDark-mode .avatar {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode #detail .section, html.vibrant-dark-mode .detailHeader, html.vibrant-dark-mode .detailFooter {
+html.vibrantDark-mode #detail .section, html.vibrantDark-mode .detailHeader, html.vibrantDark-mode .detailFooter {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode #detail .detail-body {
+html.vibrantDark-mode #detail .detail-body {
   background-color: var(--grey) !important;
 }
-html.vibrant-dark-mode .editableContent-textarea {
+html.vibrantDark-mode .editableContent-textarea {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode .detailHeader .detailHeader-title:hover, html.vibrant-dark-mode #detail .section-item:hover, html.vibrant-dark-mode #detail .section-item.detailNote:hover {
+html.vibrantDark-mode .detailHeader .detailHeader-title:hover, html.vibrantDark-mode #detail .section-item:hover, html.vibrantDark-mode #detail .section-item.detailNote:hover {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode #detail .detail-inner {
+html.vibrantDark-mode #detail .detail-inner {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode .addList:active:hover, html.vibrant-dark-mode .addList:hover, html.vibrant-dark-mode .addList:hover:hover {
+html.vibrantDark-mode .addList:active:hover, html.vibrantDark-mode .addList:hover, html.vibrantDark-mode .addList:hover:hover {
   background-color: var(--grey) !important;
 }
-html.vibrant-dark-mode .datePicker-gridCell.today.active {
+html.vibrantDark-mode .datePicker-gridCell.today.active {
   border-radius: 50% !important;
 }
-html.vibrant-dark-mode .modal {
+html.vibrantDark-mode .modal {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode .notificationToast {
+html.vibrantDark-mode .notificationToast {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode .settingsSection-header {
+html.vibrantDark-mode .settingsSection-header {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode .callout {
+html.vibrantDark-mode .callout {
   background-color: var(--dark-grey) !important;
 }
-html.vibrant-dark-mode .themeComposition.big {
+html.vibrantDark-mode .themeComposition.big {
   height: 150px !important;
 }
-html.vibrant-dark-mode .todayToolbar-count {
+html.vibrantDark-mode .todayToolbar-count {
   color: #767678 !important;
 }
