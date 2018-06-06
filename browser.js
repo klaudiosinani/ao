@@ -2,7 +2,7 @@
 const path = require('path');
 const electron = require('electron');
 const os = require('os');
-const timeStamp = require('time-stamp');
+const ms = require('ms');
 const config = require('./config');
 
 const {join} = path;
@@ -108,142 +108,80 @@ function doubleClick(classSelector) {
   classToClick.dispatchEvent(doubleClicked);
 }
 
-function untoggleTheme(themeName, activateFunction) {
-  // Deactivate theme status if it is not already deactivated
-  switch (config.get(themeName)) {
-    case true:
-      config.set(themeName, false);
-      activateFunction();
-      break;
+function toggleMode(name) {
+  const {mode} = config.getAll();
+  config.set('autoNightMode', false);
 
-    default:
-      break;
+  Object.keys(mode).forEach(mode => {
+    const status = mode === name ? !config.get(`mode.${mode}`) : false;
+    config.set(`mode.${mode}`, status);
+    document.documentElement.classList.toggle(`${mode}-mode`, config.get(`mode.${mode}`));
+  });
+
+  if (name !== null && name.includes('vibrant')) {
+    ipc.send('activate-vibrant');
+    document.documentElement.style.backgroundColor = 'transparent';
   }
 }
 
-function blackMode() {
-  document.documentElement.classList.toggle('black-mode', config.get('mode.black'));
-}
+function restoreMode() {
+  const {mode} = config.getAll();
 
-function untoggleBlack() {
-  untoggleTheme('mode.black', blackMode);
+  Object.keys(mode).forEach(mode => {
+    document.documentElement.classList.toggle(`${mode}-mode`, config.get(`mode.${mode}`));
+
+    if (mode.includes('vibrant')) {
+      ipc.send('activate-vibrant');
+      document.documentElement.style.backgroundColor = 'transparent';
+    }
+  });
 }
 
 ipc.on('toggle-black-mode', () => {
-  untoggleDark();
-  untoggleSepia();
-  untoggleVibrant();
-  untoggleDarkVibrant();
-  config.set('mode.black', !config.get('mode.black'));
-  blackMode();
+  toggleMode('black');
 });
-
-function darkMode() {
-  document.documentElement.classList.toggle('dark-mode', config.get('mode.dark'));
-}
-
-function untoggleDark() {
-  untoggleTheme('mode.dark', darkMode);
-}
 
 ipc.on('toggle-dark-mode', () => {
-  untoggleBlack();
-  untoggleSepia();
-  untoggleVibrant();
-  untoggleDarkVibrant();
-  config.set('mode.dark', !config.get('mode.dark'));
-  darkMode();
+  toggleMode('dark');
 });
-
-function sepiaMode() {
-  document.documentElement.classList.toggle('sepia-mode', config.get('mode.sepia'));
-}
-
-function untoggleSepia() {
-  untoggleTheme('mode.sepia', sepiaMode);
-}
 
 ipc.on('toggle-sepia-mode', () => {
-  untoggleBlack();
-  untoggleDark();
-  untoggleVibrant();
-  untoggleDarkVibrant();
-  config.set('mode.sepia', !config.get('mode.sepia'));
-  sepiaMode();
+  toggleMode('sepia');
 });
-
-function vibrantMode() {
-  document.documentElement.classList.toggle('vibrant-mode', config.get('mode.vibrant'));
-  ipc.send('activate-vibrant');
-  document.documentElement.style.backgroundColor = 'transparent';
-}
-
-function untoggleVibrant() {
-  untoggleTheme('mode.vibrant', vibrantMode);
-}
 
 ipc.on('toggle-vibrant-mode', () => {
-  untoggleBlack();
-  untoggleDark();
-  untoggleSepia();
-  untoggleDarkVibrant();
-  config.set('mode.vibrant', !config.get('mode.vibrant'));
-  vibrantMode();
+  toggleMode('vibrant');
 });
-
-function vibrantDarkMode() {
-  document.documentElement.classList.toggle('vibrant-dark-mode', config.get('mode.vibrantDark'));
-  ipc.send('activate-vibrant');
-  document.documentElement.style.backgroundColor = 'transparent';
-}
-
-function untoggleDarkVibrant() {
-  untoggleTheme('mode.vibrantDark', vibrantDarkMode);
-}
 
 ipc.on('toggle-vibrant-dark-mode', () => {
-  untoggleBlack();
-  untoggleDark();
-  untoggleSepia();
-  untoggleVibrant();
-  config.set('mode.vibrantDark', !config.get('mode.vibrantDark'));
-  vibrantDarkMode();
+  toggleMode('vibrantDark');
 });
 
-function autoNightMode() {
-  const time = timeStamp('HHmm');
-  switch (time <= 1800 && time >= 600) {
-    case true:
-      untoggleDark();
-      untoggleBlack();
-      untoggleSepia();
-      untoggleVibrant();
-      untoggleDarkVibrant();
-      break;
+function enableAutoNightMode() {
+  const now = new Date().getHours();
+  const isDayTime = hours => hours < 18 && hours > 6;
 
-    case false:
-      untoggleBlack();
-      untoggleSepia();
-      untoggleVibrant();
-      untoggleDarkVibrant();
-      config.set('mode.dark', true);
-      darkMode();
-      break;
+  const mode = isDayTime(now) ? null : 'dark';
+  toggleMode(mode);
 
-    default:
-      break;
+  const span = isDayTime(now) ? 18 - now : (now < 6 ? 6 - now : 30 - now);
+
+  if (config.get('autoNightMode')) {
+    setTimeout(() => {
+      enableAutoNightMode();
+    }, ms(`${span}h`));
   }
 }
 
-function untoggleAutoNightMode() {
-  untoggleDark();
+function disableAutoNightMode() {
+  toggleMode(null);
 }
 
 ipc.on('auto-night-mode', () => {
   if (config.get('autoNightMode')) {
-    autoNightMode();
+    enableAutoNightMode();
   } else {
-    untoggleAutoNightMode();
+    disableAutoNightMode();
   }
 });
 
@@ -409,20 +347,12 @@ document.addEventListener('DOMContentLoaded', () => {
   webFrame.setZoomFactor(zoomFactor);
 
   if (config.get('autoNightMode')) {
-    autoNightMode();
+    enableAutoNightMode();
   }
 
   toggleMenuBar();
 
   toggleSideBar();
 
-  blackMode();
-
-  sepiaMode();
-
-  darkMode();
-
-  vibrantMode();
-
-  vibrantDarkMode();
+  restoreMode();
 });
