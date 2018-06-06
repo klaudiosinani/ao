@@ -7,6 +7,7 @@ fs.ensureFileSync(settings.file()); // Ensure creation of `Settings` file on sta
 settings.setAll({
   alwaysOnTop: settings.get('alwaysOnTop', false),
   autoLaunch: settings.get('autoLaunch', false),
+  autoNightMode: settings.get('autoNightMode', false),
   hideTray: settings.get('hideTray', false),
   lastURL: settings.get('lastURL', 'https://todo.microsoft.com/?app'),
   lastWindowState: {
@@ -18,7 +19,6 @@ settings.setAll({
   launchMinimized: settings.get('launchMinimized', false),
   menuBarVisible: settings.get('menuBarVisible', true),
   mode: {
-    autoNight: settings.get('mode.autoNight', false),
     black: settings.get('mode.black', false),
     dark: settings.get('mode.dark', false),
     sepia: settings.get('mode.sepia', false),

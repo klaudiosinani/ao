@@ -537,10 +537,10 @@ const darwinTpl = [{
   }, {
     label: 'Auto Night Mode',
     type: 'checkbox',
-    checked: config.get('mode.autoNight'),
+    checked: config.get('autoNightMode'),
     accelerator: 'CmdorCtrl+Alt+N',
     click(item) {
-      config.set('mode.autoNight', item.checked);
+      config.set('autoNightMode', item.checked);
       activate('auto-night-mode');
     }
   }, {
@@ -856,10 +856,10 @@ const otherTpl = [{
   }, {
     label: 'Auto Night Mode',
     type: 'checkbox',
-    checked: config.get('mode.autoNight'),
+    checked: config.get('autoNightMode'),
     accelerator: 'CmdorCtrl+Alt+N',
     click(item) {
-      config.set('mode.autoNight', item.checked);
+      config.set('autoNightMode', item.checked);
       activate('auto-night-mode');
     }
   }, {
