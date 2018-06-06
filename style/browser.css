@@ -26,6 +26,9 @@ body {
   border-radius: 0px !important;
   background: #767678 !important;
 }
+#sidebar {
+  width: 280px !important;
+}
 #sidebar .sidebar-header { /* Remove box sidebar-header shadow */
   box-shadow: 0 0px 0 rgba(0,0,0,0) !important;
 }
@@ -37,6 +40,9 @@ body {
 }
 #main .backgroundLines {
   border-top: none !important;
+}
+html[dir=ltr] .themeBackground {
+  left: 280px !important;
 }
 html.side-bar-hidden div#sidebar {
   display: none !important;
