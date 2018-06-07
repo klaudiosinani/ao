@@ -157,7 +157,7 @@ function confirmSignOut() {
     message: 'Sign out of Ao',
     detail: 'Are you sure you want to sign out?',
     buttons: ['Sign out', 'Dismiss'],
-    defaultId: 0, // Make `Sign out` the default action button
+    defaultId: 0,
     cancelId: 1
   });
 
@@ -172,7 +172,7 @@ const helpSubmenu = [{
     shell.openExternal(url.license);
   }
 }, {
-  label: 'Version ' + app.getVersion(),
+  label: `Version ${app.getVersion()}`,
   enabled: false
 }, {
   label: `Ao Homepage`,
@@ -229,6 +229,19 @@ const helpSubmenu = [{
 }, {
   type: 'separator'
 }, {
+  label: `Search`,
+  submenu: [{
+    label: `Issues`,
+    click() {
+      shell.openExternal(url.search);
+    }
+  }, {
+    label: `Feature Requests`,
+    click() {
+      shell.openExternal(url.searchFeatureRequests);
+    }
+  }]
+}, {
   label: 'Fork Source',
   click() {
     shell.openExternal(url.source);
@@ -237,16 +250,6 @@ const helpSubmenu = [{
   label: `Report Issue`,
   click() {
     shell.openExternal(url.issue);
-  }
-}, {
-  label: `Search Issues`,
-  click() {
-    shell.openExternal(url.search);
-  }
-}, {
-  label: `Search Feature Requests`,
-  click() {
-    shell.openExternal(url.searchFeatureRequests);
   }
 }, {
   label: `Community Discussion`,
