@@ -43,8 +43,8 @@
     "electron": "2.0.2",
     "electron-builder": "20.15.0",
     "electron-builder-squirrel-windows": "20.15.0",
-    "electron-installer-dmg": "1.0.0",
-    "electron-packager": "12.0.0",
+    "electron-installer-dmg": "0.2.1",
+    "electron-packager": "9.1.0",
     "xo": "*"
   },
   "xo": {
