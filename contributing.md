@@ -1,6 +1,6 @@
-# Contributing to Ao ❤
+# Contributing to Ao
 
-Thank you for taking the time to contribute to Ao ✨🎉
+Thank you for taking the time to contribute to Ao!
 
 Please note that this project is released with a [Contributor Code of Conduct](code-of-conduct.md). By participating in this project you agree to abide by its terms.
 
@@ -22,7 +22,7 @@ The [`question` label](https://github.com/klauscfhq/ao/labels/question) is a goo
 
 ### Write code
 
-You can use issue labels to discover issues you could help us out with!
+You can use issue labels to discover issues you could help us out with.
 
 - [`enhancement` issues](https://github.com/klauscfhq/ao/labels/enhancement) are features we are open to including
 - [`bug` issues](https://github.com/klauscfhq/ao/labels/bug) are known bugs we would like to fix
@@ -31,9 +31,16 @@ You can use issue labels to discover issues you could help us out with!
 
 You may find an issue is assigned, or has the [`assigned` label](https://github.com/klauscfhq/ao/labels/assigned). Please double-check before starting on this issue because somebody else is likely already working on it
 
-### Say hi!
+### Say hi
 
 Come over and say hi anytime you feel like on [Gitter](https://gitter.im/klauscfhq/ao)!
+
+### Translating Documentation
+
+- Make sure that the document is not already translated in that language.
+- Add the name of the language to the document as an extension, e.g: `readme.JP.md`
+- Place the translated document inside the [`docs`](https://github.com/klauscfhq/ao/tree/master/docs) directory.
+- Create a Pull Request including the language in the title, e.g: `Readme: Japanese Translation`
 
 ### Submitting an issue
 
