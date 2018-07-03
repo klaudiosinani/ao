@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://cdn.rawgit.com/klauscfhq/ao/99ec7f1f/media/logo.png" width="21%"><br/>Ao
+  <img src="media/logo.png" width="20%"><br/>Ao
 </h1>
 
 <h4 align="center">
@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://github.com/klauscfhq/ao">
-    <img src="https://cdn.rawgit.com/klauscfhq/ao/e64a6aae/media/list-navigation.gif" alt="Ao" width="100%">
+    <img src="media/list-navigation.gif" alt="Ao" width="93%">
   </a>
 </div>
 
@@ -88,7 +88,7 @@ Please note that the feature is available **only on Macos**.
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/7dfcf6cd/media/ao-vibrant.png" alt="Ao Vibrant Theme" width="100%">
+        <img src="media/ao-vibrant.png" alt="Ao Vibrant Theme" width="90%">
       </a>
 </div>
 
@@ -98,7 +98,7 @@ Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>G</
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/3ff54861/media/sepia-theme.png" alt="Ao Sepia Theme" width="100%">
+        <img src="media/sepia-theme.png" alt="Ao Sepia Theme" width="90%">
       </a>
 </div>
 
@@ -108,7 +108,7 @@ Deep focus materialized. Boost your productivity by pressing <kbd>Cmd/Ctrl</kbd>
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/1e56aee0/media/black-theme.png" alt="Ao Black Theme" width="100%">
+        <img src="media/black-theme.png" alt="Ao Black Theme" width="90%">
       </a>
 </div>
 
@@ -118,7 +118,7 @@ Silky & relaxing. Make it yours by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/125924ed/media/dark-theme.png" alt="Ao Dark Theme" width="100%">
+        <img src="media/dark-theme.png" alt="Ao Dark Theme" width="90%">
       </a>
 </div>
 
@@ -128,7 +128,7 @@ Get more for less. Simply downsize the window to enter the mode.
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/68a0d849/media/compact-mode.png" alt="Ao Compact Mode" width="70%">
+        <img src="media/compact-mode.png" alt="Ao Compact Mode" width="60%">
       </a>
 </div>
 
@@ -138,7 +138,7 @@ Navigate seamlessly between your lists by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Tab<
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/e64a6aae/media/list-navigation.gif" alt="List Navigation" width="100%">
+        <img src="media/list-navigation.gif" alt="List Navigation" width="90%">
       </a>
 </div>
 
@@ -148,7 +148,7 @@ Adjust Ao to your workflow. Navigate to `~/.ao.json` or press <kbd>Cmd/Ctrl</kbd
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/ec52d820/media/custom-shortcut-keys.gif" alt="Custom Shortcut Keys" width="100%">
+        <img src="media/custom-shortcut-keys.gif" alt="Custom Shortcut Keys" width="90%">
       </a>
 </div>
 
@@ -158,7 +158,7 @@ Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd>
 
 <div align="center">
       <a href="https://github.com/klauscfhq/ao">
-        <img src="https://cdn.rawgit.com/klauscfhq/ao/51d7d3d2/media/scalable-interface.gif" alt="Scalable Interface" width="100%">
+        <img src="media/scalable-interface.gif" alt="Scalable Interface" width="90%">
       </a>
 </div>
 
