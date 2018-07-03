@@ -27,6 +27,9 @@ Ao is an unofficial, featureful, open source, community-driven, free Microsoft T
 
 Come over to [Gitter](https://gitter.im/klauscfhq/ao) or [Twitter](https://twitter.com/klauscfhq) to share your thoughts on the project.
 
+Visit the [contributing guidelines](https://github.com/klauscfhq/ao/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
+
+
 You can find more desktop apps [here](#related-apps).
 
 ## Highlights
