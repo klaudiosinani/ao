@@ -78,7 +78,7 @@ function createMainWindow() {
     }
   });
 
-  aoWindow.on('blur', ()=>{
+  aoWindow.on('blur', () => {
     if (platform === 'darwin') {
       aoWindow.hide();
     }
