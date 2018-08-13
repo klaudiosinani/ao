@@ -10,12 +10,6 @@ const {app, BrowserWindow, Menu, shell, Tray} = electron;
 let tray = null;
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
 const lastWindowState = config.get('lastWindowState');
-const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
-const [defaultWidth, defaultHeight] = [width, height].map(x => Math.round((x * 3) / 4));
-const WINDOW_WIDTH = lastWindowState.width || defaultWidth;
-const WINDOW_HEIGHT = lastWindowState.height || defaultHeight;
-const HORIZ_PADDING = 15;
-const VERT_PADDING = 15;
 
 function activate(command) {
   const appWindow = BrowserWindow.getAllWindows()[0];
@@ -31,6 +25,13 @@ exports.create = win => {
 
     trayIcon.on('click', (event) => {
       const screen = electron.screen;
+      const {width, height} = screen.getPrimaryDisplay().workAreaSize;
+      const [defaultWidth, defaultHeight] = [width, height].map(x => Math.round((x * 3) / 4));
+      const WINDOW_WIDTH = defaultWidth - 350;
+      const WINDOW_HEIGHT = defaultHeight;
+      const HORIZ_PADDING = 15;
+      const VERT_PADDING = 15;
+
       const cursorPosition = screen.getCursorScreenPoint();
       const primarySize = screen.getPrimaryDisplay().workAreaSize;
       const trayPositionVert = cursorPosition.y >= primarySize.height/2 ? 'bottom' : 'top';
