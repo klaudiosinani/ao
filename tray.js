@@ -9,6 +9,13 @@ const {app, BrowserWindow, Menu, shell, Tray} = electron;
 
 let tray = null;
 const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
+const lastWindowState = config.get('lastWindowState');
+const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
+const [defaultWidth, defaultHeight] = [width, height].map(x => Math.round((x * 3) / 4));
+const WINDOW_WIDTH = lastWindowState.width || defaultWidth;
+const WINDOW_HEIGHT = lastWindowState.height || defaultHeight;
+const HORIZ_PADDING = 15;
+const VERT_PADDING = 15;
 
 function activate(command) {
   const appWindow = BrowserWindow.getAllWindows()[0];
@@ -18,6 +25,35 @@ function activate(command) {
 
 exports.create = win => {
   if (platform === 'darwin' || tray) {
+    const iconPath = join(__dirname, 'static/IconTrayMac.png');
+    let trayIcon = new Tray(iconPath);
+    trayIcon.setToolTip('Hello World');
+
+    trayIcon.on('click', (event) => {
+      const screen = electron.screen;
+      const cursorPosition = screen.getCursorScreenPoint();
+      const primarySize = screen.getPrimaryDisplay().workAreaSize;
+      const trayPositionVert = cursorPosition.y >= primarySize.height/2 ? 'bottom' : 'top';
+      const trayPositionHoriz = cursorPosition.x >= primarySize.width/2 ? 'right' : 'left';
+      win.setPosition(getTrayPosX(),  getTrayPosY());
+      win.isVisible() ? win.hide() : win.show();
+
+      function getTrayPosX() {
+        const horizBounds = {
+          left:   cursorPosition.x - WINDOW_WIDTH/2,
+          right:  cursorPosition.x + WINDOW_WIDTH/2
+        };
+        if (trayPositionHoriz === 'left') {
+          return horizBounds.left <= HORIZ_PADDING ? HORIZ_PADDING : horizBounds.left;
+        }
+        else {
+          return horizBounds.right >= primarySize.width ? primarySize.width - HORIZ_PADDING - WINDOW_WIDTH: horizBounds.right - WINDOW_WIDTH;
+        }
+      }
+      function getTrayPosY() {
+        return trayPositionVert === 'bottom' ? cursorPosition.y - WINDOW_HEIGHT - VERT_PADDING : cursorPosition.y + VERT_PADDING;
+      }
+    });
     return;
   }
 

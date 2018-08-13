@@ -78,6 +78,12 @@ function createMainWindow() {
     }
   });
 
+  aoWindow.on('blur', ()=>{
+    if (platform === 'darwin') {
+      aoWindow.hide();
+    }
+  });
+
   aoWindow.on('enter-full-screen', () => {
     aoWindow.setMaximumSize(maxWindowInteger, maxWindowInteger);
   });
