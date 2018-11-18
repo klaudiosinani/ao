@@ -11,14 +11,14 @@ const {join, resolve} = path;
 const {app, BrowserWindow, dialog, globalShortcut, shell} = electron;
 
 const url = {
-  community: 'https://gitter.im/klauscfhq/ao',
-  issue: 'https://github.com/klauscfhq/ao/issues/new',
-  homepage: 'https://klauscfhq.github.io/ao',
-  keyboardShortcutsRef: 'https://github.com/klauscfhq/ao#keyboard-shortcuts',
-  license: 'https://github.com/klauscfhq/ao/blob/master/license.md',
-  search: 'https://github.com/search?q=+is:issue+repo:klauscfhq/ao',
-  searchFeatureRequests: 'https://github.com/klauscfhq/ao/labels/feature-request',
-  source: 'https://github.com/klauscfhq/ao'
+  community: 'https://gitter.im/klaussinani/ao',
+  issue: 'https://github.com/klaussinani/ao/issues/new',
+  homepage: 'https://klaussinani.github.io/ao',
+  keyboardShortcutsRef: 'https://github.com/klaussinani/ao#keyboard-shortcuts',
+  license: 'https://github.com/klaussinani/ao/blob/master/license.md',
+  search: 'https://github.com/search?q=+is:issue+repo:klaussinani/ao',
+  searchFeatureRequests: 'https://github.com/klaussinani/ao/labels/feature-request',
+  source: 'https://github.com/klaussinani/ao'
 };
 
 function getConfigPath() {

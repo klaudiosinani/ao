@@ -7,8 +7,8 @@ const {app, dialog, shell} = electron;
 
 const installedVersion = app.getVersion();
 const urls = {
-  update: 'https://klauscfhq.github.io/ao/update.json',
-  release: 'https://github.com/klauscfhq/ao/releases/latest'
+  update: 'https://klaussinani.github.io/ao/update.json',
+  release: 'https://github.com/klaussinani/ao/releases/latest'
 };
 
 function displayAvailableUpdate(latestVersion) {

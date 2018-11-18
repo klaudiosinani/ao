@@ -8,7 +8,7 @@ const {platform} = process;
 const {app, BrowserWindow, Menu, shell, Tray} = electron;
 
 let tray = null;
-const issueURL = 'https://github.com/klauscfhq/ao/issues/new';
+const issueURL = 'https://github.com/klaussinani/ao/issues/new';
 
 function activate(command) {
   const appWindow = BrowserWindow.getAllWindows()[0];
