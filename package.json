@@ -4,11 +4,11 @@
   "version": "5.6.0",
   "description": "Elegant Microsoft To-Do desktop app",
   "license": "MIT",
-  "repository": "klauscfhq/ao",
+  "repository": "klaussinani/ao",
   "author": {
     "name": "Klaus Sinani",
-    "email": "klauscfhq@protonmail.com",
-    "url": "https://klauscfhq.github.io"
+    "email": "klaussinani@gmail.com",
+    "url": "https://klaussinani.github.io"
   },
   "maintainers": [
     {
@@ -81,7 +81,7 @@
       "!media${/*}",
       "!docs${/*}"
     ],
-    "appId": "com.klauscfhq.ao",
+    "appId": "com.klaussinani.ao",
     "linux": {
       "synopsis": "Elegant Microsoft To-Do desktop app",
       "description": "Ao is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than 120 countries.",
