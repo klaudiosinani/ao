@@ -40,7 +40,7 @@
     "stylelint": "^9.2.0"
   },
   "devDependencies": {
-    "electron": "2.0.2",
+    "electron": "3.0.8",
     "electron-builder": "20.15.0",
     "electron-builder-squirrel-windows": "20.15.0",
     "electron-installer-dmg": "0.2.1",
