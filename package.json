@@ -44,12 +44,14 @@
     "xo": "*"
   },
   "xo": {
-    "esnext": true,
-    "space": 2,
     "envs": [
-      "node",
-      "browser"
-    ]
+      "browser",
+      "node"
+    ],
+    "rules": {
+      "quote-props": 0
+    },
+    "space": 2
   },
   "stylelint": {
     "rules": {
