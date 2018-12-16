@@ -16,9 +16,6 @@
   <a href="https://travis-ci.org/klaussinani/ao">
     <img alt="Build Status" src="https://travis-ci.org/klaussinani/ao.svg?branch=master">
   </a>
-  <a href="https://ci.appveyor.com/project/klaussinani/ao">
-    <img alt="Build Status" src="https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true">
-  </a>
 </p>
 
 ## Description
@@ -34,17 +31,13 @@ You can find more desktop apps [here](#related-apps).
 
 ## Highlights
 
-- [Black](#black-theme), [Dark](#dark-theme), [Sepia](#sepia-theme) & [Vibrant](#vibrant-themes) Themes
-- [Compact](#compact-mode) & [Auto-Night](#auto-night-mode) Modes
-- [Local](#local-shortcut-keys) & [Global](#global-shortcut-keys) Keyboard Shortcuts
-- [Customizable Keyboard Shortcuts](#custom-shortcut-keys)
-- [List Navigation](#list-navigation)
-- [Scalable Interface](#scalable-interface)
-- Automatic Updates ✔️
+- Black, Dark & Sepia Themes
+- Compact & Auto-Night Modes
+- Local & Global Customizable Keyboard Shortcuts
+- List Navigation
+- Scalable Interface
+- Update Notifications
 - Cross Platform
-- Deep OS Integration
-
-<sup>✔️ Windows & Linux only atm</sup>
 
 ## Contents
 
@@ -83,91 +76,18 @@ The version available on `AUR` may not be the latest. If that is the case, pleas
 
 ## Features
 
-### Vibrant Themes
+Visit the project [homepage](https://klaussinani.github.io/ao) to view all features in detail.
 
-Press <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> to activate the [dark](https://cdn.rawgit.com/klaussinani/ao/55af062e/media/vibrant-dark-theme.png) or [light](https://cdn.rawgit.com/klaussinani/ao/55af062e/media/vibrant-theme.png) vibrant theme respectively.
-
-Please note that the feature is available **only on Macos**.
-
-<div align="center">
-      <a href="https://github.com/klaussinani/ao">
-        <img src="media/ao-vibrant.png" alt="Ao Vibrant Theme" width="90%">
-      </a>
-</div>
-
-### Sepia Theme
-
-Perfect for glossy screens. Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
-
-<div align="center">
-      <a href="https://github.com/klaussinani/ao">
-        <img src="media/sepia-theme.png" alt="Ao Sepia Theme" width="90%">
-      </a>
-</div>
-
-### Black Theme
-
-Deep focus materialized. Boost your productivity by pressing <kbd>Cmd/Ctrl</kbd> <kbd>W</kbd>
-
-<div align="center">
-      <a href="https://github.com/klaussinani/ao">
-        <img src="media/black-theme.png" alt="Ao Black Theme" width="90%">
-      </a>
-</div>
-
-### Dark Theme
-
-Silky & relaxing. Make it yours by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
-
-<div align="center">
-      <a href="https://github.com/klaussinani/ao">
-        <img src="media/dark-theme.png" alt="Ao Dark Theme" width="90%">
-      </a>
-</div>
-
-### Compact Mode
-
-Get more for less. Simply downsize the window to enter the mode.
-
-<div align="center">
-      <a href="https://github.com/klaussinani/ao">
-        <img src="media/compact-mode.png" alt="Ao Compact Mode" width="60%">
-      </a>
-</div>
-
-### List Navigation
-
-Navigate seamlessly between your lists by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd> / <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd> or jump directly to a specific list by using <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
-
-<div align="center">
-      <a href="https://github.com/klaussinani/ao">
-        <img src="media/list-navigation.gif" alt="List Navigation" width="90%">
-      </a>
-</div>
-
-### Custom Shortcut Keys
-
-Adjust Ao to your workflow. Navigate to `~/.ao.json` or press <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd> and modify any shortcut key to your own preference. To reset simply delete the ao config file from your home directory.
-
-<div align="center">
-      <a href="https://github.com/klaussinani/ao">
-        <img src="media/custom-shortcut-keys.gif" alt="Custom Shortcut Keys" width="90%">
-      </a>
-</div>
-
-### Scalable Interface
-
-Adjust the zooming factor to your own preference by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd> or <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
-
-<div align="center">
-      <a href="https://github.com/klaussinani/ao">
-        <img src="media/scalable-interface.gif" alt="Scalable Interface" width="90%">
-      </a>
-</div>
-
-### Auto Night Mode
-
-Press <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd> and allow Ao to intelligently adjust to your environment.
+- Auto Night Mode - Press <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd> to allow Tusk to adjust to your environment.
+- Black Theme - Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>B</kbd>
+- Compact Mode - Downsize the window to enter the mode.
+- Custom Shortcut Keys - Navigate to `~/.ao.json` or press <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd> to modify any shortcut key. To reset delete `~/.ao.json` & restart the app.
+- Dark Theme -Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
+- Global Shortcut Keys - Enable them by using the `File` > `Enable Global Shortcut Keys` option.
+- List Navigation - Navigate your lists by pressing  <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd> / <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd> or jump directly to one by using <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
+- Scalable Interface - Adjust the zooming factor by pressing <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd> or <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>.
+- Sepia Theme - Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>.
+- Update Notifications - Customize the app's update checking frequency.
 
 ## Keyboard Shortcuts
 
@@ -182,41 +102,41 @@ Press <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd> and allow Ao to intelligen
 
 Description                | Keys
 -------------------------- | --------------------------
-Toggle Window Menu         | <kbd>Alt</kbd>
-Toggle Full Screen         | <kbd>F11</kbd>
-Return to Todos            | <kbd>Esc</kbd>
-New Todo                   | <kbd>Cmd/Ctrl</kbd> <kbd>N</kbd>
-Delete Todo                | <kbd>Cmd/Ctrl</kbd> <kbd>D</kbd>
-Rename Todo                | <kbd>Cmd/Ctrl</kbd> <kbd>T</kbd>
-Search Todos               | <kbd>Cmd/Ctrl</kbd> <kbd>F</kbd>
+Activate Auto Night Mode   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd>
+Add Due Date               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd>
 Add Todo to My Day         | <kbd>Cmd/Ctrl</kbd> <kbd>K</kbd>
+Complete Todo              | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd>
+Delete List                | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>D</kbd>
+Delete Todo                | <kbd>Cmd/Ctrl</kbd> <kbd>D</kbd>
+Edit Shortcut Keys         | <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd>
+Hide Completed Todos       | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>H</kbd>
+Jump to List               | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
+Make Text Larger           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
+Make Text Smaller          | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
+Navigate to Next List      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
 New List                   | <kbd>Cmd/Ctrl</kbd> <kbd>L</kbd>
+New Todo                   | <kbd>Cmd/Ctrl</kbd> <kbd>N</kbd>
+Reload Ao                  | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd>
 Rename List                | <kbd>Cmd/Ctrl</kbd> <kbd>Y</kbd>
-Toggle Sidebar             | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd>
-Toggle My Day              | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
+Rename Todo                | <kbd>Cmd/Ctrl</kbd> <kbd>T</kbd>
+Reset Zoom Level           | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
+Return to Todos            | <kbd>Esc</kbd>
+Search Todos               | <kbd>Cmd/Ctrl</kbd> <kbd>F</kbd>
+Set Always on Top          | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>
+Set Reminder               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd>
+Sign out                   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
+Toggle Black Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>B</kbd>
 Toggle Cortana             | <kbd>Cmd/Ctrl</kbd> <kbd>E</kbd>
 Toggle Dark Theme          | <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
-Toggle Sepia Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
-Toggle Black Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>B</kbd>
-Toggle Settings            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
-Make Text Smaller          | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
-Edit Shortcut Keys         | <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd>
-Reset Zoom Level           | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
-Navigate to Next List      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
-Jump to List               | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
-Sign out                   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
-Toggle Vibrant Light Theme | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>U</kbd>
-Toggle Vibrant Dark Theme  | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>J</kbd>
-Activate Auto Night Mode   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd>
-Delete List                | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>D</kbd>
-Add Due Date               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd>
-Reload Ao                  | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd>
-Set Reminder               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd>
-Complete Todo              | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd>
-Hide Completed Todos       | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>H</kbd>
 Toggle Dev Tools           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd>
-Set Always on Top          | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>
-Make Text Larger           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
+Toggle Full Screen         | <kbd>F11</kbd>
+Toggle My Day              | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
+Toggle Sepia Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
+Toggle Settings            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
+Toggle Sidebar             | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd>
+Toggle Vibrant Dark Theme  | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>J</kbd>
+Toggle Vibrant Light Theme | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>U</kbd>
+Toggle Window Menu         | <kbd>Alt</kbd>
 
 <br/>
 
@@ -233,9 +153,9 @@ Access Ao at any moment from anywhere within your operating system. All global s
 
 Description                | Global Shortcut
 -------------------------- | --------------------------
-Toggle Ao Window           | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>A</kbd>
 Create New Todo            | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>C</kbd>
 Search Todos               | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>F</kbd>
+Toggle Ao Window           | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>A</kbd>
 
 <br/>
 
@@ -258,8 +178,6 @@ For more info on how to contribute to the project, please read the [contributing
 - [Taskbook](https://github.com/klaussinani/taskbook) - Tasks, boards & notes for the command-line habitat.
 
 ## Team
-
-Coded with ❤ by
 
 - Klaus Sinani [(@klaussinani)](https://github.com/klaussinani)
 - Mario Sinani [(@mariocfhq)](https://github.com/mariocfhq)
