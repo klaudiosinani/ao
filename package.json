@@ -14,17 +14,13 @@
     {
       "name": "Mario Sinani",
       "email": "mariosinani@protonmail.ch",
-      "url": "github.com/mariocfhq"
+      "url": "https://github.com/mariocfhq"
     }
   ],
   "scripts": {
-    "test": "npm run test:js && npm run test:css",
-    "test:js": "xo",
-    "test:css": "stylelint 'style/*.css'",
-    "start": "electron .",
-    "dist": "build --publish never",
-    "clean": "node ./bin/clean.js",
-    "pack:macos": "electron-packager . --no-prune --overwrite --asar --out=dist --platform=darwin --arch=x64 --icon=static/Icon.icns && cd dist/Ao-darwin-x64 && zip -ryXq9 ../ao-macos-${npm_package_version}.zip Ao.app && electron-installer-dmg ../Ao-darwin-x64/Ao.app Ao --icon=../../static/Icon.icns && cp Ao.dmg ../../dist/ao-macos-${npm_package_version}.dmg"
+    "test": "xo && stylelint 'src/style/*.css'",
+    "release": "build --publish always",
+    "start": "electron ."
   },
   "dependencies": {
     "auto-launch": "^5.0.1",
@@ -72,20 +68,16 @@
     }
   },
   "build": {
-    "snap": {
-      "grade": "stable",
-      "confinement": "strict"
-    },
+    "appId": "com.klaussinani.ao",
     "files": [
       "**/*",
       "!media${/*}",
       "!docs${/*}"
     ],
-    "appId": "com.klaussinani.ao",
     "linux": {
-      "synopsis": "Elegant Microsoft To-Do desktop app",
-      "description": "Ao is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than 120 countries.",
       "category": "Office",
+      "description": "Ao is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than 120 countries.",
+      "synopsis": "Elegant Microsoft To-Do desktop app",
       "target": [
         {
           "target": "deb",
@@ -115,6 +107,10 @@
           ]
         }
       ]
+    },
+    "snap": {
+      "grade": "stable",
+      "confinement": "strict"
     },
     "win": {
       "target": [
