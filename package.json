@@ -27,20 +27,12 @@
     "electron-context-menu": "^0.9.1",
     "electron-debug": "^1.4.0",
     "electron-dl": "^1.10.0",
-    "electron-is-dev": "^0.3.0",
-    "electron-settings": "^3.1.4",
-    "fs-extra": "^4.0.2",
-    "ms": "^2.0.0",
-    "signale": "^1.2.1",
-    "simple-get": "^2.7.0",
-    "stylelint": "^9.2.0"
+    "electron-settings": "^3.1.4"
   },
   "devDependencies": {
     "electron": "3.0.8",
     "electron-builder": "20.15.0",
-    "electron-builder-squirrel-windows": "20.15.0",
-    "electron-installer-dmg": "0.2.1",
-    "electron-packager": "9.1.0",
+    "stylelint": "^9.9.0",
     "xo": "*"
   },
   "xo": {
