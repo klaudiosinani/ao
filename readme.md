@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="media/logo.png" width="20%"><br/>Ao
+  <img src="docs/media/logo.png" width="20%"><br/>Ao
 </h1>
 
 <h4 align="center">
@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://github.com/klaussinani/ao">
-    <img src="media/list-navigation.gif" alt="Ao" width="93%">
+    <img src="docs/media/list-navigation.gif" alt="Ao" width="93%">
   </a>
 </div>
 
