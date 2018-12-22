@@ -34,7 +34,7 @@ class Win {
   }
 
   get defaultOpts() {
-    return {
+    return Object.assign({}, this._minDimensions, this._lastState, {
       alwaysOnTop: settings.get('alwaysOnTop'),
       autoHideMenuBar: settings.get('menuBarHidden'),
       darkTheme: settings.get('mode.dark') || settings.get('mode.black'),
@@ -47,7 +47,7 @@ class Win {
         plugins: true,
         preload: file.preload
       }
-    };
+    });
   }
 
   activate(command) {
