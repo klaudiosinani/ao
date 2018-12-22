@@ -20,13 +20,13 @@ class Keymap {
       });
 
     const searchTodo = globalShortcut.register(
-      setAcc('global-search', 'Shift+Alt+F'), () => {
+      this.setAcc('global-search', 'Shift+Alt+F'), () => {
         win.appear();
         win.activate('search');
       });
 
     const createTodo = globalShortcut.register(
-      setAcc('global-new-todo', 'Shift+Alt+C'), () => {
+      this.setAcc('global-new-todo', 'Shift+Alt+C'), () => {
         win.appear();
         win.activate('new-todo');
       });
