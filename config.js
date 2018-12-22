@@ -26,7 +26,7 @@ settings.setAll({
     vibrantDark: settings.get('mode.vibrantDark', false)
   },
   sideBarHidden: settings.get('sideBarHidden', false),
-  updateCheckPeriod: settings.get('updateCheckPeriod', '2h'),
+  updateCheckPeriod: settings.get('updateCheckPeriod', '1w'),
   useGlobalShortcuts: settings.get('useGlobalShortcuts', false),
   zoomFactor: settings.get('zoomFactor', 1)
 });

@@ -142,9 +142,11 @@ app.on('ready', () => {
   update.init(Menu.getApplicationMenu());
 
   if (!isDevMode) {
-    setInterval(() => {
-      update.autoUpdateCheck();
-    }, ms(config.get('updateCheckPeriod')));
+    if (config.get('updateCheckPeriod') !== 'never') {
+      setInterval(() => {
+        update.autoUpdateCheck();
+      }, ms(config.get('updateCheckPeriod')));
+    }
   }
 });
 

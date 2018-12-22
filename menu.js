@@ -218,6 +218,46 @@ const helpSubmenu = [{
       config.set('updateCheckPeriod', '24h');
       requestAppRestart();
     }
+  }, {
+    label: 'Once Every 3 Days',
+    type: 'checkbox',
+    checked: (config.get('updateCheckPeriod') === '3d'),
+    click() {
+      config.set('updateCheckPeriod', '3d');
+      requestAppRestart();
+    }
+  }, {
+    label: 'Once a Week',
+    type: 'checkbox',
+    checked: (config.get('updateCheckPeriod') === '1w'),
+    click() {
+      config.set('updateCheckPeriod', '1w');
+      requestAppRestart();
+    }
+  }, {
+    label: 'Once Every 2 Weeks',
+    type: 'checkbox',
+    checked: (config.get('updateCheckPeriod') === '2w'),
+    click() {
+      config.set('updateCheckPeriod', '2w');
+      requestAppRestart();
+    }
+  }, {
+    label: 'Once a Month',
+    type: 'checkbox',
+    checked: (config.get('updateCheckPeriod') === '4w'),
+    click() {
+      config.set('updateCheckPeriod', '4w');
+      requestAppRestart();
+    }
+  }, {
+    label: 'Never',
+    type: 'checkbox',
+    checked: (config.get('updateCheckPeriod') === 'never'),
+    click() {
+      config.set('updateCheckPeriod', 'never');
+      requestAppRestart();
+    }
   }]
 }, {
   type: 'separator'
