@@ -16,7 +16,7 @@ settings.setAll({
     height: settings.get('lastWindowState.height')
   },
   launchMinimized: settings.get('launchMinimized', false),
-  menuBarVisible: settings.get('menuBarVisible', true),
+  menuBarHidden: settings.get('menuBarHidden', false),
   mode: {
     black: settings.get('mode.black', false),
     dark: settings.get('mode.dark', false),
