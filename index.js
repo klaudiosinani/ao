@@ -1,27 +1,31 @@
 'use strict';
-const path = require('path');
-const electron = require('electron');
-const fs = require('fs-extra');
-const isDevMode = require('electron-is-dev');
-const ms = require('ms');
-const appMenu = require('./menu');
-const tray = require('./tray');
-const config = require('./config');
-const update = require('./update');
+const {app, BrowserWindow, Menu, shell} = require('electron');
+const fs = require('fs');
+const {is, readSheet} = require('./src/util');
+const file = require('./src/file');
+const menu = require('./src/menu');
+const settings = require('./src/settings');
+const shortcut = require('./src/keymap');
+const time = require('./src/time');
+const tray = require('./src/tray');
+const update = require('./src/update');
+const url = require('./src/url');
+const win = require('./src/win');
 
-const {join} = path;
-const {readFileSync} = fs;
-const {platform} = process;
-const {app, BrowserWindow, ipcMain, Menu, shell} = electron;
+const {log} = console;
 
 require('electron-debug')({enabled: true});
 require('electron-dl')();
 require('electron-context-menu')();
 
-let mainWindow;
 let exiting = false;
+let mainWindow;
 
-const functioning = app.makeSingleInstance(() => {
+if (!app.requestSingleInstanceLock()) {
+  app.quit();
+}
+
+app.on('second-instance', () => {
   if (mainWindow) {
     if (mainWindow.isMinimized()) {
       mainWindow.restore();
@@ -30,47 +34,16 @@ const functioning = app.makeSingleInstance(() => {
   }
 });
 
-if (functioning) {
-  app.quit();
-}
-
 function createMainWindow() {
-  const lastWindowState = config.get('lastWindowState');
-  const maxWindowInteger = 2147483647;
-  const darkModeFlag = config.get('mode.dark') || config.get('mode.black');
-  const lastURL = config.get('lastURL');
+  const aoWindow = new BrowserWindow(win.defaultOpts);
 
-  const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
-  const [defaultWidth, defaultHeight] = [width, height].map(x => Math.round((x * 3) / 4));
-
-  const aoWindow = new BrowserWindow({
-    title: app.getName(),
-    x: lastWindowState.x,
-    y: lastWindowState.y,
-    width: lastWindowState.width || defaultWidth,
-    height: lastWindowState.height || defaultHeight,
-    minWidth: 400,
-    minHeight: 200,
-    icon: platform === 'linux' && join(__dirname, 'static/Icon.png'),
-    alwaysOnTop: config.get('alwaysOnTop'),
-    titleBarStyle: 'hiddenInset',
-    darkTheme: darkModeFlag,
-    autoHideMenuBar: true,
-    show: false,
-    webPreferences: {
-      preload: join(__dirname, 'browser.js'),
-      nodeIntegration: false,
-      plugins: true
-    }
-  });
-
-  aoWindow.loadURL(lastURL);
+  aoWindow.loadURL(url.app);
 
   aoWindow.on('close', e => {
     if (!exiting) {
       e.preventDefault();
 
-      if (platform === 'darwin') {
+      if (is.darwin) {
         app.hide();
       } else {
         aoWindow.hide();
@@ -78,108 +51,58 @@ function createMainWindow() {
     }
   });
 
-  aoWindow.on('enter-full-screen', () => {
-    aoWindow.setMaximumSize(maxWindowInteger, maxWindowInteger);
-  });
-
   aoWindow.on('page-title-updated', e => {
     e.preventDefault();
   });
 
-  aoWindow.on('unresponsive', e => {
-    console.log('Unresponsive window', e);
-  });
+  aoWindow.on('unresponsive', log);
 
-  aoWindow.webContents.on('did-navigate-in-page', (e, url) => {
-    config.set('lastURL', url);
+  aoWindow.webContents.on('did-navigate-in-page', (_, url) => {
+    settings.set('lastURL', url);
   });
 
   return aoWindow;
 }
 
 app.on('ready', () => {
-  Menu.setApplicationMenu(appMenu);
+  Menu.setApplicationMenu(menu);
   mainWindow = createMainWindow();
 
-  if (config.get('useGlobalShortcuts')) {
-    appMenu.registerGlobalShortcuts();
+  if (settings.get('useGlobalShortcuts')) {
+    shortcut.registerGlobal();
   }
 
-  if (!config.get('hideTray')) {
-    tray.create(mainWindow);
+  if (!settings.get('hideTray')) {
+    tray.create();
   }
 
-  const windowContent = mainWindow.webContents;
+  const {webContents} = mainWindow;
 
-  windowContent.on('dom-ready', () => {
-    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'browser.css'), 'utf8'));
-    if (platform === 'darwin') {
-      // Make room for the traffic-lights on macos
-      windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'macos.css'), 'utf8'));
-    }
-    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'black-mode.css'), 'utf8'));
-    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'dark-mode.css'), 'utf8'));
-    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'sepia-mode.css'), 'utf8'));
-    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'vibrant-mode.css'), 'utf8'));
-    windowContent.insertCSS(readFileSync(join(__dirname, 'style', 'vibrant-dark-mode.css'), 'utf8'));
+  webContents.on('dom-ready', () => {
+    const stylesheets = fs.readdirSync(file.style);
+    stylesheets.forEach(x => webContents.insertCSS(readSheet(x)));
 
-    if (config.get('launchMinimized')) {
+    if (settings.get('launchMinimized')) {
       mainWindow.minimize();
     } else {
       mainWindow.show();
     }
   });
 
-  windowContent.on('new-window', (e, url) => {
-    e.preventDefault();
-    shell.openExternal(url);
-  });
+  webContents.on('new-window', (_, url) => shell.openExternal(url));
 
-  windowContent.on('crashed', e => {
-    console.log('Window crashed', e);
-  });
+  webContents.on('crashed', log);
 
-  update.init(Menu.getApplicationMenu());
-
-  if (!isDevMode) {
-    setInterval(() => {
-      update.autoUpdateCheck();
-    }, ms(config.get('updateCheckPeriod')));
-  }
+  setInterval(() => update.auto(), time.ms(settings.get('updateCheckPeriod')));
 });
 
-ipcMain.on('activate-vibrant', () => {
-  if (config.get('mode.vibrant')) {
-    mainWindow.setVibrancy('light');
-  } else if (config.get('mode.vibrantDark')) {
-    mainWindow.setVibrancy('ultra-dark');
-  } else {
-    mainWindow.setVibrancy(null);
-  }
-});
+process.on('uncaughtException', log);
 
-ipcMain.on('activate-menu-bar', () => {
-  if (config.get('menuBarVisible')) {
-    mainWindow.setMenuBarVisibility(true);
-    mainWindow.setAutoHideMenuBar(false);
-  } else {
-    mainWindow.setMenuBarVisibility(false);
-    mainWindow.setAutoHideMenuBar(true);
-  }
-});
-
-process.on('uncaughtException', error => {
-  console.log(error);
-});
-
-app.on('activate', () => {
-  mainWindow.show();
-});
+app.on('activate', () => mainWindow.show());
 
 app.on('before-quit', () => {
   exiting = true;
-
   if (!mainWindow.isFullScreen()) {
-    config.set('lastWindowState', mainWindow.getBounds());
+    settings.set('lastWindowState', mainWindow.getBounds());
   }
 });
