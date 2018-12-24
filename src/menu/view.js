@@ -131,7 +131,7 @@ module.exports = {
       }
     }, {
       label: 'Toggle Full Screen',
-      accelerator: 'Ctrl+Command+F',
+      accelerator: is.darwin ? 'Ctrl+Command+F' : 'F11',
       click: (_, focusedWindow) => {
         if (focusedWindow) {
           focusedWindow.setFullScreen(!focusedWindow.isFullScreen());
@@ -140,7 +140,7 @@ module.exports = {
       }
     }, {
       label: 'Toggle Developer Tools',
-      accelerator: 'Alt+Command+I',
+      accelerator: is.darwin ? 'Alt+Command+I' : 'Ctrl+Shift+I',
       click: (_, focusedWindow) => {
         focusedWindow.toggleDevTools();
       }
