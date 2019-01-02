@@ -84,3 +84,6 @@ html.black-mode .popover-header, html.black-mode .popover-footer, html.black-mod
 html.black-mode .modal-sharing .shared .modal-footer {
   border-top: 1px solid var(--black) !important;
 }
+html.black-mode .sidebar-addList-fixed {
+  box-shadow: 0 -1px 0 var(--light-black) !important;
+}

@@ -84,3 +84,6 @@ html.sepia-mode .popover-header, html.sepia-mode .popover-footer, html.sepia-mod
 html.sepia-mode .modal-sharing .shared .modal-footer {
   border-top: 1px solid var(--sepia) !important;
 }
+html.sepia-mode .sidebar-addList-fixed {
+  box-shadow: 0 -1px 0 var(--dark-sepia) !important;
+}
