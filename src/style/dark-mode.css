@@ -1,5 +1,5 @@
 html.dark-mode span, html.dark-mode .todayToolbar-count, html.dark-mode .o365sx-button {
-  color: #6e6f6f !important;
+  color: #6E6F6F !important;
 }
 html.dark-mode ::-webkit-scrollbar-track {
   background-color: var(--dark-grey) !important;
@@ -59,9 +59,6 @@ html.dark-mode .taskItem-body, html.dark-mode .collapsible-taskCard .taskCard {
 }
 html.dark-mode .baseAdd.addTask, html.dark-mode .searchStep .searchStep-body {
   box-shadow: 0 -17px 0 -16px var(--grey) !important;
-}
-html.dark-mode .backgroundLines {
-  border-top: 1px solid var(--grey);
 }
 html.dark-mode .backgroundLines {
   border-top: 1px solid var(--grey);

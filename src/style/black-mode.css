@@ -60,9 +60,6 @@ html.black-mode .baseAdd.addTask, html.black-mode .searchStep .searchStep-body {
 html.black-mode .backgroundLines {
   border-top: 1px solid var(--light-black);
 }
-html.black-mode .backgroundLines {
-  border-top: 1px solid var(--light-black);
-}
 html.black-mode .detailFooter {
   border-top: 1px solid var(--light-black);
 }

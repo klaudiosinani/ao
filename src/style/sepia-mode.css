@@ -60,9 +60,6 @@ html.sepia-mode .baseAdd.addTask, html.sepia-mode .searchStep .searchStep-body {
 html.sepia-mode .backgroundLines {
   border-top: 1px solid var(--dark-sepia);
 }
-html.sepia-mode .backgroundLines {
-  border-top: 1px solid var(--dark-sepia);
-}
 html.sepia-mode .detailFooter {
   border-top: 1px solid var(--dark-sepia);
 }
