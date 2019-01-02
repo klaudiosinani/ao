@@ -5,10 +5,6 @@
   --grey: rgba(45, 45, 45, 1);
   --black: rgba(0, 0, 0, 1);
   --light-black: rgba(20, 20, 20, 1);
-  --vibrant-black: rgba(30, 14, 29, 1);
-  --vibrant-grey: rgba(216, 203, 199, 1);
-  --vibrant-dark-grey: rgba(189, 177, 174, 1);
-  --transparent-white: rgba(255, 255, 255, 0);
 }
 html {
   overflow: hidden;
@@ -16,45 +12,30 @@ html {
 body {
   -webkit-app-region: drag;
 }
-::-webkit-scrollbar { /* Scrollbar */
+#O365_MainLink_NavMenu, #O365_AppName {
+  visibility: hidden !important;
+}
+::-webkit-scrollbar {
   width: 6px !important;
 }
-::-webkit-scrollbar-track { /* Scrollbar track */
+::-webkit-scrollbar-track {
   border-radius: 0px !important;
 }
-::-webkit-scrollbar-thumb { /* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
   border-radius: 0px !important;
   background: #767678 !important;
 }
-#sidebar {
-  width: 280px !important;
-}
-#sidebar .sidebar-header { /* Remove box sidebar-header shadow */
-  box-shadow: 0 0px 0 rgba(0,0,0,0) !important;
-}
-#sidebar .otherApps { /* Hide `Download App` message */
+html.side-bar-hidden .leftColumn {
   display: none !important;
 }
-#main .addTask {
-  box-shadow: none !important;
+html.side-bar-hidden #container.leftColumn-overlaid #app {
+  padding-left: 0px !important;
 }
-#main .backgroundLines {
-  border-top: none !important;
-}
-html[dir=ltr] .themeBackground {
-  left: 280px !important;
-}
-html.side-bar-hidden div#sidebar {
-  display: none !important;
-}
-html.side-bar-hidden .themeBackground {
-  left: -280px !important;
-}
-@media all and (max-width: 640px) {
-  #sidebar { /* Hide sidebar on Compact Mode */
+@media all and (max-width: 620px) {
+  .leftColumn, #owaToDoButton, #todoWhatsNewBtn {
     display: none !important;
   }
-  html[dir=ltr] .themeBackground { /* Make background image cover */
-    left: -280px !important;
+  #container.leftColumn-overlaid #app {
+    padding-left: 0px !important;
   }
 }
