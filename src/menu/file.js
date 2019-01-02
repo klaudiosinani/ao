@@ -109,12 +109,6 @@ module.exports = {
         activate('my-day');
       }
     }, {
-      label: 'Toggle Cortana',
-      accelerator: setAcc('toggle-cortana', 'CmdorCtrl+E'),
-      click() {
-        activate('toggle-cortana');
-      }
-    }, {
       label: 'Return to Todos',
       accelerator: setAcc('return', 'Esc'),
       click() {
