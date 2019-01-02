@@ -25,6 +25,9 @@ body {
   border-radius: 0px !important;
   background: #767678 !important;
 }
+.keyboardNavigation .listItem:focus {
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0) !important;
+}
 html.side-bar-hidden .leftColumn {
   display: none !important;
 }
