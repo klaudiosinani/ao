@@ -1,3 +1,6 @@
+html.dark-mode span, html.dark-mode .todayToolbar-count, html.dark-mode .o365sx-button {
+  color: #6e6f6f !important;
+}
 html.dark-mode ::-webkit-scrollbar-track {
   background-color: var(--dark-grey) !important;
 }
