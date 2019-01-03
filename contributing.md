@@ -8,11 +8,11 @@ Please note that this project is released with a [Contributor Code of Conduct](c
 
 ### Improve documentation
 
-Typo corrections, error fixes, better explanations, more examples etc. Open an issue regarding anything that you think it could be improved! You can use the [`docs` label](https://github.com/klaussinani/ao/labels/docs) to find out what others have suggested!
+Typo corrections, error fixes, better explanations, more examples etc. Open an issue regarding anything that you think could be improved! You can use the [`docs` label](https://github.com/klaussinani/ao/labels/docs) to find out what others have suggested!
 
 ### Improve issues
 
-Sometimes reported issues lack information, are not reproducible, or are even plain invalid. Help us out to make them easier to resolve. Handling issues takes a lot of time that we could rather spend on fixing bugs and adding features.
+Sometimes reported issues lack information, are not reproducible, or are even plain invalid. Help us out to make them easier to resolve. Handling issues takes a lot of time that we would rather spend on fixing bugs and adding features.
 
 ### Give feedback on issues
 
@@ -26,10 +26,10 @@ You can use issue labels to discover issues you could help us out with.
 
 - [`enhancement` issues](https://github.com/klaussinani/ao/labels/enhancement) are features we are open to including
 - [`bug` issues](https://github.com/klaussinani/ao/labels/bug) are known bugs we would like to fix
-- [`future` issues](https://github.com/klaussinani/ao/labels/future) are those that we'd like to get to, biut not anytime soon. Please check before working on these since we may not yet want to take on the burden of supporting those features
+- [`future` issues](https://github.com/klaussinani/ao/labels/future) are those that we'd like to get to, but not anytime soon. Please check before working on these since we may not yet want to take on the burden of supporting those features
 - on the [`help wanted`](https://github.com/klaussinani/ao/labels/future) label you can always find something exciting going on
 
-You may find an issue is assigned, or has the [`assigned` label](https://github.com/klaussinani/ao/labels/assigned). Please double-check before starting on this issue because somebody else is likely already working on it
+You may find that an issue is assigned, or has the [`assigned` label](https://github.com/klaussinani/ao/labels/assigned). Please double-check before starting on this issue because somebody else is likely already working on it
 
 ### Say hi
 
