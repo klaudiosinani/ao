@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="media/logo.png" width="20%"><br/>Ao
+  <img src="../media/logo.png" width="20%"><br/>Ao
 </h1>
 
 <h4 align="center">
@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://github.com/klaussinani/ao">
-    <img src="media/list-navigation.gif" alt="Ao" width="93%">
+    <img src="../media/list-navigation.gif" alt="Ao" width="93%">
   </a>
 </div>
 
@@ -84,13 +84,13 @@ Die Version unter `AUR` kann unter umständen nicht die aktuellste Version sein.
 
 ### Vibrant Theme
 
-Drücke <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> um das [Dark](https://cdn.rawgit.com/klaussinani/ao/55af062e/media/vibrant-dark-theme.png) oder das [Light](https://cdn.rawgit.com/klaussinani/ao/55af062e/media/vibrant-theme.png) Vibrant Theme zu aktivieren.
+Drücke <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> um das [Dark](https://cdn.rawgit.com/klaussinani/ao/55af062e/../media/vibrant-dark-theme.png) oder das [Light](https://cdn.rawgit.com/klaussinani/ao/55af062e/../media/vibrant-theme.png) Vibrant Theme zu aktivieren.
 
 Bitte beachte, dass das Theme **nur unter macOS** verfügbar ist.
 
 <div align="center">
       <a href="https://github.com/klaussinani/ao">
-        <img src="media/ao-vibrant.png" alt="Ao Vibrant Theme" width="90%">
+        <img src="../media/ao-vibrant.png" alt="Ao Vibrant Theme" width="90%">
       </a>
 </div>
 
@@ -100,7 +100,7 @@ Perfekt für spiegelnde Bildschirme. Aktiviere das Sepia Theme per  <kbd>Cmd/Ctr
 
 <div align="center">
       <a href="https://github.com/klaussinani/ao">
-        <img src="media/sepia-theme.png" alt="Ao Sepia Theme" width="90%">
+        <img src="../media/sepia-theme.png" alt="Ao Sepia Theme" width="90%">
       </a>
 </div>
 
@@ -110,7 +110,7 @@ Steigere deine Produktivität und aktiviere das Theme mit mit <kbd>Cmd/Ctrl</kbd
 
 <div align="center">
       <a href="https://github.com/klaussinani/ao">
-        <img src="media/black-theme.png" alt="Ao Black Theme" width="90%">
+        <img src="../media/black-theme.png" alt="Ao Black Theme" width="90%">
       </a>
 </div>
 
@@ -120,7 +120,7 @@ Dunkel, aber nicht zu dunkel. Mache es zu deinem Theme <kbd>Cmd/Ctrl</kbd> <kbd>
 
 <div align="center">
       <a href="https://github.com/klaussinani/ao">
-        <img src="media/dark-theme.png" alt="Ao Dark Theme" width="90%">
+        <img src="../media/dark-theme.png" alt="Ao Dark Theme" width="90%">
       </a>
 </div>
 
@@ -130,7 +130,7 @@ Du hast wenig Platz? Skaliere einfach das Fenster und die App passt sich automat
 
 <div align="center">
       <a href="https://github.com/klaussinani/ao">
-        <img src="media/compact-mode.png" alt="Ao Compact Mode" width="60%">
+        <img src="../media/compact-mode.png" alt="Ao Compact Mode" width="60%">
       </a>
 </div>
 
@@ -140,7 +140,7 @@ Navigiere mit wenig Aufwand durch deine Listen. Drücke einfach <kbd>Cmd/Ctrl</k
 
 <div align="center">
       <a href="https://github.com/klaussinani/ao">
-        <img src="media/list-navigation.gif" alt="List Navigation" width="90%">
+        <img src="../media/list-navigation.gif" alt="List Navigation" width="90%">
       </a>
 </div>
 
@@ -150,7 +150,7 @@ Navigiere zur Datei `~/.ao.json` oder drücke <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd> u
 
 <div align="center">
       <a href="https://github.com/klaussinani/ao">
-        <img src="media/custom-shortcut-keys.gif" alt="Custom Shortcut Keys" width="90%">
+        <img src="../media/custom-shortcut-keys.gif" alt="Custom Shortcut Keys" width="90%">
       </a>
 </div>
 
@@ -160,7 +160,7 @@ Passe den Zoom Faktor einfach durch <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=<
 
 <div align="center">
       <a href="https://github.com/klaussinani/ao">
-        <img src="media/scalable-interface.gif" alt="Scalable Interface" width="90%">
+        <img src="../media/scalable-interface.gif" alt="Scalable Interface" width="90%">
       </a>
 </div>
 
