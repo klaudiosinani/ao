@@ -21,7 +21,6 @@ module.exports = {
     'settings': 'Cmd+,',
     'sign-out': 'Cmd+Alt+Q',
     'toggle-black-mode': 'Cmd+B',
-    'toggle-cortana': 'Cmd+E',
     'toggle-dark-mode': 'Cmd+H',
     'toggle-sepia-mode': 'Cmd+G',
     'toggle-sidebar': 'Cmd+O'
