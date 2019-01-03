@@ -37,7 +37,7 @@ ipc.on('rename-todo', () => {
 });
 
 ipc.on('delete-todo', () => {
-  nav.doubleClick('.taskItem.selected');
+  nav.click('.taskItem.selected');
   nav.click('.detailFooter-trash');
 });
 
