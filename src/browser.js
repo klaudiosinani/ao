@@ -10,7 +10,7 @@ ipc.on('search', () => {
 });
 
 ipc.on('new-list', () => {
-  nav.click('.addList');
+  nav.click('#baseAddInput');
 });
 
 ipc.on('delete-list', () => {
@@ -28,7 +28,7 @@ ipc.on('hide-todo', () => {
 });
 
 ipc.on('new-todo', () => {
-  nav.click('.addTask-icon');
+  nav.click('#main > div.main-background > div.baseAdd.addTask > button');
 });
 
 ipc.on('rename-todo', () => {
