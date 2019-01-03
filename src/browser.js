@@ -32,12 +32,12 @@ ipc.on('new-todo', () => {
 });
 
 ipc.on('rename-todo', () => {
-  nav.doubleClick('.taskItem.selected.active');
+  nav.click('.taskItem.selected.active');
   nav.click('.editableContent-editButton');
 });
 
 ipc.on('delete-todo', () => {
-  nav.doubleClick('.taskItem.selected.active');
+  nav.doubleClick('.taskItem.selected');
   nav.click('.detailFooter-trash');
 });
 
