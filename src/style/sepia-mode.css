@@ -14,7 +14,7 @@ html.sepia-mode .details .details-separator {
   background: var(--sepia) !important;
   border: 1px solid var(--sepia) !important;
 }
-html.sepia-mode .details .section, html.sepia-mode .details .section-item.detailNote, html.sepia-mode .detailHeader {
+html.sepia-mode .details .section, html.sepia-mode .details .section-item.detailNote, html.sepia-mode .detailHeader, html.sepia-mode .taskCard {
   border: 1px solid var(--sepia) !important;
   background-color: var(--sepia) !important;
 }
@@ -32,7 +32,7 @@ html.sepia-mode .detailNote .editableContent .editableContent-edit {
   background-color: var(--dark-sepia) !important;
   background: var(--dark-sepia) !important;
 }
-html.sepia-mode .listItem:hover, html.sepia-mode .todayToolbar-item:hover, html.sepia-mode .baseAdd.addList:hover, html.sepia-mode .baseAdd.addList:active:hover, html.sepia-mode .baseAdd.addList:hover:hover, html.sepia-mode .hamburgerMenu button:hover, html.sepia-mode .step:hover, html.sepia-mode .step.selected, html.sepia-mode .step.selected:hover, html.sepia-mode .searchStep:hover .searchStep-body, html.sepia-mode .searchStep.selected .searchStep-body, html.sepia-mode .searchStep.selected:hover .searchStep-body, html.sepia-mode .modal-close:hover, html.sepia-mode .modal-return:hover {
+html.sepia-mode .listItem:hover, html.sepia-mode .todayToolbar-item:hover, html.sepia-mode .baseAdd.addList:hover, html.sepia-mode .baseAdd.addList:active:hover, html.sepia-mode .baseAdd.addList:hover:hover, html.sepia-mode .hamburgerMenu button:hover, html.sepia-mode .step:hover, html.sepia-mode .step.selected, html.sepia-mode .step.selected:hover, html.sepia-mode .searchStep:hover .searchStep-body, html.sepia-mode .searchStep.selected .searchStep-body, html.sepia-mode .searchStep.selected:hover .searchStep-body, html.sepia-mode .modal-close:hover, html.sepia-mode .modal-return:hover, html.sepia-mode .moreEntriesButton:hover {
   background-color: var(--dark-sepia) !important;
 }
 html.sepia-mode .hamburgerMenu button:hover {

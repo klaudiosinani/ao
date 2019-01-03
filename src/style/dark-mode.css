@@ -17,7 +17,7 @@ html.dark-mode .details .details-separator {
   background: var(--dark-grey) !important;
   border: 1px solid var(--dark-grey) !important;
 }
-html.dark-mode .details .section, html.dark-mode .details .section-item.detailNote, html.dark-mode .detailHeader {
+html.dark-mode .details .section, html.dark-mode .details .section-item.detailNote, html.dark-mode .detailHeader, html.dark-mode .taskCard {
   border: 1px solid var(--dark-grey) !important;
   background-color: var(--dark-grey) !important;
 }
@@ -35,7 +35,7 @@ html.dark-mode .detailNote .editableContent .editableContent-edit {
   background-color: var(--grey) !important;
   background: var(--grey) !important;
 }
-html.dark-mode .listItem:hover, html.dark-mode .todayToolbar-item:hover, html.dark-mode .baseAdd.addList:hover, html.dark-mode .baseAdd.addList:active:hover, html.dark-mode .baseAdd.addList:hover:hover, html.dark-mode .hamburgerMenu button:hover, html.dark-mode .step:hover, html.dark-mode .step.selected, html.dark-mode .step.selected:hover, html.dark-mode .searchStep:hover .searchStep-body, html.dark-mode .searchStep.selected .searchStep-body, html.dark-mode .searchStep.selected:hover .searchStep-body, html.dark-mode .modal-close:hover, html.dark-mode .modal-return:hover {
+html.dark-mode .listItem:hover, html.dark-mode .todayToolbar-item:hover, html.dark-mode .baseAdd.addList:hover, html.dark-mode .baseAdd.addList:active:hover, html.dark-mode .baseAdd.addList:hover:hover, html.dark-mode .hamburgerMenu button:hover, html.dark-mode .step:hover, html.dark-mode .step.selected, html.dark-mode .step.selected:hover, html.dark-mode .searchStep:hover .searchStep-body, html.dark-mode .searchStep.selected .searchStep-body, html.dark-mode .searchStep.selected:hover .searchStep-body, html.dark-mode .modal-close:hover, html.dark-mode .modal-return:hover, html.dark-mode .moreEntriesButton:hover {
   background-color: var(--grey) !important;
 }
 html.dark-mode .hamburgerMenu button:hover {

@@ -14,7 +14,7 @@ html.black-mode .details .details-separator {
   background: var(--black) !important;
   border: 1px solid var(--black) !important;
 }
-html.black-mode .details .section, html.black-mode .details .section-item.detailNote, html.black-mode .detailHeader {
+html.black-mode .details .section, html.black-mode .details .section-item.detailNote, html.black-mode .detailHeader, html.black-mode .taskCard {
   border: 1px solid var(--black) !important;
   background-color: var(--black) !important;
 }
@@ -32,7 +32,7 @@ html.black-mode .detailNote .editableContent .editableContent-edit {
   background-color: var(--light-black) !important;
   background: var(--light-black) !important;
 }
-html.black-mode .listItem:hover, html.black-mode .todayToolbar-item:hover, html.black-mode .baseAdd.addList:hover, html.black-mode .baseAdd.addList:active:hover, html.black-mode .baseAdd.addList:hover:hover, html.black-mode .hamburgerMenu button:hover, html.black-mode .step:hover, html.black-mode .step.selected, html.black-mode .step.selected:hover, html.black-mode .searchStep:hover .searchStep-body, html.black-mode .searchStep.selected .searchStep-body, html.black-mode .searchStep.selected:hover .searchStep-body, html.black-mode .modal-close:hover, html.black-mode .modal-return:hover {
+html.black-mode .listItem:hover, html.black-mode .todayToolbar-item:hover, html.black-mode .baseAdd.addList:hover, html.black-mode .baseAdd.addList:active:hover, html.black-mode .baseAdd.addList:hover:hover, html.black-mode .hamburgerMenu button:hover, html.black-mode .step:hover, html.black-mode .step.selected, html.black-mode .step.selected:hover, html.black-mode .searchStep:hover .searchStep-body, html.black-mode .searchStep.selected .searchStep-body, html.black-mode .searchStep.selected:hover .searchStep-body, html.black-mode .modal-close:hover, html.black-mode .modal-return:hover, html.black-mode .moreEntriesButton:hover {
   background-color: var(--light-black) !important;
 }
 html.black-mode .hamburgerMenu button:hover {
