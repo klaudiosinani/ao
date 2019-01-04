@@ -10,7 +10,7 @@ ipc.on('search', () => {
 });
 
 ipc.on('new-list', () => {
-  nav.click('#baseAddInput');
+  nav.click('.baseAdd-icon');
 });
 
 ipc.on('delete-list', () => {
