@@ -61,8 +61,8 @@ ipc.on('set-reminder', () => {
 });
 
 ipc.on('add-due-date', () => {
-  nav.doubleClick('.taskItem.selected.active');
-  nav.select('.detail-body').children[1].children[1].firstChild.click();
+  nav.click('.taskItem.selected.active');
+  nav.click('.section-icon .ms-Icon--Calendar');
 });
 
 ipc.on('settings', () => {
