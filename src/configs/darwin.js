@@ -22,6 +22,7 @@ module.exports = {
     'set-reminder': 'Cmd+Shift+E',
     'settings': 'Cmd+,',
     'sign-out': 'Cmd+Alt+Q',
+    'tasks': 'Cmd+J',
     'toggle-black-mode': 'Cmd+B',
     'toggle-dark-mode': 'Cmd+H',
     'toggle-sepia-mode': 'Cmd+G',

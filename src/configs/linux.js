@@ -22,6 +22,7 @@ module.exports = {
     'set-reminder': 'Ctrl+Shift+E',
     'settings': 'Ctrl+,',
     'sign-out': 'Ctrl+Alt+Q',
+    'tasks': 'Ctrl+J',
     'toggle-black-mode': 'Ctrl+B',
     'toggle-dark-mode': 'Ctrl+H',
     'toggle-sepia-mode': 'Ctrl+G',

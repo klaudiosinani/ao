@@ -63,6 +63,10 @@ ipc.on('planned', () => {
   nav.click('#smart_list_planned');
 });
 
+ipc.on('tasks', () => {
+  nav.click('.listItem .ms-Icon--Home');
+});
+
 ipc.on('set-reminder', () => {
   nav.click('.taskItem.selected.active');
   nav.click('.ms-Icon--AlarmClock');

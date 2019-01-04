@@ -103,23 +103,34 @@ module.exports = {
     }, {
       type: 'separator'
     }, {
-      label: 'My Day',
-      accelerator: setAcc('my-day', 'CmdorCtrl+M'),
-      click() {
-        activate('my-day');
-      }
-    }, {
-      label: 'Important',
-      accelerator: setAcc('important', 'CmdorCtrl+I'),
-      click() {
-        activate('important');
-      }
-    }, {
-      label: 'Planned',
-      accelerator: setAcc('planned', 'CmdorCtrl+P'),
-      click() {
-        activate('planned');
-      }
+      label: 'Go to',
+      submenu: [
+        {
+          label: 'My Day',
+          accelerator: setAcc('my-day', 'CmdorCtrl+M'),
+          click() {
+            activate('my-day');
+          }
+        }, {
+          label: 'Important',
+          accelerator: setAcc('important', 'CmdorCtrl+I'),
+          click() {
+            activate('important');
+          }
+        }, {
+          label: 'Planned',
+          accelerator: setAcc('planned', 'CmdorCtrl+P'),
+          click() {
+            activate('planned');
+          }
+        }, {
+          label: 'Tasks',
+          accelerator: setAcc('tasks', 'CmdorCtrl+A'),
+          click() {
+            activate('tasks');
+          }
+        }
+      ]
     }, {
       label: 'Return to Todos',
       accelerator: setAcc('return', 'Esc'),
