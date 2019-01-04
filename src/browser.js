@@ -42,8 +42,8 @@ ipc.on('delete-todo', () => {
 });
 
 ipc.on('add-my-day', () => {
-  nav.doubleClick('.taskItem.selected.active');
-  nav.select('.detail-body').children[0].children[0].firstChild.click();
+  nav.click('.taskItem.selected.active');
+  nav.click('.section-innerClick');
   nav.click('.detailFooter-close');
 });
 
