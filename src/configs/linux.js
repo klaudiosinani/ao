@@ -15,6 +15,7 @@ module.exports = {
     'my-day': 'Ctrl+M',
     'new-list': 'Ctrl+L',
     'new-todo': 'Ctrl+N',
+    'planned': 'Ctrl+P',
     'rename-list': 'Ctrl+Y',
     'rename-todo': 'Ctrl+T',
     'return': 'Esc',

@@ -115,6 +115,12 @@ module.exports = {
         activate('important');
       }
     }, {
+      label: 'Planned',
+      accelerator: setAcc('planned', 'CmdorCtrl+P'),
+      click() {
+        activate('planned');
+      }
+    }, {
       label: 'Return to Todos',
       accelerator: setAcc('return', 'Esc'),
       click() {
