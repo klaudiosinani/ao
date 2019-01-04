@@ -117,7 +117,6 @@ Make Text Smaller          | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
 Navigate to Next List      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
 New List                   | <kbd>Cmd/Ctrl</kbd> <kbd>L</kbd>
 New Todo                   | <kbd>Cmd/Ctrl</kbd> <kbd>N</kbd>
-Reload Ao                  | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd>
 Rename List                | <kbd>Cmd/Ctrl</kbd> <kbd>Y</kbd>
 Rename Todo                | <kbd>Cmd/Ctrl</kbd> <kbd>T</kbd>
 Reset Zoom Level           | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
@@ -127,16 +126,14 @@ Set Always on Top          | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>
 Set Reminder               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd>
 Sign out                   | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
 Toggle Black Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>B</kbd>
-Toggle Cortana             | <kbd>Cmd/Ctrl</kbd> <kbd>E</kbd>
 Toggle Dark Theme          | <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
-Toggle Dev Tools           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd>
-Toggle Full Screen         | <kbd>F11</kbd>
+Toggle Important           | <kbd>Cmd/Ctrl</kbd> <kbd>I</kbd>
 Toggle My Day              | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
+Toggle Planned             | <kbd>Cmd/Ctrl</kbd> <kbd>P</kbd>
 Toggle Sepia Theme         | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
 Toggle Settings            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
 Toggle Sidebar             | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd>
-Toggle Vibrant Dark Theme  | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>J</kbd>
-Toggle Vibrant Light Theme | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>U</kbd>
+Toggle Tasks               | <kbd>Cmd/Ctrl</kbd> <kbd>J</kbd>
 Toggle Window Menu         | <kbd>Alt</kbd>
 
 <br/>
