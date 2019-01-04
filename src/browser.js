@@ -56,8 +56,8 @@ ipc.on('my-day', () => {
 });
 
 ipc.on('set-reminder', () => {
-  nav.doubleClick('.taskItem.selected.active');
-  nav.select('.detail-body').children[1].children[0].firstChild.click();
+  nav.click('.taskItem.selected.active');
+  nav.click('.ms-Icon--AlarmClock');
 });
 
 ipc.on('add-due-date', () => {
