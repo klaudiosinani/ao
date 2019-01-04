@@ -11,6 +11,7 @@ module.exports = {
     'global-search': 'Shift+Alt+F',
     'global-toggle-ao': 'Shift+Alt+A',
     'hide-todo': 'Ctrl+Shift+H',
+    'important': 'Ctrl+I',
     'my-day': 'Ctrl+M',
     'new-list': 'Ctrl+L',
     'new-todo': 'Ctrl+N',

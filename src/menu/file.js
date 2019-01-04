@@ -109,6 +109,12 @@ module.exports = {
         activate('my-day');
       }
     }, {
+      label: 'Important',
+      accelerator: setAcc('important', 'CmdorCtrl+I'),
+      click() {
+        activate('important');
+      }
+    }, {
       label: 'Return to Todos',
       accelerator: setAcc('return', 'Esc'),
       click() {
