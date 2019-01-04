@@ -42,13 +42,6 @@ class Nav {
     document.querySelector(x).click();
   }
 
-  doubleClick(x) {
-    const doubleClicked = document.createEvent('MouseEvents');
-    doubleClicked.initEvent('dblclick', true, true);
-    const classToClick = document.querySelector(x);
-    classToClick.dispatchEvent(doubleClicked);
-  }
-
   jumpToList(event) {
     const comboKey = is.darwin ? event.metaKey : event.ctrlKey;
 
