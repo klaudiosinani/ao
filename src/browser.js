@@ -66,8 +66,7 @@ ipc.on('add-due-date', () => {
 });
 
 ipc.on('settings', () => {
-  nav.click('.userToolbar-avatar');
-  nav.select('.popoverMenu').children[0].click();
+  nav.click('#owaSettingsButton');
 });
 
 ipc.on('sign-out', () => {
