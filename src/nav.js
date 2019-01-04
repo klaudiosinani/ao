@@ -19,6 +19,14 @@ class Nav {
     return this._getLists().length - 1;
   }
 
+  _clickClass(x) {
+    document.querySelector(`.${x}`).click();
+  }
+
+  _clickId(x) {
+    document.getElementById(x).click();
+  }
+
   _currentIdx() {
     let currentIdx = 0;
     const lists = this._getLists();
@@ -78,7 +86,8 @@ class Nav {
     if (idx >= 0 && idx <= this._lastIdx) {
       const lists = this._getLists();
       const {id, className} = lists[idx];
-      this.click(id ? `#${id}` : `.${className}`);
+      console.log({id, className});
+      return id ? this._clickId(id) : this._clickClass(className);
     }
   }
 
