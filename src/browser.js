@@ -70,8 +70,8 @@ ipc.on('settings', () => {
 });
 
 ipc.on('sign-out', () => {
-  nav.click('.userToolbar-avatar');
-  nav.select('.popoverMenu').children[3].click();
+  nav.click('#O365_MainLink_MePhoto');
+  nav.click('#meControlSignoutLink');
 });
 
 ipc.on('toggle-sidebar', () => {

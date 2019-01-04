@@ -93,7 +93,7 @@ class Dialog {
 
   confirmSignOut() {
     if (this._signOut() === 0) {
-      activate('log-out');
+      activate('sign-out');
     }
   }
 
