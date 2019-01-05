@@ -170,6 +170,13 @@ module.exports = {
         dialog.confirmRestart();
       }
     }, {
+      label: 'Request Exit Confirmation',
+      type: 'checkbox',
+      checked: settings.get('requestExitConfirmation'),
+      click(item) {
+        settings.set('requestExitConfirmation', item.checked);
+      }
+    }, {
       type: 'separator'
     }, {
       label: 'Sign out',
