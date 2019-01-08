@@ -89,7 +89,10 @@ app.on('ready', () => {
     }
   });
 
-  webContents.on('new-window', (_, url) => shell.openExternal(url));
+  webContents.on('new-window', (e, url) => {
+    e.preventDefault();
+    shell.openExternal(url);
+  });
 
   webContents.on('crashed', log);
 
