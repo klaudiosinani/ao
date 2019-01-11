@@ -168,11 +168,11 @@ For more info on how to contribute to the project, please read the [contributing
 - Install the project dependencies `npm install` or `yarn install`
 - Run Ao on dev mode `npm start` or `yarn start`
 - Lint code for errors `npm test` or `yarn test`
-- Build binaries and installers `npm run dist` or `yarn dist`
+- Build binaries and installers `npm run release` or `yarn release`
 
 ## Related Apps
 
-- [Tusk](https://github.com/champloohq/tusk) - Refined Evernote desktop app.
+- [Tusk](https://github.com/klaussinani/tusk) - Refined Evernote desktop app.
 - [Taskbook](https://github.com/klaussinani/taskbook) - Tasks, boards & notes for the command-line habitat.
 
 ## Team
