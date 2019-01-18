@@ -102,6 +102,9 @@
         }
       ]
     },
+    "nsis": {
+      "license": "license.md"
+    },
     "snap": {
       "grade": "stable",
       "confinement": "strict"
