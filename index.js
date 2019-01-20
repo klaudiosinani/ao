@@ -97,7 +97,9 @@ app.on('ready', () => {
 
   webContents.on('crashed', log);
 
-  setInterval(() => update.auto(), time.ms(settings.get('updateCheckPeriod')));
+  if (!settings.get('disableAutoUpdateCheck')) {
+    setInterval(() => update.auto(), time.ms(settings.get('updateCheckPeriod')));
+  }
 });
 
 process.on('uncaughtException', log);
