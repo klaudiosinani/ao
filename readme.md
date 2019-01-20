@@ -151,9 +151,9 @@ Access Ao at any moment from anywhere within your operating system. All global s
 
 Description                | Global Shortcut
 -------------------------- | --------------------------
-Create New Todo            | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>C</kbd>
-Search Todos               | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>F</kbd>
-Toggle Ao Window           | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>A</kbd>
+Create New Todo            | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>C</kbd>
+Search Todos               | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>F</kbd>
+Toggle Ao Window           | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>A</kbd>
 
 <br/>
 
