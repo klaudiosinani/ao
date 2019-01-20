@@ -41,7 +41,8 @@
       "node"
     ],
     "rules": {
-      "quote-props": 0
+      "quote-props": 0,
+      "unicorn/prefer-query-selector": 0
     },
     "space": 2
   },

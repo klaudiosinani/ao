@@ -86,7 +86,6 @@ class Nav {
     if (idx >= 0 && idx <= this._lastIdx) {
       const lists = this._getLists();
       const {id, className} = lists[idx];
-      console.log({id, className});
       return id ? this._clickId(id) : this._clickClass(className);
     }
   }
