@@ -23,7 +23,7 @@
 
 ## Beschreibung
 
-Ao ist eine inoffizielle, funktionsreiche, Open Source, community-driven, kostenfreie Microsoft To-Do App und wird bereits in mehr als [120 Ländern](https://snapcraft.io/ao) genutzt.
+Ao ist eine inoffizielle, funktionsreiche, Open Source, community-getriebene, kostenfreie Microsoft To-Do App und wird bereits in mehr als [120 Ländern](https://snapcraft.io/ao) genutzt.
 
 Bei [Gitter](https://gitter.im/klaussinani/ao) oder [Twitter](https://twitter.com/klaussinani) kannst du dich mit uns in Verbindung setzen.
 
@@ -166,7 +166,7 @@ Passe den Zoom Faktor einfach durch <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=<
 
 ### "Auto-Night" Modus
 
-Mit dem "Auto-Night" Modus passt sich Ao farblich automatisch an die zur aktuellen Uhrzeit herschenden Lichtverhältnisse an. Drücke dazu einfach <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd>
+Mit dem "Auto-Night" Modus passt sich Ao farblich automatisch an die zur aktuellen Uhrzeit herrschenden Lichtverhältnisse an. Drücke dazu einfach <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd>
 
 ## Tastatur Shortcuts
 
