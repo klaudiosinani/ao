@@ -28,7 +28,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/ao/blob/maste
 
 Come over to [Gitter](https://gitter.im/klaussinani/ao) or [Twitter](https://twitter.com/klaussinani) to share your thoughts on the project.
 
-You can find more desktop apps [here](#related-apps).
+You can find more apps [here](#related-apps).
 
 ## Highlights
 
