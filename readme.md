@@ -59,17 +59,17 @@ You can find more apps [here](#related-apps).
 
 Head to the [releases](https://github.com/klaussinani/ao/releases/latest) page and download the appropriate installer for your system.
 
+#### Snapcraft
+
+Ubuntu Linux users can directly install through [`Snapcraft`](https://snapcraft.io/ao) `snap install ao`
+
 #### Homebrew
 
 Macos users can directly install through [`Homebrew Cask`](https://caskroom.github.io/) `brew cask install ao`
 
-#### Snap
-
-Ubuntu Linux users can directly install through [`Snap`](https://snapcraft.io/ao) `snap install ao`
-
 #### Note
 
-The version available on `AUR` may not be the latest. If that is the case, please consider downloading directly from the [Github releases](https://github.com/klaussinani/ao/releases/latest) page.
+The version available on `Homebrew Cask` may not be the latest, since unlike `Snapcraft`, it is not offically maintained. If that is the case, please consider downloading directly from the [Github releases](https://github.com/klaussinani/ao/releases/latest) page.
 
 ## Features
 
