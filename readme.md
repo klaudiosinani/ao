@@ -67,10 +67,6 @@ Macos users can directly install through [`Homebrew Cask`](https://caskroom.gith
 
 Ubuntu Linux users can directly install through [`Snap`](https://snapcraft.io/ao) `snap install ao`
 
-#### AUR
-
-Arch Linux users can directly install through [`AUR`](https://aur.archlinux.org/packages/ao/) `yaourt ao`
-
 #### Note
 
 The version available on `AUR` may not be the latest. If that is the case, please consider downloading directly from the [Github releases](https://github.com/klaussinani/ao/releases/latest) page.
