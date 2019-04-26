@@ -75,6 +75,13 @@
       "synopsis": "Elegant Microsoft To-Do desktop app",
       "target": [
         {
+          "target": "pacman",
+          "arch": [
+            "ia32",
+            "x64"
+          ]
+        },
+        {
           "target": "deb",
           "arch": [
             "ia32",
