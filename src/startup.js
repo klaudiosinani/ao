@@ -1,12 +1,12 @@
 'use strict';
-const {app} = require('electron');
+const {app, remote} = require('electron');
 const AutoLaunch = require('auto-launch');
 const {is} = require('./util');
 const settings = require('./settings');
 
 const _settings = {
   name: 'Ao',
-  path: is.darwin ? app.getPath('exe').replace(/\.app\/Content.*/, '.app') : undefined,
+  path: is.darwin ? (app || remote.app).getPath('exe').replace(/\.app\/Content.*/, '.app') : undefined,
   isHidden: true
 };
 
