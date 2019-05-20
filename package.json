@@ -30,7 +30,7 @@
     "electron-settings": "^3.1.4"
   },
   "devDependencies": {
-    "electron": "3.1.4",
+    "electron": "4.2.2",
     "electron-builder": "20.38.2",
     "stylelint": "^9.9.0",
     "xo": "*"
