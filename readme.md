@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  ✔️ Elegant Microsoft To-Do desktop app
+  Elegant Microsoft To-Do desktop app
 </h4>
 
 <div align="center">
