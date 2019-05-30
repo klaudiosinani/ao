@@ -1,7 +1,7 @@
 {
   "name": "ao",
   "productName": "Ao",
-  "version": "6.8.0",
+  "version": "6.9.0",
   "description": "Elegant Microsoft To-Do desktop app",
   "license": "MIT",
   "repository": "klaussinani/ao",
@@ -18,6 +18,7 @@
     }
   ],
   "scripts": {
+    "postinstall": "electron-builder install-app-deps",
     "test": "xo && stylelint 'src/style/*.css'",
     "release": "build --publish always",
     "start": "electron ."
@@ -30,8 +31,8 @@
     "electron-settings": "^3.1.4"
   },
   "devDependencies": {
-    "electron": "3.1.4",
-    "electron-builder": "20.38.2",
+    "electron": "4.2.2",
+    "electron-builder": "20.40.2",
     "stylelint": "^9.9.0",
     "xo": "*"
   },
