@@ -71,6 +71,10 @@ Macos users can directly install through [`Homebrew Cask`](https://caskroom.gith
 
 The version available on `Homebrew Cask` may not be the latest, since unlike `Snapcraft`, it is not offically maintained. If that is the case, please consider downloading directly from the [Github releases](https://github.com/klaussinani/ao/releases/latest) page.
 
+#### Arch User Repository
+
+Arch Linux users can install the [stable](https://aur.archlinux.org/packages/ao/) or [git](https://aur.archlinux.org/packages/ao-git/) versions from the AUR.
+
 ## Features
 
 Visit the project [homepage](https://klaussinani.github.io/ao) to view all features in detail.
