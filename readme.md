@@ -24,6 +24,8 @@ Ao is an unofficial, featureful, open source, community-driven, free Microsoft T
 
 Read this document in: [Deutsch](https://github.com/klaussinani/ao/blob/master/docs/i18n/readme.GER.md).
 
+You can now support the development process by donating on [Open Collective](https://opencollective.com/klaussinani).
+
 Visit the [contributing guidelines](https://github.com/klaussinani/ao/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
 
 Come over to [Gitter](https://gitter.im/klaussinani/ao) or [Twitter](https://twitter.com/klaussinani) to share your thoughts on the project.
