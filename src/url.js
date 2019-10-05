@@ -11,5 +11,5 @@ module.exports = {
   search: 'https://github.com/search?q=+is:issue+repo:klaussinani/ao',
   searchFeatureRequests: 'https://github.com/klaussinani/ao/labels/feature-request',
   source: 'https://github.com/klaussinani/ao',
-  update: 'https://klaussinani.github.io/ao/update.json'
+  update: 'https://raw.githubusercontent.com/klaussinani/ao/master/docs/update.json'
 };
