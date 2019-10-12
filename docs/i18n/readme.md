@@ -1,6 +1,7 @@
 ## Ao Translated Documentation
 
 - [Deutsch - German](https://github.com/klaussinani/ao/blob/master/docs/i18n/readme.GER.md) by [@christophostrzinski](https://github.com/christophostrzinski) and [@0xflotus](https://github.com/0xflotus)
+- [Русский - Russian](https://github.com/klaussinani/ao/blob/master/docs/i18n/readme.RUS.md) by [@yalexaner](https://github.com/yalexaner)
 
 ## Contributing
 
