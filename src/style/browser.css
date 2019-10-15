@@ -42,3 +42,8 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
     padding-left: 0px !important;
   }
 }
+
+/* Fixed the white icon background issue in darkmode */
+.listItem .listItem-icon {
+  background-color: transparent !important;
+}
