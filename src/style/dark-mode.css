@@ -1,17 +1,25 @@
-html.dark-mode span, html.dark-mode .todayToolbar-count, html.dark-mode .o365sx-button {
-  color: #6E6F6F !important;
+html.dark-mode span, html.dark-mode .todayToolbar-count, html.dark-mode .o365sx-button, html.dark-mode .label-91, 
+html.dark-mode .sidePanel-header, html.dark-mode .ms-DatePicker-monthAndYear, html.dark-mode .ms-DatePicker-weekday, 
+html.dark-mode .ms-ContextualMenu-title, html.dark-mode .baseAdd-input, html.dark-mode .addGroupInputWrapper input.groupAdd, 
+html.dark-mode .o365sx-neutral-dark-font, html.dark-mode .label-47, html.dark-mode .searchToolbar input.searchToolbar-input[type=text],
+html.dark-mode .themePicker-headline, html.dark-mode .label-83 {
+  color: var(--white) !important;
 }
 html.dark-mode ::-webkit-scrollbar-track {
   background-color: var(--dark-grey) !important;
 }
-html.dark-mode .sidebar, html.dark-mode #main, html.dark-mode .steps, html.dark-mode .detailFooter {
+html.dark-mode .sidebar, html.dark-mode #main, html.dark-mode .steps, html.dark-mode .detailFooter,
+html.dark-mode .suggestionsBucket, html.dark-mode .sidePanel .ms-Panel-main,
+html.dark-mode .ms-ContextualMenu-Callout .ms-Callout-main, html.dark-mode .root-41, html.dark-mode .ms-ContextualMenu-title,
+html.dark-mode .root-51, html.dark-mode .o365cs-base .o365sx-neutral-lighterAlt-background, html.dark-mode .item-79,
+html.dark-mode .root-74, html.dark-mode .root-84, html.dark-mode .ms-ContextualMenu-list {
   background-color: var(--dark-grey) !important;
 }
 html.dark-mode .steps {
   border: 1px solid var(--dark-grey) !important;
 }
 html.dark-mode .step .step-body {
-  box-shadow: 0 1px 0 0 var(--grey);
+  box-shadow: 0 1px 0 0 var(--grey) !important;
 }
 html.dark-mode .details .details-separator {
   background: var(--dark-grey) !important;
@@ -24,21 +32,35 @@ html.dark-mode .details .section, html.dark-mode .details .section-item.detailNo
 html.dark-mode .button:hover {
   background: var(--dark-grey) !important;
 }
-html.dark-mode .backgroundLines, html.dark-mode #main .main-background, html.dark-mode .rightColumn {
+html.dark-mode .backgroundLines, html.dark-mode #main .main-background, html.dark-mode .rightColumn, html.dark-mode .placeholder, 
+html.dark-mode .emptyList, html.dark-mode .listReplicationIndicator, html.dark-mode .groupItem:hover:hover .listItem:hover,
+html.dark-mode .o365cs-base .o365sx-neutral-foreground-background {
   background-color: var(--dark-grey) !important;
   background: var(--dark-grey) !important;
 }
-html.dark-mode .active, html.dark-mode .details, html.dark-mode .details .section-item:hover {
+html.dark-mode .active, html.dark-mode .details, html.dark-mode .details .section-item:hover,
+html.dark-mode .modal, html.dark-mode .popover, html.dark-mode .popoverMenuItem:hover, html.dark-mode .isOpen, html.dark-mode .notificationToast, 
+html.dark-mode .datePicker-header, html.dark-mode .popover-footerRight, html.dark-mode .timePicker-input {
   background: var(--grey) !important;
 }
-html.dark-mode .detailNote .editableContent .editableContent-edit {
+html.dark-mode .detailNote .editableContent .editableContent-edit, html.dark-mode .o365cs-base .o365sx-activeButton,
+html.dark-mode .sidePanel .ms-Panel-closeButton:hover, html.dark-mode .button.grey {
   background-color: var(--grey) !important;
   background: var(--grey) !important;
 }
-html.dark-mode .listItem:hover, html.dark-mode .todayToolbar-item:hover, html.dark-mode .baseAdd.addList:hover, html.dark-mode .baseAdd.addList:active:hover, html.dark-mode .baseAdd.addList:hover:hover, html.dark-mode .hamburgerMenu button:hover, html.dark-mode .step:hover, html.dark-mode .step.selected, html.dark-mode .step.selected:hover, html.dark-mode .searchStep:hover .searchStep-body, html.dark-mode .searchStep.selected .searchStep-body, html.dark-mode .searchStep.selected:hover .searchStep-body, html.dark-mode .modal-close:hover, html.dark-mode .modal-return:hover, html.dark-mode .moreEntriesButton:hover {
+html.dark-mode .listItem:hover, html.dark-mode .todayToolbar-item:hover, html.dark-mode .baseAdd.addList:hover, html.dark-mode .root-48:hover,
+html.dark-mode .baseAdd.addList:active:hover, html.dark-mode .baseAdd.addList:hover:hover, html.dark-mode .hamburgerMenu button:hover, 
+html.dark-mode .step:hover, html.dark-mode .step.selected, html.dark-mode .step.selected:hover, html.dark-mode .searchStep:hover .searchStep-body, 
+html.dark-mode .searchStep.selected .searchStep-body, html.dark-mode .searchStep.selected:hover .searchStep-body, html.dark-mode .modal-close:hover, 
+html.dark-mode .modal-return:hover, html.dark-mode .moreEntriesButton:hover, html.dark-mode .groupItem:hover, html.dark-mode .root-83,
+html.dark-mode .groupItem .groupItem-inner:hover, html.dark-mode .addGroupButtonWrapper:hover, html.dark-mode .root-73,
+html.dark-mode .o365cs-base .o365sx-neutral-light-hover-background:hover, html.dark-mode .root-81:hover,
+html.dark-mode .detailFooter .detailFooter-close:hover, html.dark-mode .detailFooter .detailFooter-trash:hover, 
+html.dark-mode .o365header .searchToolbar .searchToolbar-icon.stop:hover, html.dark-mode .root-106, html.dark-mode .ms-ContextualMenu-link .is-expanded  {
   background-color: var(--grey) !important;
 }
-html.dark-mode .hamburgerMenu button:hover {
+html.dark-mode .hamburgerMenu button:hover, html.dark-mode .addGroupButtonWrapper button:hover {
+  background-color: var(--grey) !important;
   box-shadow: 0 0 0 1px var(--grey) !important;
 }
 html.dark-mode .taskItem.selected .taskItem-body, html.dark-mode .taskItem:hover .taskItem-body {
@@ -51,8 +73,11 @@ html.dark-mode #app > div.leftColumn.leftColumn-entered, html.dark-mode #app > d
 html.dark-mode #app > div.rightColumn.rightColumn-entered > div, html.dark-mode #app > div.rightColumn.rightColumn-exited > div {
   border-left: 1px solid var(--grey) !important;
 }
-html.dark-mode .sidebar-footer {
+html.dark-mode .sidebar-footer, html.dark-mode .backgroundLines, html.dark-mode .detailFooter {
   border-top: 1px solid var(--grey) !important;
+}
+html.dark-mode .listReplicationIndicator {
+  border-bottom: 1px solid var(--grey) !important;
 }
 html.dark-mode .taskItem-body, html.dark-mode .collapsible-taskCard .taskCard {
   box-shadow: 0 17px 0 -16px var(--grey) !important;
@@ -60,30 +85,36 @@ html.dark-mode .taskItem-body, html.dark-mode .collapsible-taskCard .taskCard {
 html.dark-mode .baseAdd.addTask, html.dark-mode .searchStep .searchStep-body {
   box-shadow: 0 -17px 0 -16px var(--grey) !important;
 }
-html.dark-mode .backgroundLines {
-  border-top: 1px solid var(--grey);
-}
-html.dark-mode .detailFooter {
-  border-top: 1px solid var(--grey);
-}
-html.dark-mode .detailFooter .detailFooter-close:hover, .detailFooter .detailFooter-trash:hover {
-  background-color: var(--grey) !important;
-}
-html.dark-mode .modal, html.dark-mode .popover, html.dark-mode .popoverMenuItem:hover, html.dark-mode .isOpen, html.dark-mode .notificationToast, html.dark-mode .datePicker-header, html.dark-mode .popover-footerRight, html.dark-mode .timePicker-input {
-  background: var(--grey) !important;
-}
 html.dark-mode .notificationToast-postponeButton {
   border-bottom: 1px solid var(--dark-grey) !important;
 }
 html.dark-mode .notificationToast-buttons button {
   border-left: 1px solid var(--dark-grey) !important;
 }
-html.dark-mode .popover-header, html.dark-mode .popover-footer, html.dark-mode .popover-headerLeft, html.dark-mode .popover-footerRight, html.dark-mode .modal-sharing .modal-header {
-  border-bottom: 1px solid var(--dark-grey) !important;
-}
 html.dark-mode .modal-sharing .shared .modal-footer {
   border-top: 1px solid var(--dark-grey) !important;
 }
+html.dark-mode .popover-header, html.dark-mode .popover-footer, html.dark-mode .popover-headerLeft, html.dark-mode .popover-footerRight, 
+html.dark-mode .modal-sharing .modal-header {
+  border-bottom: 1px solid var(--dark-grey) !important;
+  color: var(--white) !important;
+}
 html.dark-mode .sidebar-addList-fixed {
   box-shadow: 0 -1px 0 var(--grey) !important;
+}
+html.dark-mode .section-title, html.dark-mode .editableContent {
+  color: #969696 !important;
+}
+html.dark-mode .o365cs-base .o365sx-neutral-lightAlt-border {
+  border-color: var(--grey);
+}
+html.dark-mode .o365cs-base .o365sx-button:focus {
+  outline: var(--dark-grey) !important;
+}
+html.dark-mode .o365header .searchToolbar {
+  background: var(--dark-grey-transparent) !important;
+}
+html.dark-mode .o365header .searchToolbar:hover {
+  background-color: var(--dark-grey) !important;
+  box-shadow: 0 0 0 1px var(--grey) !important;
 }

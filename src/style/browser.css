@@ -1,9 +1,13 @@
 :root {
+  --white: rgba(255, 255, 255, 1);
   --sepia: rgba(251, 240, 217, 1);
+  --sepia-transparent: rgba(251, 240, 217, 0.8);
   --dark-sepia: rgba(232, 222, 201, 1);
   --dark-grey: rgba(33, 33, 33, 1);
+  --dark-grey-transparent: rgba(33, 33, 33, 0.8);
   --grey: rgba(45, 45, 45, 1);
   --black: rgba(0, 0, 0, 1);
+  --black-transparent: rgba(0, 0, 0, 0.8);
   --light-black: rgba(20, 20, 20, 1);
 }
 html {
@@ -41,4 +45,7 @@ html.side-bar-hidden #container.leftColumn-overlaid #app {
   #container.leftColumn-overlaid #app {
     padding-left: 0px !important;
   }
+}
+.listItem, .listItem .listItem-icon {
+  background-color: transparent !important;
 }
