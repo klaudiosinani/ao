@@ -22,7 +22,7 @@
 
 Ao is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than [120 countries](https://snapcraft.io/ao).
 
-Read this document in: [Deutsch](https://github.com/klaussinani/ao/blob/master/docs/i18n/readme.GER.md).
+Read this document in: [Deutsch](https://github.com/klaussinani/ao/blob/master/docs/i18n/readme.GER.md) or [Chinese](https://github.com/klaussinani/ao/blob/master/docs/i18n/readme.ZH.md).
 
 You can now support the development process through [GitHub Sponsors](https://github.com/sponsors/klaussinani).
 
