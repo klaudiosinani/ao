@@ -53,10 +53,10 @@ module.exports = {
             activate('toggle-sepia-mode');
           }
         }, {
-          label: 'Black Theme',
-          accelerator: setAcc('toggle-black-mode', 'CmdOrCtrl+B'),
+          label: 'Bisque Theme',
+          accelerator: setAcc('toggle-bisque-mode', 'CmdOrCtrl+G'),
           click() {
-            activate('toggle-black-mode');
+            activate('toggle-bisque-mode');
           }
         }, {
           label: 'Dark Theme',
