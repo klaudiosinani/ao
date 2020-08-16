@@ -54,7 +54,7 @@ module.exports = {
           }
         }, {
           label: 'Bisque Theme',
-          accelerator: setAcc('toggle-bisque-mode', 'CmdOrCtrl+G'),
+          accelerator: setAcc('toggle-bisque-mode', 'CmdOrCtrl+B'),
           click() {
             activate('toggle-bisque-mode');
           }
