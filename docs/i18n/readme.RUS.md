@@ -70,7 +70,7 @@ Ao — это неофициальное и многофункционально
 
 ### Homebrew
 
-Пользователи macOS могут установить с помощью [`Homebrew Cask`](https://caskroom.github.io/) командой `brew cask install ao`.
+Пользователи macOS могут установить с помощью [`Homebrew Cask`](https://caskroom.github.io/) командой `brew install --cask ao`.
 
 ### Замечание
 
