@@ -67,7 +67,7 @@ Ubuntu Linux users can directly install through [`Snapcraft`](https://snapcraft.
 
 #### Homebrew
 
-Macos users can directly install through [`Homebrew Cask`](https://caskroom.github.io/) `brew cask install ao`
+Macos users can directly install through [`Homebrew Cask`](https://caskroom.github.io/) `brew install --cask ao`
 
 #### Note
 
