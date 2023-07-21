@@ -102,10 +102,12 @@ Macos users kullanıcıları direkt olarak [`Homebrew Cask`](https://caskroom.gi
 ### Yerel Kısayol Tuşları
 
 40'tan fazla yerel klavye kısayolu. Herhangi bir şeyi anında değiştirin.
+
 <details>
 <summary>Kullanılabilir tüm yerel klavye kısayollarını görüntüleyin</summary>
 
 <br>
+
 Tanım                      | Kısayol Tuşları
 -------------------------- | --------------------------
 Otomatik Gece Modu         | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd>
