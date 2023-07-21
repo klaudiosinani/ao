@@ -109,39 +109,38 @@ Macos users kullanıcıları direkt olarak [`Homebrew Cask`](https://caskroom.gi
 <br/>
 Tanım                      | Kısayol Tuşları
 -------------------------- | --------------------------
-Otomatik Gece Modunu
-                Etkinleştir | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd>
-Son Tarih Ekle            | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd>
-Güne Yapılacaklar Ekle        | <kbd>Cmd/Ctrl</kbd> <kbd>K</kbd>
+Otomatik Gece Modu         | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd>
+Son Tarih Ekle             | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd>
+Güne Yapılacaklar Ekle     | <kbd>Cmd/Ctrl</kbd> <kbd>K</kbd>
 Tüm Yapılacaklar           | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd>
 Listeyi Sil                | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>D</kbd>
-Yapılacak olanı sil         | <kbd>Cmd/Ctrl</kbd> <kbd>D</kbd>
-Kısayol Tuşlarını Ayarla    | <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd>
-Tüm Yapılmışları Gizle       | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>H</kbd>
-Listeye geç              | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
-Yazıyı büyüt        | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
-Yazıyı Küçült         | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
-Sonraki Listeye Geç      | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
+Yapılacak olanı sil        | <kbd>Cmd/Ctrl</kbd> <kbd>D</kbd>
+Kısayol Tuşlarını Ayarla   | <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd>
+Tüm Yapılmışları Gizle     | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>H</kbd>
+Listeye geç                | <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
+Yazıyı büyüt               | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
+Yazıyı Küçült              | <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd>
+Sonraki Listeye Geç        | <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd>
 Yeni Liste                 | <kbd>Cmd/Ctrl</kbd> <kbd>L</kbd>
-Yeni Yapılacak                  | <kbd>Cmd/Ctrl</kbd> <kbd>N</kbd>
-Listeyi yeniden adlandır               | <kbd>Cmd/Ctrl</kbd> <kbd>Y</kbd>
-Yapılacağı yeniden adlandır               | <kbd>Cmd/Ctrl</kbd> <kbd>T</kbd>
-Yakınlaştırmayı Sıfırla          | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
+Yeni Yapılacak             | <kbd>Cmd/Ctrl</kbd> <kbd>N</kbd>
+Listeyi yeniden adlandır   | <kbd>Cmd/Ctrl</kbd> <kbd>Y</kbd>
+Yapılacağı yeniden adlandır| <kbd>Cmd/Ctrl</kbd> <kbd>T</kbd>
+Yakınlaştırmayı Sıfırla    | <kbd>Cmd/Ctrl</kbd> <kbd>0</kbd>
 Yapılacaklara dön          | <kbd>Esc</kbd>
-Yapılacaklarda ara              | <kbd>Cmd/Ctrl</kbd> <kbd>F</kbd>
-Her Zaman üstte olarak ayarla         | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>
-Hatırlatıcı Kur             | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd>
-Çıkış Yap                | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
-Siyah Temayı Değiştir         | <kbd>Cmd/Ctrl</kbd> <kbd>B</kbd>
-Koyu Temayı Değiştir        | <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
-Önemlileri Değiştir           | <kbd>Cmd/Ctrl</kbd> <kbd>I</kbd>
-Günümü Değiştir             | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
-Plananları Değiştir            | <kbd>Cmd/Ctrl</kbd> <kbd>P</kbd>
-Sapya Temasını Değiştir       | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
-Ayarları değiştir            | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
-Kenarı Değiştir           | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd>
-Görevleri Değiştir            | <kbd>Cmd/Ctrl</kbd> <kbd>J</kbd>
-Pencere Menüsünü değiştir       | <kbd>Alt</kbd>
+Yapılacaklarda ara         | <kbd>Cmd/Ctrl</kbd> <kbd>F</kbd>
+Her Zaman üstte            | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>
+Hatırlatıcı Kur            | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd>
+Çıkış Yap                  | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>
+Siyah Temayı Değiştir      | <kbd>Cmd/Ctrl</kbd> <kbd>B</kbd>
+Koyu Temayı Değiştir       | <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
+Önemlileri Değiştir        | <kbd>Cmd/Ctrl</kbd> <kbd>I</kbd>
+Günümü Değiştir            | <kbd>Cmd/Ctrl</kbd> <kbd>M</kbd>
+Plananları Değiştir        | <kbd>Cmd/Ctrl</kbd> <kbd>P</kbd>
+Sapya Temasını Değiştir    | <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
+Ayarları değiştir          | <kbd>Cmd/Ctrl</kbd> <kbd>,</kbd>
+Kenarı Değiştir            | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd>
+Görevleri Değiştir         | <kbd>Cmd/Ctrl</kbd> <kbd>J</kbd>
+Pencere Menüsünü değiştir  | <kbd>Alt</kbd>
 
 <br/>
 
@@ -153,15 +152,15 @@ Ao'ya işletim sisteminizin herhangi bir yerinden istediğiniz zaman erişin. T�
 
 
 <details>
-<summary>View all the available global keyboard shortcuts.</summary>
+<summary>Bütün global kısayolları göster.</summary>
 
 <br>
 
-Description                | Global Shortcut
+Tanım                      | Global Kısayollar
 -------------------------- | --------------------------
-Create New Todo            | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>C</kbd>
-Search Todos               | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>F</kbd>
-Toggle Ao Window           | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>A</kbd>
+Yeni yapılacak             | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>C</kbd>
+Yapılacaklarda ara         | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>F</kbd>
+Ao penceresi ayarla        | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>A</kbd>
 
 <br/>
 
