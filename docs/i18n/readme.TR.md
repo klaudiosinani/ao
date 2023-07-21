@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="docs/media/logo.png" width="20%"><br/>Ao
+  <img src="../media/logo.png" width="20%"><br/>Ao
 </h1>
 
 <h4 align="center">
@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://github.com/klaussinani/ao">
-    <img src="docs/media/list-navigation.gif" alt="Ao" width="93%">
+    <img src="../media/list-navigation.gif" alt="Ao" width="93%">
   </a>
 </div>
 
@@ -17,7 +17,6 @@
     <img alt="Build Status" src="https://travis-ci.org/klaussinani/ao.svg?branch=master">
   </a>
 </p>
-
 
 ## Tanıtım
 
@@ -106,7 +105,7 @@ Macos users kullanıcıları direkt olarak [`Homebrew Cask`](https://caskroom.gi
 <details>
 <summary>Kullanılabilir tüm yerel klavye kısayollarını görüntüleyin</summary>
 
-<br/>
+<br>
 Tanım                      | Kısayol Tuşları
 -------------------------- | --------------------------
 Otomatik Gece Modu         | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd>
