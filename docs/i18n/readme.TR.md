@@ -153,7 +153,7 @@ Ao'ya işletim sisteminizin herhangi bir yerinden istediğiniz zaman erişin. T�
 
 
 <details>
-<summary>Bütün global kısayolları göster.</summary>
+<summary>Kullanılabilir tüm global klavye kısayollarını görüntüleyin</summary>
 
 <br>
 
