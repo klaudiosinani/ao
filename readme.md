@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://github.com/klaussinani/ao">
-    <img src="docs/media/list-navigation.gif" alt="Ao" width="93%">
+    <img src="docs/media/list-navigation.gif" alt="Ao" width="98%">
   </a>
 </div>
 
@@ -17,6 +17,20 @@
     <img alt="Build Status" src="https://travis-ci.org/klaussinani/ao.svg?branch=master">
   </a>
 </p>
+
+<div align="center">
+  <br>
+  <sup><b>Sponsored by:</b></sup>
+  <br>
+  <a href="https://betterstack.com">
+    <div>
+      <img src="https://github.com/Seldaek/monolog/assets/183678/7de58ce0-2fa2-45c0-b3e8-e60cebb3c4cf" width="200" alt="Better Stack">
+    </div>
+    <sup>
+      Spot, Resolve, and Prevent Downtime.
+    </sup>
+  </a>
+</div>
 
 ## Description
 
@@ -52,6 +66,7 @@ You can find more apps [here](#related-apps).
 - [Development](#development)
 - [Related Apps](#related-apps)
 - [Team](#team)
+- [Sponsors](#sponsors)
 - [Disclaimer](#disclaimer)
 - [License](#license)
 
@@ -175,9 +190,14 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## Team
 
-- Klaus Sinani [(@klaussinani)](https://github.com/klaussinani)
+- Klaudio Sinani [(@klaudiosinani)](https://github.com/klaudiosinani)
 - Mario Sinani [(@mariosinani)](https://github.com/mariosinani)
-- Athan Gkanos [(@athangkanos)](https://github.com/athangkanos)
+
+## Sponsors
+
+A big thank you to all the people and companies supporting our Open Source work:
+
+- [Better Stack: Spot, Resolve, and Prevent Downtime.](https://betterstack.com/)
 
 ## Disclaimer
 
