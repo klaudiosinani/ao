@@ -111,13 +111,6 @@ module.exports = {
       click() {
         shell.openExternal(url.community);
       }
-    }, {
-      type: 'separator'
-    }, {
-      role: 'about',
-      click() {
-        dialog.confirmAbout();
-      }
     }
   ]
 };

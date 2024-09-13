@@ -26,6 +26,7 @@ module.exports = {
     'toggle-black-mode': 'Cmd+B',
     'toggle-dark-mode': 'Cmd+H',
     'toggle-sepia-mode': 'Cmd+G',
-    'toggle-sidebar': 'Cmd+O'
+    'toggle-sidebar': 'Cmd+O',
+    'exit': 'Cmd+Q'
   }
 };
