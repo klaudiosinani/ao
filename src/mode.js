@@ -33,10 +33,6 @@ class Mode {
     return settings.get('autoNightMode') ? this._enableAutoNight() : this._disableAutoNight();
   }
 
-  black() {
-    this._toggle('black');
-  }
-
   dark() {
     this._toggle('dark');
   }
@@ -53,6 +49,9 @@ class Mode {
 
   sepia() {
     this._toggle('sepia');
+  }
+  bisque() {
+    this._toggle('bisque');
   }
 }
 

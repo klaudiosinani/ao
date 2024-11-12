@@ -56,10 +56,10 @@ module.exports = [
           win.activate('toggle-sepia-mode');
         }
       }, {
-        label: 'Black Theme',
+        label: 'Bisque Theme',
         click() {
           win.appear();
-          win.activate('toggle-black-mode');
+          win.activate('toggle-bisque-mode');
         }
       }, {
         label: 'Dark Theme',
