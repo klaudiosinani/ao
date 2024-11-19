@@ -1,5 +1,5 @@
 'use strict';
-const {app, BrowserWindow, Menu, shell} = require('electron');
+const {app, BrowserWindow, Menu, shell, session} = require('electron');
 const fs = require('fs');
 const {is, readSheet} = require('./src/util');
 const file = require('./src/file');
@@ -67,6 +67,13 @@ function createMainWindow() {
 
 app.on('ready', () => {
   Menu.setApplicationMenu(menu);
+
+  const lang = app.getLocale();
+  session.defaultSession.webRequest.onBeforeSendHeaders((details, callback) => {
+    details.requestHeaders['Accept-Language'] = `${lang},en-US;q=0.9`;
+    callback({ cancel: false, requestHeaders: details.requestHeaders });
+  })
+
   mainWindow = createMainWindow();
 
   if (settings.get('useGlobalShortcuts')) {
