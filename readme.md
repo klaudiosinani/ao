@@ -172,6 +172,23 @@ Toggle Ao Window           | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>A</kbd>
 
 </details>
 
+## Proxy
+Ao uses Electron, if you need to use proxy behind proxy, add arguments to the end of executable.
+```
+# Disable proxy
+--no-proxy-server
+
+# Manual proxy address
+--proxy-server=<scheme>=<uri>[:<port>][;...] | <uri>[:<port>] | "direct://"
+
+# Manual PAC address
+--proxy-pac-url=<pac-file-url>
+
+# Disable proxy per host
+--proxy-bypass-list=(<trailing_domain>|<ip-address>)[:<port>][;...]
+```
+For advance users, please access [Electron Chrome Command Line Switches](https://github.com/electron/electron/blob/master/docs/api/chrome-command-line-switches.md).
+
 ## Development
 
 For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/ao/blob/master/contributing.md).
