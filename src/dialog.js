@@ -7,6 +7,37 @@ const file = require('./file');
 const settings = require('./settings');
 
 class Dialog {
+
+  get _keyReferenceInfo() {
+    return [
+      `Add due date: Cmd+Shift+T`,
+      `Add my day: Cmd+K`,
+      `Complete todo: Cmd+Shift+N`,
+      `Delete list: Cmd+Shift+D`,
+      `Delete todo: Cmd+D`,
+      `Global create todo: Cmd+Alt+C`,
+      `Global search todo: Cmd+Alt+F`,
+      `Global toggle window: Cmd+Alt+A`,
+      `Hide todo: Cmd+Shift+H`,
+      `Important: Cmd+I`,
+      `My day: Cmd+M`,
+      `New list: Cmd+L`,
+      `New todo: Cmd+N`,
+      `Planned: Cmd+P`,
+      `Rename list: Cmd+Y`,
+      `Rename todo: Cmd+T`,
+      `Return: Esc`,
+      `Set reminder: Cmd+Shift+E`,
+      `Settings: Cmd+,`,
+      `Sign out: Cmd+Alt+Q`,
+      `Tasks: Cmd+J`,
+      `Toggle black mode: Cmd+B`,
+      `Toggle dark mode: Cmd+H`,
+      `Toggle sepia mode: Cmd+G`,
+      `Toggle sidebar: Cmd+O`
+    ].join('\n');
+  }
+
   get _systemInfo() {
     return [
       `Version: ${app.getVersion()}`,
@@ -17,6 +48,17 @@ class Dialog {
       `OS: ${os.type()} ${os.arch()} ${os.release()}`
     ].join('\n');
   }
+
+  
+  _keyRef() {
+    return this._create({
+      buttons: ['Done', 'Copy'],
+      detail: `Created by Greymond.\n\n${this._keyReferenceInfo}`,
+      message: `Ao ${app.getVersion()} (${os.arch()})`,
+      title: 'Shortcut Key Reference'
+    });
+  } 
+
 
   _about() {
     return this._create({
@@ -76,6 +118,12 @@ class Dialog {
   confirmAbout() {
     if (this._about() === 1) {
       clipboard.writeText(this._systemInfo);
+    }
+  }
+
+  confirmKey() {
+    if (this._keyRef() === 1) {
+      clipboard.writeText(this._keyReferenceInfo);
     }
   }
 

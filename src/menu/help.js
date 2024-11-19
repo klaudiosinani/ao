@@ -77,7 +77,7 @@ module.exports = {
     }, {
       label: 'Keyboard Shortcuts Reference',
       click() {
-        shell.openExternal(url.keyboardShortcutsRef);
+        dialog.confirmKey();
       }
     }, {
       type: 'separator'
