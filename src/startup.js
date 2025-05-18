@@ -1,3 +1,4 @@
+'use strict';
 const settings = require('./settings');
 const AutoLauncherLib = require('auto-launch');
 const config = require('./AutoLaunchConfig');
