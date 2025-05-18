@@ -1,41 +1,52 @@
-'use strict';
-const {app, remote} = require('electron');
-const AutoLaunch = require('auto-launch');
-const {is} = require('./util');
 const settings = require('./settings');
+const AutoLauncherLib = require('auto-launch');
+const config = require('./AutoLaunchConfig');
+const { app, remote } = require('electron');
+const { is } = require('./util');
 
-const _settings = {
-  name: 'Ao',
-  path: is.darwin ? (app || remote.app).getPath('exe').replace(/\.app\/Content.*/, '.app') : undefined,
-  isHidden: true
-};
+const appPath = is.darwin
+  ? (app || remote.app).getPath('exe').replace(/\.app\/Content.*/, '.app')
+  : undefined;
 
-class Startup {
-  constructor(settings) {
-    this._launcher = new AutoLaunch(settings);
+class StartupManager {
+  constructor() {
+    this.launcher = new AutoLauncher(config);
   }
 
-  async _activate() {
+  autoLaunch() {
+    if (settings.get('autoLaunch')) {
+      this.launcher.enable();
+    } else {
+      this.launcher.disable();
+    }
+  }
+}
+
+class AutoLauncher {
+  constructor(settings) {
+    this._launcher = new AutoLauncherLib(settings);
+  }
+
+  async enable() {
     const enabled = await this._launcher.isEnabled();
     if (!enabled) {
       return this._launcher.enable();
     }
   }
 
-  async _deactivate() {
+  async disable() {
     const enabled = await this._launcher.isEnabled();
     if (enabled) {
       return this._launcher.disable();
     }
   }
-
-  autoLaunch() {
-    if (settings.get('autoLaunch')) {
-      this._activate();
-    } else {
-      this._deactivate();
-    }
-  }
 }
 
-module.exports = new Startup(_settings);
+
+module.exports = {
+  name: 'Ao',
+  path: appPath,
+  isHidden: true,
+  StartupManager,
+  AutoLauncher
+};
