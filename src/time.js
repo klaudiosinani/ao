@@ -1,5 +1,4 @@
 'use strict';
-const SystemClock = require('./SystemClock');
 
 class TimeHelper {
   static isDaytime() {
