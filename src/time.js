@@ -1,23 +1,33 @@
 'use strict';
+const SystemClock = require('./SystemClock');
 
-class Time {
-  hours() {
-    return new Date().getHours();
-  }
-
-  isDaytime() {
-    const hs = this.hours();
+class TimeHelper {
+  static isDaytime() {
+    const hs = SystemClock.getHours();
     return hs < 18 && hs > 6;
   }
 
-  ms(hours) {
-    return 1000 * 60 * 60 * parseInt(hours, 10);
-  }
-
-  transitionSpan() {
-    const hs = this.hours();
+  static transitionSpan() {
+    const hs = SystemClock.getHours();
     return this.isDaytime() ? 18 - hs : (hs < 6 ? 6 - hs : 30 - hs);
   }
 }
 
-module.exports = new Time();
+class TimeConverter {
+  static hoursToMs(hours) {
+    return 1000 * 60 * 60 * parseInt(hours, 10);
+  }
+}
+
+class SystemClock {
+  static getHours() {
+    return new Date().getHours();
+  }
+}
+
+
+module.exports = {
+  TimeHelper,
+  TimeConverter,
+  SystemClock
+};
