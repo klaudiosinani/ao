@@ -1,43 +1,61 @@
 'use strict';
-const {globalShortcut} = require('electron');
-const {shortcutKeys} = require('./config');
+const { globalShortcut } = require('electron');
+const ShortcutConfig = require('./ShortcutConfig');
+const ShortcutAction = require('./ShortcutAction');
 const win = require('./win');
-
-const {log} = console;
+const { shortcutKeys } = require('./config');
 
 class Keymap {
-  setAcc(custom, predefined) {
-    if (Object.prototype.hasOwnProperty.call(shortcutKeys, custom)) {
-      return shortcutKeys[custom];
-    }
-
-    return predefined;
-  }
-
   registerGlobal() {
     const toggleAo = globalShortcut.register(
-      this.setAcc('global-toggle-window', 'CmdorCtrl+Alt+A'), () => {
-        win.toggle();
-      });
+      ShortcutConfig.get('global-toggle-window', 'CmdorCtrl+Alt+A'),
+      ShortcutAction.toggleWindow
+    );
 
     const searchTodo = globalShortcut.register(
-      this.setAcc('global-search-todo', 'CmdorCtrl+Alt+F'), () => {
-        win.appear();
-        win.activate('search');
-      });
+      ShortcutConfig.get('global-search-todo', 'CmdorCtrl+Alt+F'),
+      ShortcutAction.openSearch
+    );
 
     const createTodo = globalShortcut.register(
-      this.setAcc('global-create-todo', 'CmdorCtrl+Alt+C'), () => {
-        win.appear();
-        win.activate('new-todo');
-      });
+      ShortcutConfig.get('global-create-todo', 'CmdorCtrl+Alt+C'),
+      ShortcutAction.createTodo
+    );
 
-    if (toggleAo && searchTodo && createTodo) {
-      log('Successfully registered global shortcut keys');
-    } else {
-      log('Global shortcut keys registration failed');
-    }
+    const success = toggleAo && searchTodo && createTodo;
+
+    console.log(success
+      ? 'Successfully registered global shortcut keys'
+      : 'Global shortcut keys registration failed');
   }
 }
 
-module.exports = new Keymap();
+class ShortcutConfig {
+  static get(custom, fallback) {
+    return shortcutKeys.hasOwnProperty(custom) ? shortcutKeys[custom] : fallback;
+  }
+}
+
+
+class ShortcutAction {
+  static toggleWindow() {
+    win.toggle();
+  }
+
+  static openSearch() {
+    win.appear();
+    win.activate('search');
+  }
+
+  static createTodo() {
+    win.appear();
+    win.activate('new-todo');
+  }
+}
+
+
+module.exports = {
+  Keymap,
+  ShortcutConfig,
+  ShortcutAction
+};
