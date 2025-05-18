@@ -1,9 +1,46 @@
 'use strict';
 const settings = require('./settings');
 const time = require('./time');
+const ManualMode = require('./ManualMode');
 
-class Mode {
-  _toggle(mode) {
+class ModeRestorer {
+  restore() {
+    const modes = settings.get('mode');
+    Object.keys(modes).forEach(x => {
+      if (modes[x]) {
+        document.documentElement.classList.toggle(`${x}-mode`, modes[x]);
+      }
+    });
+  }
+}
+
+
+class AutoNightMode {
+  enable() {
+    if (time.isDaytime()) {
+      ManualMode.toggle(null);
+    } else if (!settings.get('mode.dark')) {
+      ManualMode.toggle('dark');
+    }
+
+    setTimeout(() => {
+      if (settings.get('autoNightMode')) {
+        this.enable();
+      }
+    }, time.ms(time.transitionSpan()));
+  }
+
+  disable() {
+    ManualMode.toggle(null);
+  }
+
+  autoNight() {
+    return settings.get('autoNightMode') ? this.enable() : this.disable();
+  }
+}
+
+class ManualMode {
+  toggle(mode) {
     const modes = settings.get('mode');
     Object.keys(modes).forEach(x => {
       settings.set(`mode.${x}`, (x === mode) ? !modes[x] : false);
@@ -11,49 +48,21 @@ class Mode {
     });
   }
 
-  _enableAutoNight() {
-    if (time.isDaytime()) {
-      this._toggle(null);
-    } else if (!settings.get('mode.dark')) {
-      this._toggle('dark');
-    }
-
-    setTimeout(() => {
-      if (settings.get('autoNightMode')) {
-        return this._enableAutoNight();
-      }
-    }, time.ms(time.transitionSpan()));
-  }
-
-  _disableAutoNight() {
-    this._toggle(null);
-  }
-
-  autoNight() {
-    return settings.get('autoNightMode') ? this._enableAutoNight() : this._disableAutoNight();
-  }
-
   black() {
-    this._toggle('black');
+    this.toggle('black');
   }
 
   dark() {
-    this._toggle('dark');
-  }
-
-  restore() {
-    const modes = settings.get('mode');
-
-    Object.keys(modes).forEach(x => {
-      if (modes[x]) {
-        document.documentElement.classList.toggle(`${x}-mode`, modes[x]);
-      }
-    });
+    this.toggle('dark');
   }
 
   sepia() {
-    this._toggle('sepia');
+    this.toggle('sepia');
   }
 }
 
-module.exports = new Mode();
+module.exports = {
+  ManualMode,
+  AutoNightMode,
+  ModeRestorer
+};
