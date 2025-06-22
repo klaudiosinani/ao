@@ -24,7 +24,7 @@
     "start": "electron ."
   },
   "dependencies": {
-    "auto-launch": "^5.0.1",
+    "auto-launch": "^5.0.6",
     "electron-context-menu": "^0.9.1",
     "electron-debug": "^1.4.0",
     "electron-dl": "^1.10.0",
