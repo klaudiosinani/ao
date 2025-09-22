@@ -1,33 +1,24 @@
+<div align="center">
+  <img src="../media/logo.png" width="20%">
+</div>
+
 <h1 align="center">
-  <img src="../media/logo.png" width="20%"><br/>Ao
+  Ao
 </h1>
 
 <h4 align="center">
-  ✔️ Elegante Microsoft To-Do Desktop App
+  Elegant Microsoft To-Do desktop app
 </h4>
 
 <div align="center">
-  <a href="https://github.com/klaussinani/ao">
-    <img src="../media/list-navigation.gif" alt="Ao" width="93%">
-  </a>
+  <img src="../media/list-navigation.gif" alt="Ao" width="98%">
 </div>
-
-<p align="center">
-  <a href="https://travis-ci.org/klaussinani/ao">
-    <img alt="Build Status" src="https://travis-ci.org/klaussinani/ao.svg?branch=master">
-  </a>
-  <a href="https://ci.appveyor.com/project/klaussinani/ao">
-    <img alt="Build Status" src="https://ci.appveyor.com/api/projects/status/aau9e9amxaqrc6pw?svg=true">
-  </a>
-</p>
 
 ## Beschreibung
 
 Ao ist eine inoffizielle, funktionsreiche, Open Source, community-getriebene, kostenfreie Microsoft To-Do App und wird bereits in mehr als [120 Ländern](https://snapcraft.io/ao) genutzt.
 
-Bei [Gitter](https://gitter.im/klaussinani/ao) oder [Twitter](https://twitter.com/klaussinani) kannst du dich mit uns in Verbindung setzen.
-
-Schau in den [Leitlinien](https://github.com/klaussinani/ao/blob/master/contributing.md#translating-documentation) vorbei und lerne mehr darüber, wie du dieses Dokument in weitere Sprachen übersetzen kannst.
+Schau in den [Leitlinien](https://github.com/klaudiosinani/ao/blob/master/contributing.md#translating-documentation) vorbei und lerne mehr darüber, wie du dieses Dokument in weitere Sprachen übersetzen kannst.
 
 Weitere Desktop Apps findest du [hier](#related-apps).
 
@@ -62,7 +53,7 @@ Weitere Desktop Apps findest du [hier](#related-apps).
 
 #### Github Releases
 
-Auf der [Github Releases](https://github.com/klaussinani/ao/releases/latest) Seite findest du Installationsdateien für dein Betriebssystem.
+Auf der [Github Releases](https://github.com/klaudiosinani/ao/releases/latest) Seite findest du Installationsdateien für dein Betriebssystem.
 
 #### Homebrew
 
@@ -78,18 +69,18 @@ Unter Arch Linux kannst du mit [`AUR`](https://aur.archlinux.org/packages/ao/) d
 
 #### Hinweis
 
-Die Version unter `AUR` kann unter umständen nicht die aktuellste Version sein. Nutze dann bitte den direkten Download von der [Github Releases](https://github.com/klaussinani/ao/releases/latest) Seite.
+Die Version unter `AUR` kann unter umständen nicht die aktuellste Version sein. Nutze dann bitte den direkten Download von der [Github Releases](https://github.com/klaudiosinani/ao/releases/latest) Seite.
 
 ## Funktionen
 
 ### Vibrant Theme
 
-Drücke <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> um das [Dark](https://cdn.rawgit.com/klaussinani/ao/55af062e/../media/vibrant-dark-theme.png) oder das [Light](https://cdn.rawgit.com/klaussinani/ao/55af062e/../media/vibrant-theme.png) Vibrant Theme zu aktivieren.
+Drücke <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>U</kbd> / <kbd>Cmd</kbd> <kbd>Alt</kbd> <kbd>J</kbd> um das [Dark](https://cdn.rawgit.com/klaudiosinani/ao/55af062e/../media/vibrant-dark-theme.png) oder das [Light](https://cdn.rawgit.com/klaudiosinani/ao/55af062e/../media/vibrant-theme.png) Vibrant Theme zu aktivieren.
 
 Bitte beachte, dass das Theme **nur unter macOS** verfügbar ist.
 
 <div align="center">
-      <a href="https://github.com/klaussinani/ao">
+      <a href="https://github.com/klaudiosinani/ao">
         <img src="../media/ao-vibrant.png" alt="Ao Vibrant Theme" width="90%">
       </a>
 </div>
@@ -99,7 +90,7 @@ Bitte beachte, dass das Theme **nur unter macOS** verfügbar ist.
 Perfekt für spiegelnde Bildschirme. Aktiviere das Sepia Theme per  <kbd>Cmd/Ctrl</kbd> <kbd>G</kbd>
 
 <div align="center">
-      <a href="https://github.com/klaussinani/ao">
+      <a href="https://github.com/klaudiosinani/ao">
         <img src="../media/sepia-theme.png" alt="Ao Sepia Theme" width="90%">
       </a>
 </div>
@@ -109,7 +100,7 @@ Perfekt für spiegelnde Bildschirme. Aktiviere das Sepia Theme per  <kbd>Cmd/Ctr
 Steigere deine Produktivität und aktiviere das Theme mit mit <kbd>Cmd/Ctrl</kbd> <kbd>W</kbd>
 
 <div align="center">
-      <a href="https://github.com/klaussinani/ao">
+      <a href="https://github.com/klaudiosinani/ao">
         <img src="../media/black-theme.png" alt="Ao Black Theme" width="90%">
       </a>
 </div>
@@ -119,7 +110,7 @@ Steigere deine Produktivität und aktiviere das Theme mit mit <kbd>Cmd/Ctrl</kbd
 Dunkel, aber nicht zu dunkel. Mache es zu deinem Theme <kbd>Cmd/Ctrl</kbd> <kbd>H</kbd>
 
 <div align="center">
-      <a href="https://github.com/klaussinani/ao">
+      <a href="https://github.com/klaudiosinani/ao">
         <img src="../media/dark-theme.png" alt="Ao Dark Theme" width="90%">
       </a>
 </div>
@@ -129,7 +120,7 @@ Dunkel, aber nicht zu dunkel. Mache es zu deinem Theme <kbd>Cmd/Ctrl</kbd> <kbd>
 Du hast wenig Platz? Skaliere einfach das Fenster und die App passt sich automatisch an.
 
 <div align="center">
-      <a href="https://github.com/klaussinani/ao">
+      <a href="https://github.com/klaudiosinani/ao">
         <img src="../media/compact-mode.png" alt="Ao Compact Mode" width="60%">
       </a>
 </div>
@@ -139,7 +130,7 @@ Du hast wenig Platz? Skaliere einfach das Fenster und die App passt sich automat
 Navigiere mit wenig Aufwand durch deine Listen. Drücke einfach <kbd>Cmd/Ctrl</kbd> <kbd>Tab</kbd> / <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd> oder springe einfach direkt zu deiner gewünschten Liste mit <kbd>Cmd/Ctrl</kbd> <kbd>1</kbd> - <kbd>9</kbd>
 
 <div align="center">
-      <a href="https://github.com/klaussinani/ao">
+      <a href="https://github.com/klaudiosinani/ao">
         <img src="../media/list-navigation.gif" alt="List Navigation" width="90%">
       </a>
 </div>
@@ -149,7 +140,7 @@ Navigiere mit wenig Aufwand durch deine Listen. Drücke einfach <kbd>Cmd/Ctrl</k
 Navigiere zur Datei `~/.ao.json` oder drücke <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd> und passe die Shortcuts an deine eigenen Bedürfnisse an. Um die Shortscuts zurückzusetzen lösche einfach die Ao Konfigurationsdatei aus deinem "Home-Verzeichnis".
 
 <div align="center">
-      <a href="https://github.com/klaussinani/ao">
+      <a href="https://github.com/klaudiosinani/ao">
         <img src="../media/custom-shortcut-keys.gif" alt="Custom Shortcut Keys" width="90%">
       </a>
 </div>
@@ -159,7 +150,7 @@ Navigiere zur Datei `~/.ao.json` oder drücke <kbd>Cmd/Ctrl</kbd> <kbd>.</kbd> u
 Passe den Zoom Faktor einfach durch <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd> oder <kbd>Cmd/Ctrl</kbd> <kbd>-</kbd> an.
 
 <div align="center">
-      <a href="https://github.com/klaussinani/ao">
+      <a href="https://github.com/klaudiosinani/ao">
         <img src="../media/scalable-interface.gif" alt="Scalable Interface" width="90%">
       </a>
 </div>
@@ -173,11 +164,6 @@ Mit dem "Auto-Night" Modus passt sich Ao farblich automatisch an die zur aktuell
 ### Lokale Shortcuts
 
 40+ lokale Tastatur Shortcuts für noch produktiveres Arbeiten.
-
-<details>
-<summary>Schau dir alle verfügbaren lokalen Tastatur Shortcuts an.</summary>
-
-<br/>
 
 Beschreibung               | Tasten
 -------------------------- | --------------------------
@@ -217,18 +203,9 @@ Entwicklertools            | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>I</kbd>
 Set Always on Top          | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>
 Text vergrößern            | <kbd>Cmd/Ctrl</kbd> <kbd>Shift</kbd> <kbd>=</kbd>
 
-<br/>
-
-</details>
-
 ### Globale Shortcuts
 
 Greife in jeder Situation auf Ao zu. Die globalen Shortcuts kannst du an deine eigenen Bedürfnisse in der `~/.ao.json` Datei anpassen.
-
-<details>
-<summary>Schau dir alle verfügbaren globalen Tastatur Shortcuts an.</summary>
-
-<br>
 
 Beschreibung               | Globaler Shortcut
 -------------------------- | --------------------------
@@ -236,13 +213,9 @@ Verstecke das Ao Fenster   | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>A</kbd>
 Neuer To-Do Eintrag        | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>C</kbd>
 Suche                      | <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>F</kbd>
 
-<br/>
-
-</details>
-
 ## Entwicklung
 
-Weitere Informationen, wie du zum Projekt beitragen kannst, findest du in den [Richtlinien](https://github.com/klaussinani/ao/blob/master/contributing.md).
+Weitere Informationen, wie du zum Projekt beitragen kannst, findest du in den [Richtlinien](https://github.com/klaudiosinani/ao/blob/master/contributing.md).
 
 - Fork the repository and clone it to your machine
 - Navigate to your local fork `cd ao`
@@ -254,15 +227,14 @@ Weitere Informationen, wie du zum Projekt beitragen kannst, findest du in den [R
 ## Ähnliche Apps
 
 - [Tusk](https://github.com/champloohq/tusk) - verbesserte Evernote Desktop App.
-- [Taskbook](https://github.com/klaussinani/taskbook) - Aufgaben, "boards" und Notizen für die Kommandozeile.
+- [Taskbook](https://github.com/klaudiosinani/taskbook) - Aufgaben, "boards" und Notizen für die Kommandozeile.
 
 ## Team
 
 Entwickelt mit ❤ durch
 
-- Klaus Sinani [(@klaussinani)](https://github.com/klaussinani)
+- Klaudio Sinani [(@klaudiosinani)](https://github.com/klaudiosinani)
 - Mario Sinani [(@mariocfhq)](https://github.com/mariocfhq)
-- Thanasis Gkanos [(@ThanasisGkanos)](https://github.com/ThanasisGkanos)
 
 ## Disclaimer
 
@@ -270,4 +242,4 @@ Ao ist eine inoffizielle, Open Source, third-party, community-driven, kostenfrei
 
 ## Lizenz
 
-[MIT](https://github.com/klaussinani/ao/blob/master/license.md)
+[MIT](https://github.com/klaudiosinani/ao/blob/master/license.md)
