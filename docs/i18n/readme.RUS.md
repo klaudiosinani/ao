@@ -1,5 +1,9 @@
+<div align="center">
+  <img src="../media/logo.png" width="20%">
+</div>
+
 <h1 align="center">
-  <img src="../media/logo.png" width="20%"><br/>Ao
+  Ao
 </h1>
 
 <h4 align="center">
@@ -7,30 +11,18 @@
 </h4>
 
 <div align="center">
-  <a href="https://github.com/klaussinani/ao">
-    <img src="../media/list-navigation.gif" alt="Ao" width="93%">
-  </a>
+  <img src="../media/list-navigation.gif" alt="Ao" width="98%">
 </div>
-
-<p align="center">
-  <a href="https://travis-ci.org/klaussinani/ao">
-    <img alt="Build Status" src="https://travis-ci.org/klaussinani/ao.svg?branch=master">
-  </a>
-</p>
 
 ## Описание
 
 Ao — это неофициальное и многофункциональное приложение для сервиса Microsoft To-Do, оно полностью бесплатное, имеет открытый исходный код и существует благодаря сообществу. Его используют люди из более, чем [120 стран мира](https://snapcraft.io/ao).
 
-Оригинал документа — [английский](https://github.com/klaussinani/ao/blob/master/readme.md).
+Оригинал документа — [английский](https://github.com/klaudiosinani/ao/blob/master/readme.md).
 
-Другие доступные переводы: [немецкий](https://github.com/klaussinani/ao/blob/master/docs/i18n/readme.GER.md).
+Другие доступные переводы: [немецкий](https://github.com/klaudiosinani/ao/blob/master/docs/i18n/readme.GER.md).
 
-Вы можете поддержать процесс разработки с помощью доната на [Open Collective](https://opencollective.com/klaussinani).
-
-Если вы хотите помочь с переводом, посетите страницу с [рекомендациями по поддержке](https://github.com/klaussinani/ao/blob/master/contributing.md#translating-documentation), чтобы узнать, как перевести этот документ на другие языки.
-
-Если есть мысли по поводу проекта, дайте знать в [Gitter](https://gitter.im/klaussinani/ao) или [Twitter](https://twitter.com/klaussinani).
+Если вы хотите помочь с переводом, посетите страницу с [рекомендациями по поддержке](https://github.com/klaudiosinani/ao/blob/master/contributing.md#translating-documentation), чтобы узнать, как перевести этот документ на другие языки.
 
 Больше приложений — [здесь](#похожие-приложения).
 
@@ -62,7 +54,7 @@ Ao — это неофициальное и многофункционально
 
 ### Github Releases
 
-Посетите [страницу с релизами](https://github.com/klaussinani/ao/releases/latest) и скачайте подходящую для вашей операционной системы версию программы.
+Посетите [страницу с релизами](https://github.com/klaudiosinani/ao/releases/latest) и скачайте подходящую для вашей операционной системы версию программы.
 
 ### Snapcraft
 
@@ -74,11 +66,11 @@ Ao — это неофициальное и многофункционально
 
 ### Замечание
 
-Версия, которая доступна на `Homebrew Cask`, может быть не самой последней, потому что она, в отличие от `Snapcraft`, имеет неофициальную поддержку. Если это для вас является проблемой, вам стоит воспользоваться версией со страницы [Github releases](https://github.com/klaussinani/ao/releases/latest).
+Версия, которая доступна на `Homebrew Cask`, может быть не самой последней, потому что она, в отличие от `Snapcraft`, имеет неофициальную поддержку. Если это для вас является проблемой, вам стоит воспользоваться версией со страницы [Github releases](https://github.com/klaudiosinani/ao/releases/latest).
 
 ## Возможности
 
-Все возможности программы детально — на [главной странице](https://klaussinani.github.io/ao) проекта.
+Все возможности программы детально — на [главной странице](https://klaudiosinani.com/ao) проекта.
 
 - Автоматическая смена на ночную тему: чтобы активировать функцию, нажмите сочетание клавиш <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd>.
 - Темная тема: активируется по нажатию <kbd>Cmd/Ctrl</kbd> <kbd>B</kbd>.
@@ -96,11 +88,6 @@ Ao — это неофициальное и многофункционально
 ### Локальные
 
 Более 40 локальных горячих клавиш. Совершайте любые действия за доли секунды.
-
-<details>
-<summary>Посмотреть все доступные локальные горячие клавиши.</summary>
-
-<br/>
 
 Описание                                   | Сочетание клавиш
 ------------------------------------------ | --------------------------
@@ -137,18 +124,9 @@ Ao — это неофициальное и многофункционально
 Перейти в Задачи                           | <kbd>Cmd/Ctrl</kbd> <kbd>J</kbd>
 Меню                                       | <kbd>Alt</kbd>
 
-<br/>
-
-</details>
-
 ### Глобальные горячие клавиши
 
 Получите доступ к Ao в любой момент из любого места. Все глобальные горячие клавиши можно настроить по собственным предпочтениям в файле `~/.ao.json`.
-
-<details>
-<summary>Посмотреть все доступные глобальные горячие клавиши.</summary>
-
-<br>
 
 Описание                   | Сочетание клавиш
 -------------------------- | --------------------------
@@ -156,13 +134,9 @@ Ao — это неофициальное и многофункционально
 Искать задачу              | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>F</kbd>
 Открыть Ao                 | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>A</kbd>
 
-<br/>
-
-</details>
-
 ## Разработка
 
-Чтобы узнать больше о том, как помочь с разработкой, прочитайте [рекомендацию по поддержке](https://github.com/klaussinani/ao/blob/master/contributing.md).
+Чтобы узнать больше о том, как помочь с разработкой, прочитайте [рекомендацию по поддержке](https://github.com/klaudiosinani/ao/blob/master/contributing.md).
 
 - Форкните репозиторий и создайте клон.
 - Перейдите в свою копию: `cd ao`.
@@ -173,14 +147,13 @@ Ao — это неофициальное и многофункционально
 
 ## Похожие приложения
 
-- [Tusk](https://github.com/klaussinani/tusk) — улучшенное десктопное приложения для Evernote.
-- [Taskbook](https://github.com/klaussinani/taskbook) — задачи, доски и заметки для любителей командной строки.
+- [Tusk](https://github.com/klaudiosinani/tusk) — улучшенное десктопное приложения для Evernote.
+- [Taskbook](https://github.com/klaudiosinani/taskbook) — задачи, доски и заметки для любителей командной строки.
 
 ## Команда
 
-- Klaus Sinani [(@klaussinani)](https://github.com/klaussinani)
+- Klaudio Sinani [(@klaudiosinani)](https://github.com/klaudiosinani)
 - Mario Sinani [(@mariosinani)](https://github.com/mariosinani)
-- Thanasis Gkanos [(@ThanasisGkanos)](https://github.com/ThanasisGkanos)
 
 ## Дисклеймер
 
@@ -188,4 +161,4 @@ Ao — это стороннее, неофициальное и полность
 
 ## Лицензия
 
-[MIT](https://github.com/klaussinani/ao/blob/master/license.md)
+[MIT](https://github.com/klaudiosinani/ao/blob/master/license.md)

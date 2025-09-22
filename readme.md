@@ -1,5 +1,9 @@
+<div align="center">
+  <img src="docs/media/logo.png" width="20%">
+</div>
+
 <h1 align="center">
-  <img src="docs/media/logo.png" width="20%"><br/>Ao
+  Ao
 </h1>
 
 <h4 align="center">
@@ -7,19 +11,10 @@
 </h4>
 
 <div align="center">
-  <a href="https://github.com/klaussinani/ao">
-    <img src="docs/media/list-navigation.gif" alt="Ao" width="98%">
-  </a>
+  <img src="docs/media/list-navigation.gif" alt="Ao" width="98%">
 </div>
 
-<p align="center">
-  <a href="https://travis-ci.org/klaussinani/ao">
-    <img alt="Build Status" src="https://travis-ci.org/klaussinani/ao.svg?branch=master">
-  </a>
-</p>
-
 <div align="center">
-  <br>
   <sup><b>Sponsored by:</b></sup>
   <br>
   <a href="https://betterstack.com">
@@ -36,13 +31,11 @@
 
 Ao is an unofficial, featureful, open source, community-driven, free Microsoft To-Do app, used by people in more than [120 countries](https://snapcraft.io/ao).
 
-Read this document in: [Deutsch](https://github.com/klaussinani/ao/blob/master/docs/i18n/readme.GER.md).
+Read this document in: [Deutsch](https://github.com/klaudiosinani/ao/blob/master/docs/i18n/readme.GER.md).
 
-You can now support the development process through [GitHub Sponsors](https://github.com/sponsors/klaussinani).
+You can now support the development process through [GitHub Sponsors](https://github.com/sponsors/klaudiosinani).
 
-Visit the [contributing guidelines](https://github.com/klaussinani/ao/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
-
-Come over to [Gitter](https://gitter.im/klaussinani/ao) or [Twitter](https://twitter.com/klaussinani) to share your thoughts on the project.
+Visit the [contributing guidelines](https://github.com/klaudiosinani/ao/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
 
 You can find more apps [here](#related-apps).
 
@@ -74,7 +67,7 @@ You can find more apps [here](#related-apps).
 
 #### Github Releases
 
-Head to the [releases](https://github.com/klaussinani/ao/releases/latest) page and download the appropriate installer for your system.
+Head to the [releases](https://github.com/klaudiosinani/ao/releases/latest) page and download the appropriate installer for your system.
 
 #### Snapcraft
 
@@ -86,11 +79,11 @@ Macos users can directly install through [`Homebrew Cask`](https://caskroom.gith
 
 #### Note
 
-The version available on `Homebrew Cask` may not be the latest, since unlike `Snapcraft`, it is not offically maintained. If that is the case, please consider downloading directly from the [Github releases](https://github.com/klaussinani/ao/releases/latest) page.
+The version available on `Homebrew Cask` may not be the latest, since unlike `Snapcraft`, it is not offically maintained. If that is the case, please consider downloading directly from the [Github releases](https://github.com/klaudiosinani/ao/releases/latest) page.
 
 ## Features
 
-Visit the project [homepage](https://klaussinani.github.io/ao) to view all features in detail.
+Visit the project [homepage](https://klaudiosinani.com/ao) to view all features in detail.
 
 - Auto Night Mode - Press <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>N</kbd> to allow Tusk to adjust to your environment.
 - Black Theme - Activate it by pressing <kbd>Cmd/Ctrl</kbd> <kbd>B</kbd>
@@ -108,11 +101,6 @@ Visit the project [homepage](https://klaussinani.github.io/ao) to view all featu
 ### Local Shortcut Keys
 
 40+ local keyboard shortcuts. Toggle anything in a flash.
-
-<details>
-<summary>View all the available local keyboard shortcuts.</summary>
-
-<br/>
 
 Description                | Keys
 -------------------------- | --------------------------
@@ -149,18 +137,9 @@ Toggle Sidebar             | <kbd>Cmd/Ctrl</kbd> <kbd>O</kbd>
 Toggle Tasks               | <kbd>Cmd/Ctrl</kbd> <kbd>J</kbd>
 Toggle Window Menu         | <kbd>Alt</kbd>
 
-<br/>
-
-</details>
-
 ### Global Shortcut Keys
 
 Access Ao at any moment from anywhere within your operating system. All global shortcuts can be customized to match your own preference through the configuration file `~/.ao.json`.
-
-<details>
-<summary>View all the available global keyboard shortcuts.</summary>
-
-<br>
 
 Description                | Global Shortcut
 -------------------------- | --------------------------
@@ -168,13 +147,9 @@ Create New Todo            | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>C</kbd>
 Search Todos               | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>F</kbd>
 Toggle Ao Window           | <kbd>Cmd/Ctrl</kbd> <kbd>Alt</kbd> <kbd>A</kbd>
 
-<br/>
-
-</details>
-
 ## Development
 
-For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaussinani/ao/blob/master/contributing.md).
+For more info on how to contribute to the project, please read the [contributing guidelines](https://github.com/klaudiosinani/ao/blob/master/contributing.md).
 
 - Fork the repository and clone it to your machine
 - Navigate to your local fork `cd ao`
@@ -185,8 +160,8 @@ For more info on how to contribute to the project, please read the [contributing
 
 ## Related Apps
 
-- [Tusk](https://github.com/klaussinani/tusk) - Refined Evernote desktop app.
-- [Taskbook](https://github.com/klaussinani/taskbook) - Tasks, boards & notes for the command-line habitat.
+- [Tusk](https://github.com/klaudiosinani/tusk) - Refined Evernote desktop app.
+- [Taskbook](https://github.com/klaudiosinani/taskbook) - Tasks, boards & notes for the command-line habitat.
 
 ## Team
 
@@ -205,4 +180,4 @@ Ao is an unofficial, open source, third-party, community-driven, free app and is
 
 ## License
 
-[MIT](https://github.com/klaussinani/ao/blob/master/license.md)
+[MIT](https://github.com/klaudiosinani/ao/blob/master/license.md)
