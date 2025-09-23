@@ -1,14 +1,25 @@
+html.black-mode span, html.black-mode .todayToolbar-count, html.black-mode .o365sx-button, html.black-mode .label-91, 
+html.black-mode .sidePanel-header, html.black-mode .ms-DatePicker-monthAndYear, html.black-mode .ms-DatePicker-weekday, 
+html.black-mode .ms-ContextualMenu-title, html.black-mode .baseAdd-input, html.black-mode .addGroupInputWrapper input.groupAdd, 
+html.black-mode .o365sx-neutral-dark-font, html.black-mode .label-47, html.black-mode .searchToolbar input.searchToolbar-input[type=text],
+html.black-mode .themePicker-headline, html.black-mode .label-83 {
+  color: var(--white) !important;
+}
 html.black-mode ::-webkit-scrollbar-track {
   background-color: var(--black) !important;
 }
-html.black-mode .sidebar, html.black-mode #main, html.black-mode .steps, html.black-mode .detailFooter {
+html.black-mode .sidebar, html.black-mode #main, html.black-mode .steps, html.black-mode .detailFooter,
+html.black-mode .suggestionsBucket, html.black-mode .sidePanel .ms-Panel-main,
+html.black-mode .ms-ContextualMenu-Callout .ms-Callout-main, html.black-mode .root-41, html.black-mode .ms-ContextualMenu-title,
+html.black-mode .root-51, html.black-mode .o365cs-base .o365sx-neutral-lighterAlt-background, html.black-mode .item-79,
+html.black-mode .root-74, html.black-mode .root-84, html.black-mode .ms-ContextualMenu-list {
   background-color: var(--black) !important;
 }
 html.black-mode .steps {
   border: 1px solid var(--black) !important;
 }
 html.black-mode .step .step-body {
-  box-shadow: 0 1px 0 0 var(--light-black);
+  box-shadow: 0 1px 0 0 var(--light-black) !important;
 }
 html.black-mode .details .details-separator {
   background: var(--black) !important;
@@ -21,21 +32,35 @@ html.black-mode .details .section, html.black-mode .details .section-item.detail
 html.black-mode .button:hover {
   background: var(--black) !important;
 }
-html.black-mode .backgroundLines, html.black-mode #main .main-background, html.black-mode .rightColumn {
+html.black-mode .backgroundLines, html.black-mode #main .main-background, html.black-mode .rightColumn, html.black-mode .placeholder, 
+html.black-mode .emptyList, html.black-mode .listReplicationIndicator, html.black-mode .groupItem:hover:hover .listItem:hover,
+html.black-mode .o365cs-base .o365sx-neutral-foreground-background {
   background-color: var(--black) !important;
   background: var(--black) !important;
 }
-html.black-mode .active, html.black-mode .details, html.black-mode .details .section-item:hover {
+html.black-mode .active, html.black-mode .details, html.black-mode .details .section-item:hover,
+html.black-mode .modal, html.black-mode .popover, html.black-mode .popoverMenuItem:hover, html.black-mode .isOpen, html.black-mode .notificationToast, 
+html.black-mode .datePicker-header, html.black-mode .popover-footerRight, html.black-mode .timePicker-input {
   background: var(--light-black) !important;
 }
-html.black-mode .detailNote .editableContent .editableContent-edit {
+html.black-mode .detailNote .editableContent .editableContent-edit, html.black-mode .o365cs-base .o365sx-activeButton,
+html.black-mode .sidePanel .ms-Panel-closeButton:hover, html.black-mode .button.grey {
   background-color: var(--light-black) !important;
   background: var(--light-black) !important;
 }
-html.black-mode .listItem:hover, html.black-mode .todayToolbar-item:hover, html.black-mode .baseAdd.addList:hover, html.black-mode .baseAdd.addList:active:hover, html.black-mode .baseAdd.addList:hover:hover, html.black-mode .hamburgerMenu button:hover, html.black-mode .step:hover, html.black-mode .step.selected, html.black-mode .step.selected:hover, html.black-mode .searchStep:hover .searchStep-body, html.black-mode .searchStep.selected .searchStep-body, html.black-mode .searchStep.selected:hover .searchStep-body, html.black-mode .modal-close:hover, html.black-mode .modal-return:hover, html.black-mode .moreEntriesButton:hover {
+html.black-mode .listItem:hover, html.black-mode .todayToolbar-item:hover, html.black-mode .baseAdd.addList:hover, html.black-mode .root-48:hover,
+html.black-mode .baseAdd.addList:active:hover, html.black-mode .baseAdd.addList:hover:hover, html.black-mode .hamburgerMenu button:hover, 
+html.black-mode .step:hover, html.black-mode .step.selected, html.black-mode .step.selected:hover, html.black-mode .searchStep:hover .searchStep-body, 
+html.black-mode .searchStep.selected .searchStep-body, html.black-mode .searchStep.selected:hover .searchStep-body, html.black-mode .modal-close:hover, 
+html.black-mode .modal-return:hover, html.black-mode .moreEntriesButton:hover, html.black-mode .groupItem:hover, html.black-mode .root-83,
+html.black-mode .groupItem .groupItem-inner:hover, html.black-mode .addGroupButtonWrapper:hover, html.black-mode .root-73,
+html.black-mode .o365cs-base .o365sx-neutral-light-hover-background:hover, html.black-mode .root-81:hover,
+html.black-mode .detailFooter .detailFooter-close:hover, html.black-mode .detailFooter .detailFooter-trash:hover, 
+html.black-mode .o365header .searchToolbar .searchToolbar-icon.stop:hover, html.black-mode .root-106, html.black-mode .ms-ContextualMenu-link .is-expanded  {
   background-color: var(--light-black) !important;
 }
-html.black-mode .hamburgerMenu button:hover {
+html.black-mode .hamburgerMenu button:hover, html.black-mode .addGroupButtonWrapper button:hover {
+  background-color: var(--light-black) !important;
   box-shadow: 0 0 0 1px var(--light-black) !important;
 }
 html.black-mode .taskItem.selected .taskItem-body, html.black-mode .taskItem:hover .taskItem-body {
@@ -48,8 +73,11 @@ html.black-mode #app > div.leftColumn.leftColumn-entered, html.black-mode #app >
 html.black-mode #app > div.rightColumn.rightColumn-entered > div, html.black-mode #app > div.rightColumn.rightColumn-exited > div {
   border-left: 1px solid var(--light-black) !important;
 }
-html.black-mode .sidebar-footer {
+html.black-mode .sidebar-footer, html.black-mode .backgroundLines, html.black-mode .detailFooter {
   border-top: 1px solid var(--light-black) !important;
+}
+html.black-mode .listReplicationIndicator {
+  border-bottom: 1px solid var(--light-black) !important;
 }
 html.black-mode .taskItem-body, html.black-mode .collapsible-taskCard .taskCard {
   box-shadow: 0 17px 0 -16px var(--light-black) !important;
@@ -57,30 +85,36 @@ html.black-mode .taskItem-body, html.black-mode .collapsible-taskCard .taskCard 
 html.black-mode .baseAdd.addTask, html.black-mode .searchStep .searchStep-body {
   box-shadow: 0 -17px 0 -16px var(--light-black) !important;
 }
-html.black-mode .backgroundLines {
-  border-top: 1px solid var(--light-black);
-}
-html.black-mode .detailFooter {
-  border-top: 1px solid var(--light-black);
-}
-html.black-mode .detailFooter .detailFooter-close:hover, .detailFooter .detailFooter-trash:hover {
-  background-color: var(--light-black) !important;
-}
-html.black-mode .modal, html.black-mode .popover, html.black-mode .popoverMenuItem:hover, html.black-mode .isOpen, html.black-mode .notificationToast, html.black-mode .datePicker-header, html.black-mode .popover-footerRight, html.black-mode .timePicker-input {
-  background: var(--light-black) !important;
-}
 html.black-mode .notificationToast-postponeButton {
   border-bottom: 1px solid var(--black) !important;
 }
 html.black-mode .notificationToast-buttons button {
   border-left: 1px solid var(--black) !important;
 }
-html.black-mode .popover-header, html.black-mode .popover-footer, html.black-mode .popover-headerLeft, html.black-mode .popover-footerRight, html.black-mode .modal-sharing .modal-header {
-  border-bottom: 1px solid var(--black) !important;
-}
 html.black-mode .modal-sharing .shared .modal-footer {
   border-top: 1px solid var(--black) !important;
 }
+html.black-mode .popover-header, html.black-mode .popover-footer, html.black-mode .popover-headerLeft, html.black-mode .popover-footerRight, 
+html.black-mode .modal-sharing .modal-header {
+  border-bottom: 1px solid var(--black) !important;
+  color: var(--white) !important;
+}
 html.black-mode .sidebar-addList-fixed {
   box-shadow: 0 -1px 0 var(--light-black) !important;
+}
+html.black-mode .section-title, html.black-mode .editableContent {
+  color: #969696 !important;
+}
+html.black-mode .o365cs-base .o365sx-neutral-lightAlt-border {
+  border-color: var(--light-black);
+}
+html.black-mode .o365cs-base .o365sx-button:focus {
+  outline: var(--black) !important;
+}
+html.black-mode .o365header .searchToolbar {
+  background: var(--black-transparent) !important;
+}
+html.black-mode .o365header .searchToolbar:hover {
+  background-color: var(--black) !important;
+  box-shadow: 0 0 0 1px var(--light-black) !important;
 }
