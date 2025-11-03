@@ -1,11 +1,19 @@
 'use strict';
 const {app} = require('electron');
+const {setAcc} = require('./../keymap');
 const dialog = require('./../dialog');
 
 module.exports = {
   label: app.getName(),
   submenu: [
     {
+      role: 'about',
+      click() {
+        dialog.confirmAbout();
+      }
+    }, {
+      type: 'separator'
+    }, {
       role: 'services',
       submenu: []
     }, {
@@ -20,6 +28,7 @@ module.exports = {
       type: 'separator'
     }, {
       label: 'Exit',
+      accelerator: setAcc('exit', 'CmdorCtrl+Q'),
       click() {
         dialog.confirmExit();
       }
