@@ -19,6 +19,7 @@ require('electron-dl')();
 require('electron-context-menu')();
 
 let exiting = false;
+let shown = false;
 let mainWindow;
 
 if (!app.requestSingleInstanceLock()) {
@@ -83,10 +84,14 @@ app.on('ready', () => {
     const stylesheets = fs.readdirSync(file.style);
     stylesheets.forEach(x => webContents.insertCSS(readSheet(x)));
 
-    if (settings.get('launchMinimized')) {
-      mainWindow.minimize();
-    } else {
-      mainWindow.show();
+    if (!shown) {
+      if (settings.get('launchMinimized')) {
+        mainWindow.minimize();
+      } else {
+        mainWindow.show();
+      }
+
+      shown = true;
     }
   });
 
