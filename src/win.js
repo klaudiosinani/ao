@@ -37,7 +37,7 @@ class Win {
     return Object.assign({}, this._minDimensions, this._lastState, {
       alwaysOnTop: settings.get('alwaysOnTop'),
       autoHideMenuBar: settings.get('menuBarHidden'),
-      darkTheme: settings.get('mode.dark') || settings.get('mode.black'),
+      darkTheme: settings.get('mode.dark'),
       icon: is.linux && file.icon,
       show: false,
       title: app.getName(),

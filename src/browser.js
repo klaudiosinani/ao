@@ -95,7 +95,7 @@ ipc.on('return', () => {
   nav.click('.detailFooter-close');
 });
 
-ipc.on('toggle-black-mode', () => mode.black());
+ipc.on('toggle-bisque-mode', () => mode.bisque());
 
 ipc.on('toggle-dark-mode', () => mode.dark());
 

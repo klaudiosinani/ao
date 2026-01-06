@@ -19,9 +19,10 @@ settings.setAll({
   launchMinimized: settings.get('launchMinimized', false),
   menuBarHidden: settings.get('menuBarHidden', false),
   mode: {
-    black: settings.get('mode.black', false),
+    bisque: settings.get('mode.bisque', false),
     dark: settings.get('mode.dark', false),
-    sepia: settings.get('mode.sepia', false)
+    sepia: settings.get('mode.sepia', false),
+    
   },
   requestExitConfirmation: settings.get('requestExitConfirmation', true),
   sideBarHidden: settings.get('sideBarHidden', false),
