@@ -57,7 +57,7 @@ Auf der [Github Releases](https://github.com/klaudiosinani/ao/releases/latest) S
 
 #### Homebrew
 
-Mit macOS und [`Homebrew Cask`](https://caskroom.github.io/) kannst du dir Ao über das Terminal installieren: `brew cask install ao`
+Mit macOS und [`Homebrew Cask`](https://caskroom.github.io/) kannst du dir Ao über das Terminal installieren: `brew install --cask ao`
 
 #### Snap
 
